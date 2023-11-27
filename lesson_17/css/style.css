@@ -1,0 +1,166 @@
+
+/* Скидання стилів */
+@import url("reset.css");
+
+/* Основні стилі */
+body {
+	background-color: #333;
+	font-family: "Cormorant Infant;", sans-serif;
+	background: #FFF;
+	
+}
+.wrapper {
+	min-height: 100%;
+	overflow: clip;
+
+	display: flex;
+	flex-direction: column;
+}
+.wrapper > main {
+	flex-grow: 1;
+}
+
+
+[class*="__container"] {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+
+
+
+
+.popular-product {
+	padding-top: clamp(1.25rem, 0.3187rem + 3.9735vw, 3.125rem);;
+	text-align: center;
+}
+.popular-product__title {
+	color: #291403;
+font-family: "DM Serif Text";
+font-size: clamp(1.875rem, 1.0058rem + 3.7086vw, 3.625rem);
+margin-bottom: clamp(1.25rem, 0.7533rem + 2.1192vw, 2.25rem);
+
+}
+
+.popular-product__info {
+	color: #818181;
+text-align: center;
+font-size: clamp(1.25rem, 0.9396rem + 1.3245vw, 1.875rem);
+font-weight: 700;
+line-height: 1.40; 
+}
+
+.popular-product__container {
+	
+}
+
+.popular-product__items {
+	display: flex;
+	flex: 0 1 25%;
+	margin: 0 -15px;
+	flex-wrap: wrap;
+}
+
+ .popular-product__column {
+		padding: 0 15px;
+		flex: 0 1 25%; 
+		
+  }
+  
+	
+
+
+.popular-product__item {
+	padding: 0 15px;
+}
+
+.popular-product__image {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 271px / 270px;
+	object-fit: contain;
+	margin-bottom: 24px;
+}
+.popular-product__embossed-info  {
+	font-weight: 700;
+  line-height: 1.4;
+  color: #000;
+  margin-bottom: 12px;
+   white-space: nowrap;
+	font-size: 24px;
+	
+	
+}
+
+.popular-product__embossed-info a:hover {
+	text-decoration: underline;
+}
+
+
+.popular-product__embossed-price {
+	display: inline-block;
+	font-weight: 700;
+  line-height: 1.40;
+  color: #000;
+  font-size: 24px;
+}
+.popular-product__buttom a {
+	color: #FFF;
+font-family: "Ubuntu";
+font-size: 16px;
+font-weight: 500;
+line-height: 1.87; 
+padding: 12px 42.5px;
+background: #FF7A49;
+transition: background 0.3s ease 0s;
+margin-top: 80px;
+}
+
+.popular-product__buttom a:hover {
+transition: background 0.3s ease 0s;
+background: #c74c20;
+}
+
+
+@media (max-width: 1024.98px){
+	.popular-product__column {
+		
+		flex: 1 0 auto; 
+		
+  }
+}
+
+@media (max-width: 768.98px) {
+	
+	    
+	.popular-product__column {
+		
+		flex: 0 1 calc(50% - 30px); 
+		
+  }
+  
+  .popular-product {
+	padding-top: 15px;
+	
+}
+
+}
+	@media (max-width: 668.98px){
+		.popular-product__column {
+		
+			flex: 1 0 auto; 
+			justify-content: center;
+	  }
+	  .popular-product {
+		padding-top: 15px;
+		
+	}
+	.popular-product__image {
+		aspect-ratio: 50 / 50;
+		margin-bottom: 18px;
+		
+		
+	}
+
+	} 
