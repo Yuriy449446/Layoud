@@ -1,22 +1,21 @@
-
 /* Скидання стилів */
 @import url("reset.css");
 
 /* Основні стилі */
 body {
 	background-color: #333;
-	font-family: "Cormorant Infant;", sans-serif;
+	font-family: "Cormorant Infant", sans-serif;
 	background: #FFF;
-	
 }
+
 .wrapper {
 	min-height: 100%;
 	overflow: clip;
-
 	display: flex;
 	flex-direction: column;
 }
-.wrapper > main {
+
+.wrapper>main {
 	flex-grow: 1;
 }
 
@@ -27,70 +26,73 @@ body {
 	padding: 0 15px;
 }
 
+[class*="__box"] {
+	max-width: 1210px;
+	margin: 0 auto;
+	padding: 0 15px;
+
+}
+[class*="__limitation"]{
+	max-width: 1250px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
 
 
 
 .popular-product {
-	padding-top: clamp(1.25rem, 0.3187rem + 3.9735vw, 3.125rem);;
+	padding-top: clamp(1.25rem, 0.3187rem + 3.9735vw, 3.125rem);
+	;
 	text-align: center;
+	margin-bottom: 50px;
 }
+
 .popular-product__title {
 	color: #291403;
-font-family: "DM Serif Text";
-font-size: clamp(1.875rem, 1.0058rem + 3.7086vw, 3.625rem);
-margin-bottom: clamp(1.25rem, 0.7533rem + 2.1192vw, 2.25rem);
+	font-family: "DM Serif Text";
+	font-size: clamp(1.875rem, 1.0058rem + 3.7086vw, 3.625rem);
+	margin-bottom: clamp(1.25rem, 0.7533rem + 2.1192vw, 2.25rem);
 
 }
 
 .popular-product__info {
 	color: #818181;
-text-align: center;
-font-size: clamp(1.25rem, 0.9396rem + 1.3245vw, 1.875rem);
-font-weight: 700;
-line-height: 1.40; 
+	text-align: center;
+	font-size: clamp(1.25rem, 0.9396rem + 1.3245vw, 1.875rem);
+	font-weight: 700;
+	line-height: 1.40;
 }
 
-.popular-product__container {
-	
-}
 
 .popular-product__items {
 	display: flex;
-	flex: 0 1 25%;
 	margin: 0 -15px;
 	flex-wrap: wrap;
+
 }
 
- .popular-product__column {
-		padding: 0 15px;
-		flex: 0 1 25%; 
-		
-  }
-  
-	
-
-
-.popular-product__item {
+.popular-product__column {
 	padding: 0 15px;
+	flex: 0 1 25%;
+
 }
 
 .popular-product__image {
 	display: inline-block;
 	width: 100%;
 	height: 100%;
-	aspect-ratio: 271px / 270px;
+	aspect-ratio: 271 / 270;
 	object-fit: contain;
 	margin-bottom: 24px;
 }
-.popular-product__embossed-info  {
+
+.popular-product__embossed-info {
 	font-weight: 700;
-  line-height: 1.4;
-  color: #000;
-  margin-bottom: 12px;
-   white-space: nowrap;
+	line-height: 1.4;
+	color: #000;
+	margin-bottom: 12px;
 	font-size: 24px;
-	
-	
+
 }
 
 .popular-product__embossed-info a:hover {
@@ -101,66 +103,540 @@ line-height: 1.40;
 .popular-product__embossed-price {
 	display: inline-block;
 	font-weight: 700;
-  line-height: 1.40;
-  color: #000;
-  font-size: 24px;
+	line-height: 1.40;
+	color: #000;
+	font-size: 24px;
 }
+
 .popular-product__buttom a {
 	color: #FFF;
-font-family: "Ubuntu";
-font-size: 16px;
-font-weight: 500;
-line-height: 1.87; 
-padding: 12px 42.5px;
-background: #FF7A49;
-transition: background 0.3s ease 0s;
-margin-top: 80px;
+	font-family: "Ubuntu";
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 1.87;
+	padding: 12px 42.5px;
+	background: #FF7A49;
+	transition: background 0.3s ease 0s;
+	margin-top: 80px;
 }
 
 .popular-product__buttom a:hover {
-transition: background 0.3s ease 0s;
-background: #c74c20;
+	transition: background 0.3s ease 0s;
+	background: #c74c20;
+}
+
+/*__ ____ ___*/
+
+
+.our-product {
+	background: #0E333D;
+	padding-top: clamp(1.875rem, 0.3028rem + 6.7081vw, 5.25rem);
+
+}
+
+.our-product__title {
+	color: #FFF;
+	font-family: "DM Serif Text";
+	font-size: clamp(1.875rem, 1.3509rem + 2.236vw, 3rem);
+	text-align: center;
+	line-height: 1.27;
+	margin-bottom: 36px;
 }
 
 
-@media (max-width: 1024.98px){
-	.popular-product__column {
-		
-		flex: 1 0 auto; 
-		
-  }
+.our-product__info {
+	color: #EBEBEB;
+	font-family: "Raleway";
+	font-size: clamp(1rem, 0.8835rem + 0.4969vw, 1.25rem);
+	text-align: center;
+	font-weight: 500;
+	line-height: 1.27;
+	margin-bottom: 34px;
 }
+
+.our-product__list {
+	display: flex;
+	justify-content: space-between;
+	gap: 40px;
+	max-width: 350px;
+	margin: 0 auto;
+	margin-bottom: clamp(2.1875rem, 1.3648rem + 3.5102vw, 4.875rem);
+}
+
+
+
+.link__list {
+	color: #FFF;
+	font-family: "Raleway";
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	line-height: 1.27;
+
+}
+
+.link__list a:hover {
+	text-decoration-line: underline;
+}
+
+
+.our-product__items {
+	display: flex;
+	row-gap: 25px;
+	margin: 0 -15px;
+	flex-wrap: wrap;
+	padding-bottom: clamp(2.1875rem, 1.0587rem + 4.8163vw, 5.875rem);
+}
+
+.our-product__column {
+	padding: 0 15px;
+	flex: 0 1 25%;
+}
+
+.our-product__item {
+	color: #FFF;
+	font-family: "Cormorant Infant";
+	font-size: 24px;
+
+	font-weight: 700;
+	line-height: 1.40;
+}
+
+.our-product__image {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 271 / 270;
+	object-fit: contain;
+	margin-bottom: 24px;
+}
+
+.our-product__embossed-info {
+	margin-bottom: 12px;
+
+}
+
+.our-product__embossed-price {}
+
+/*__ ____ ___*/
+
+.ours-popular {
+	position: relative;
+	overflow: clip;
+	padding-top: clamp(3.125rem, 0.9414rem + 9.3168vw, 7.8125rem);
+	background-color: #f0f0f0;
+	padding-bottom: clamp(1.875rem, -0.5707rem + 10.4348vw, 7.125rem);
+}
+
+.ours-popular__title {
+	color: #000;
+	font-family: "DM Serif Text";
+	font-size: clamp(2.5rem, 1.9759rem + 2.236vw, 3.625rem);
+	margin-bottom: 22px;
+
+}
+
+.ours-popular__info {
+	color: #606060;
+	font-family: "Inter";
+	font-size: 20px;
+	font-style: normal;
+	line-height: 1.80;
+	margin-bottom: 53px;
+}
+
+
+.ours-popular__items {
+	display: flex;
+	row-gap: 25px;
+	margin: 0 -20px;
+	flex-wrap: wrap;
+
+}
+
+
+.ours-popular__column {
+	padding: 0 20px;
+	flex: 0 1 33.333%;
+
+}
+
+.ours-popular__item {}
+
+.ours-popular__image {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	aspect-ratio: 360 / 235;
+	object-fit: contain;
+	margin-bottom: 16px;
+}
+
+.ours-popular__rings-info {
+	color: #000;
+	font-family: "DM Serif Text";
+	font-size: 24px;
+	line-height: 1.2;
+	margin-bottom: 20px;
+}
+
+.urs-popular__rings-text {
+	color: #000;
+	font-family: "Inter";
+	font-size: 16px;
+	line-height: 1.60;
+	margin-bottom: 14px;
+}
+
+
+.urs-popular__rings-link {
+	color: #F55529;
+	font-family: "Inter";
+	font-size: 16px;
+	font-weight: 800;
+	line-height: 1.50;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.urs-popular__rings-link:hover {
+	color: #bd2e06;
+	transition: color 0.3s ease 0s;
+}
+
+.urs-popular__rings-link path:hover {
+	fill: #bd2e06;
+	transition: color 0.3s ease 0s;
+}
+
+
+
+
+.urs-popular__rings-link span {
+	display: inline-block;
+	width: 24px;
+	height: 24px;
+}
+
+
+.popular-product__buttom {}
+
+.ours-popular--deco {
+	background: url(../img/popular/deco.png)no-repeat;
+	background-position: right bottom;
+}
+
+/*_____  ______ _____*/
+
+
+.consulting {
+	
+	background-color: #37393F;
+	color: #FFF;
+	
+	
+}
+.consulting__content{
+	flex: 0 0 100%;
+}
+
+.consulting__limitation {
+	
+}
+.consulting__info {
+}
+/*
+.consulting__body{
+	max-width:610px ;
+	flex: 1 0 100%;
+	padding-top:clamp(3.125rem, 0.6842rem + 10.4142vw, 8.625rem);
+	
+}
+*/
+
+.consulting__body{
+	
+	width: 50%;
+	padding-top:clamp(3.125rem, 0.6842rem + 10.4142vw, 8.625rem);
+	
+}
+
+.consulting__title--why {
+	
+	font-family: "Inter";
+	font-size: 18px;
+	padding-left: 18px;
+	font-weight: 500;
+	position: relative;
+	padding-bottom: 18px;
+}
+.consulting__title--why::after{
+	content: "";
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width:12px ;
+	height: 12px;
+	background: #40DDB6;
+}
+
+.consulting__title--we {
+	
+font-family: "Poppins";
+font-size: 30px;
+font-weight: 600;
+line-height: 1.21; 
+padding-bottom: 18px;
+}
+.consulting__text {
+	
+font-family: "Inter";
+font-size: 18px;
+line-height: 1.46; 
+}
+.consulting__diagram {
+	display: flex;
+	column-gap: 15px;
+	padding: 36px 0;
+}
+.consulting__diagram img{
+	
+}
+
+
+.consulting__list {
+	display: flex;
+	flex-wrap: wrap;
+	row-gap: 23px;
+	position: relative;
+	padding-left: 45px;
+}
+
+
+
+
+
+
+.consulting__link {
+	
+	flex: 0 1 50%;
+	font-family: "Poppins";
+	font-size: 20px;
+	font-weight: 700;
+	
+	
+}
+.consulting__svg{
+	position: absolute;
+	
+	width: 27px;
+	height: 27px;
+	
+}
+
+
+.consulting__link span{
+	padding-left: 10px;
+	font-family: "Poppins";
+	font-size: 20px;
+	
+	font-weight: 400;
+	
+}
+
+
+.consulting__link mark{
+	color: #FFB342;
+font-family: "Poppins";
+font-size: 20px;
+background-color: #37393F;
+font-weight: 400;
+
+}
+.consulting__link--azure{
+	color: #40DDB6;
+	text-align: center;
+	font-family: "Inter";
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 600;
+	text-transform: capitalize;
+	text-decoration: underline;
+	position: relative;
+}
+.consulting__link--azure::after{
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 0;
+	
+	width: 100%;
+	height: 2px;
+	background:#40DDB6 ;
+}
+
+
+.consulting__img img {
+	max-width: 100%;
+	aspect-ratio: 867 / 748;
+}
+
+/*
+.consulting__img img {
+	aspect-ratio: 867 / 748;
+}
+*/
+
+@media(max-width:1440.98px) {
+	.ours-popular--deco {
+		background-size: 0px;
+
+	}
+}
+
+
+@media (max-width: 1024.98px) {
+
+	.popular-product__column,
+	.our-product__column {
+
+		flex: 1 1 50%;
+
+	}
+
+	.our-product__column:not(:last-child) {
+		margin-bottom: 25px;
+	}
+
+	.ours-popular__column {
+		flex: 1 1 50%;
+	}
+
+	.ours-popular__column:not(:last-child) {
+		margin-bottom: 50px;
+	}
+
+	.ours-popular__body-info {
+		padding: 0px 15px;
+	}
+   
+   .consulting__body{
+	
+		width: 100%;
+		
+		
+	}
+	.consulting__diagram{
+        justify-content: center;
+	}
+	.consulting__list{
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		row-gap: 26px;
+		margin-bottom: 30px;
+	}
+   
+} 
+
 
 @media (max-width: 768.98px) {
-	
-	    
-	.popular-product__column {
-		
-		flex: 0 1 calc(50% - 30px); 
-		
-  }
-  
-  .popular-product {
-	padding-top: 15px;
-	
-}
+
+
+
+	.popular-product {
+		padding-top: 15px;
+
+	}
+
+	.link__list {
+
+		font-size: 20px;
+
+
+	}
+
+	.our-product__column:not(:last-child) {
+		margin-bottom: 25px;
+	}
+
 
 }
-	@media (max-width: 668.98px){
-		.popular-product__column {
-		
-			flex: 1 0 auto; 
-			justify-content: center;
-	  }
-	  .popular-product {
-		padding-top: 15px;
-		
+
+@media (max-width: 668.98px) {
+
+	.popular-product__column,
+	.our-product__column {
+
+		flex: 1 0 auto;
+		justify-content: center;
+		align-items: center;
 	}
-	.popular-product__image {
+
+	.popular-product {
+		padding-top: 15px;
+
+	}
+
+
+	.popular-product__image,
+	.our-product__image {
 		aspect-ratio: 50 / 50;
 		margin-bottom: 18px;
-		
+
+	}
+
+	.our-product__list {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.link__list {
+
+		font-size: 20px;
+
+
+	}
+
+
+	.ours-popular__column {
+		flex: 0 1 100%;
+	}
+
+}
+
+@media(max-width:425.98px){
+	.consulting__diagram {
+		display: flex;
+		flex-direction: column;
+		row-gap: 15px;
+		align-self: center;
+		justify-content: center;
+	}
+
+   
+  
+	
+
+
+
+}
+
+@media(min-width:1024.98px){
+	.consulting{
+		display: flex;
+		column-gap: 92px;
+	}
+	.consulting__img{
+		flex: 0 0 50%;
+		transform: translateX(-100%);
 		
 	}
 
-	} 
+   
+
+
+}
