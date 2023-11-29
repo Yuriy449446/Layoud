@@ -216,7 +216,6 @@ body {
 
 }
 
-.our-product__embossed-price {}
 
 /*__ ____ ___*/
 
@@ -260,8 +259,6 @@ body {
 	flex: 0 1 33.333%;
 
 }
-
-.ours-popular__item {}
 
 .ours-popular__image {
 	display: inline-block;
@@ -311,16 +308,11 @@ body {
 }
 
 
-
-
 .urs-popular__rings-link span {
 	display: inline-block;
 	width: 24px;
 	height: 24px;
 }
-
-
-.popular-product__buttom {}
 
 .ours-popular--deco {
 	background: url(../img/popular/deco.png)no-repeat;
@@ -331,29 +323,15 @@ body {
 
 
 .consulting {
-	
 	background-color: #37393F;
 	color: #FFF;
-	
-	
+		
 }
+
 .consulting__content{
 	flex: 0 0 100%;
 }
 
-.consulting__limitation {
-	
-}
-.consulting__info {
-}
-/*
-.consulting__body{
-	max-width:610px ;
-	flex: 1 0 100%;
-	padding-top:clamp(3.125rem, 0.6842rem + 10.4142vw, 8.625rem);
-	
-}
-*/
 
 .consulting__body{
 	
@@ -400,9 +378,6 @@ line-height: 1.46;
 	column-gap: 15px;
 	padding: 36px 0;
 }
-.consulting__diagram img{
-	
-}
 
 
 .consulting__list {
@@ -410,13 +385,9 @@ line-height: 1.46;
 	flex-wrap: wrap;
 	row-gap: 23px;
 	position: relative;
-	padding-left: 45px;
+	
+	
 }
-
-
-
-
-
 
 .consulting__link {
 	
@@ -427,24 +398,14 @@ line-height: 1.46;
 	
 	
 }
-.consulting__svg{
-	position: absolute;
-	
-	width: 27px;
-	height: 27px;
-	
+
+
+.consulting__link a{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
 }
-
-
-.consulting__link span{
-	padding-left: 10px;
-	font-family: "Poppins";
-	font-size: 20px;
-	
-	font-weight: 400;
-	
-}
-
 
 .consulting__link mark{
 	color: #FFB342;
@@ -465,12 +426,12 @@ font-weight: 400;
 	text-decoration: underline;
 	position: relative;
 }
+
 .consulting__link--azure::after{
 	content: "";
 	position: absolute;
-	top: 100%;
+	top: 80%;
 	left: 0;
-	
 	width: 100%;
 	height: 2px;
 	background:#40DDB6 ;
