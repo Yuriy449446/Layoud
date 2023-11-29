@@ -347,7 +347,7 @@ body {
 	padding-left: 18px;
 	font-weight: 500;
 	position: relative;
-	padding-bottom: 18px;
+	margin-bottom: 18px;
 }
 .consulting__title--why::after{
 	content: "";
@@ -365,23 +365,25 @@ font-family: "Poppins";
 font-size: 30px;
 font-weight: 600;
 line-height: 1.21; 
-padding-bottom: 18px;
+margin-bottom: 18px;
 }
 .consulting__text {
 	
 font-family: "Inter";
 font-size: 18px;
 line-height: 1.46; 
+margin-bottom: 36px;
 }
 .consulting__diagram {
 	display: flex;
 	column-gap: 15px;
-	padding: 36px 0;
+	margin-bottom: 36px;
 }
 
 
 .consulting__list {
 	display: flex;
+	
 	flex-wrap: wrap;
 	row-gap: 23px;
 	position: relative;
@@ -423,7 +425,7 @@ font-weight: 400;
 	font-style: normal;
 	font-weight: 600;
 	text-transform: capitalize;
-	text-decoration: underline;
+	
 	position: relative;
 }
 
@@ -432,10 +434,12 @@ font-weight: 400;
 	position: absolute;
 	top: 80%;
 	left: 0;
-	width: 100%;
+	width: 110px;
 	height: 2px;
-	background:#40DDB6 ;
+	background:#40DDB6;
 }
+
+
 
 
 .consulting__img img {
@@ -443,11 +447,12 @@ font-weight: 400;
 	aspect-ratio: 867 / 748;
 }
 
-/*
-.consulting__img img {
-	aspect-ratio: 867 / 748;
+.footer__container h5{
+	width: 50px;
+	margin: 0 auto;
+	font-size: 16px;
+	padding:20px 0px ;
 }
-*/
 
 @media(max-width:1440.98px) {
 	.ours-popular--deco {
@@ -491,14 +496,20 @@ font-weight: 400;
 	.consulting__diagram{
         justify-content: center;
 	}
-	.consulting__list{
-		justify-content: center;
-		align-items: center;
-		flex-direction: column;
-		row-gap: 26px;
+	
+   .consulting__list{
+		margin-left: 10%;
 		margin-bottom: 30px;
+		
 	}
-   
+	.consulting__wrapper-list{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+	}
+
+
 } 
 
 
@@ -521,6 +532,26 @@ font-weight: 400;
 	.our-product__column:not(:last-child) {
 		margin-bottom: 25px;
 	}
+   .consulting__link{
+		flex: 0 1 100%;
+		
+		
+	}
+	.consulting__list{
+		margin-left: 0px;
+		display: flex;
+		flex-direction: column;
+		
+		
+	}
+	.consulting__wrapper-list{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		
+	}
+
+
 
 
 }
@@ -569,17 +600,22 @@ font-weight: 400;
 
 }
 
-@media(max-width:425.98px){
+@media(max-width:661.98px){
 	.consulting__diagram {
 		display: flex;
 		flex-direction: column;
 		row-gap: 15px;
 		align-self: center;
 		justify-content: center;
+		max-width: 267px;
+		margin: 0 auto;
+	}
+	
+	.consulting__wrapper-list{
+		padding-top: 30px;
+		
 	}
 
-   
-  
 	
 
 
