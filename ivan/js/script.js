@@ -132,5 +132,26 @@ const orderImg = document.querySelector('.popup3_order');
 const order = document.querySelector(".popup3_btn_right");
 order.addEventListener('click', function () {
 	orderImg.classList.toggle('hidden');
+	document.documentElement.classList.toggle('open');
 	
 });
+  // Прокрутка сайна нагору
+  // Get the scroll-top-container element
+  var scrollContainer = document.querySelector('.scroll-top-container');
+
+  // Show/hide the scroll-top-container based on scroll position
+  window.addEventListener('scroll', function () {
+		if (window.scrollY > 500) {
+			 scrollContainer.style.display = 'block';
+		} else {
+			 scrollContainer.style.display = 'none';
+		}
+  });
+
+  // Add click event listener to scroll to the top
+  scrollContainer.addEventListener('click', function () {
+		window.scrollTo({
+			 top: 0,
+			 behavior: 'smooth'  // Add smooth scrolling effect
+		});
+  });

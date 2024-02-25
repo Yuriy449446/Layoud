@@ -1958,9 +1958,6 @@ body {
   padding-left: 2.6875rem;
   position: relative;
 }
-.business__item:not(:last-child) {
-  margin-bottom: 1.125rem;
-}
 .business__item h4 {
   color: #FFF;
   font-family: "Poppins";
@@ -3489,4 +3486,23 @@ body {
 
 .footer__top-info {
   margin-bottom: 10px;
+}
+
+.scroll-top-container {
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+  bottom: 20px;
+  height: 40px;
+  width: 40px;
+  position: fixed;
+  border-radius: 50%;
+  right: 20px;
+  text-align: center;
+  overflow: hidden;
+  z-index: 9999;
+  opacity: 0.5;
+}
+.scroll-top-container img {
+  width: 40px;
+  border-radius: 50%;
 }

@@ -1783,7 +1783,7 @@ body {
 	// .business__item
 	&__item {
 		&:not(:last-child){
-			margin-bottom: toRem(18);
+			//margin-bottom: toRem(18);
 		}
 		padding-bottom: toRem(21);
 		border-bottom:1px solid #FFF; 
@@ -3287,3 +3287,21 @@ body {
 		margin-bottom: 10px;
 	} 
 	
+		.scroll-top-container {
+			
+			box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+			bottom: 20px;
+			height: 40px;
+			width: 40px;
+			position: fixed;
+			border-radius: 50%;
+			right: 20px;
+			text-align: center;
+			overflow: hidden;
+			z-index: 9999;
+			opacity: 0.5;
+			img{
+				width: 40px;
+				border-radius: 50%;
+			}
+		}
