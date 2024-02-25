@@ -312,6 +312,7 @@ body {
 		@media (max-width: toEm(1088)) {
 		padding-top: toRem(50);
 		flex-direction: column;
+		
 	}
 	
 	.open & {
@@ -320,7 +321,7 @@ body {
 		  row-gap: 20px;
 		  transition: all 3s ease;
 	  }
-	@media (max-width: toEm(1088)) {
+	@media (max-width: toEm(1125.98)) {
 		position: fixed;
 		width: 100%;
 		height: 100%;

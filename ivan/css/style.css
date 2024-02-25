@@ -427,7 +427,7 @@ body {
   -webkit-transition: all 3s ease;
   transition: all 3s ease;
 }
-@media (max-width: 68em) {
+@media (max-width: 70.37375em) {
   .info {
     position: fixed;
     width: 100%;
