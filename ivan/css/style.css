@@ -80,6 +80,20 @@ body {
   line-height: 1.2;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-purple);
+  border-radius: 5px;
+}
+
 .wrapper {
   overflow: clip;
   display: -webkit-box;
@@ -397,6 +411,10 @@ body {
 @media (max-width: 68em) {
   .info {
     padding-top: 3.125rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 .open .info {
@@ -406,6 +424,8 @@ body {
           flex-direction: column;
   padding-top: 180px;
   row-gap: 20px;
+  -webkit-transition: all 3s ease;
+  transition: all 3s ease;
 }
 @media (max-width: 68em) {
   .info {
@@ -415,21 +435,29 @@ body {
     overflow: auto;
     top: 0;
     left: -100%;
-    -webkit-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+    padding-top: 180px;
+    row-gap: 20px;
   }
 }
 .open .info {
-  left: 0;
+  left: 0%;
   background-color: #fff;
   z-index: 2;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all 1.3s ease;
+  transition: all 1.3s ease;
+  padding-top: 180px;
 }
 .info__item {
   color: #37393F;
   text-align: center;
   font-size: 1.125rem;
+}
+@media (max-width: 68em) {
+  .info__item {
+    font-size: 1.75rem;
+  }
 }
 .open .info__item {
   font-size: 1.75rem;
@@ -439,6 +467,11 @@ body {
   text-align: center;
   font-size: 1.125rem;
   position: relative;
+}
+@media (max-width: 68em) {
+  .info__item--arrow {
+    font-size: 1.75rem;
+  }
 }
 .open .info__item--arrow {
   font-size: 1.75rem;
@@ -1707,7 +1740,7 @@ body {
   }
 }
 .item-client__text {
-  color: #0a0404;
+  color: #dacece;
   font-family: "Inter";
   font-size: 1.125rem;
   line-height: 1.46; /* 26.314px */
@@ -2561,7 +2594,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 0.875rem;
+  margin-bottom: 0.25rem;
 }
 @media (max-width: 75em) {
   .footer__top-info {
@@ -2977,9 +3010,21 @@ body {
      object-fit: cover;
 }
 
+.swiper-pagination-bullet.swiper-pagination-bullet {
+  background: #b1a9b0;
+}
+
+.swiper-pagination-bullet-active.swiper-pagination-bullet-active {
+  background: #e3e4e9;
+}
+
+.swiper-pagination-bullet-active.swiper-pagination-bullet-active {
+  background: #e3e4e9;
+}
+
 /*     */
 .info-sushi__container {
-  padding: 50px 0px;
+  padding: 50px 10px;
 }
 .info-sushi__taitle {
   font-family: "Poppins", sans-serif;

@@ -16,6 +16,22 @@ body {
 
 }
 
+
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--main-purple);
+  border-radius: 5px;
+}
+
 .wrapper {
 	overflow: clip;
 	display: flex;
@@ -293,15 +309,16 @@ body {
 	row-gap: 15px;
 	column-gap: toRem(40);
 	align-items: center;
-	@media (max-width: toEm(1088)) {
+		@media (max-width: toEm(1088)) {
 		padding-top: toRem(50);
+		flex-direction: column;
 	}
 	
 	.open & {
 		flex-direction: column;
 		  	padding-top: 180px;
 		  row-gap: 20px;
-		  
+		  transition: all 3s ease;
 	  }
 	@media (max-width: toEm(1088)) {
 		position: fixed;
@@ -309,20 +326,28 @@ body {
 		height: 100%;
 		overflow: auto;
 		top: 0;
-		left: -100%;
-		transition: all 0.3s ease;
+	   left: -100%;
+		transition: all 1s ease;
+		padding-top: 180px;
+		row-gap: 20px;
+		
 	} 
 	.open & {
-		left: 0;
+		left: 0%;
 		background-color: #fff;
 		z-index: 2;
-		transition: all 0.3s ease;
+		transition: all 1.3s ease;
+		padding-top: 180px;
 	}
 
 	&__item {
 		color: #37393F;
 		text-align: center;
 		font-size: toRem(18);
+		@media (max-width: toEm(1088)) {
+			font-size: toRem(28);
+			
+		} 
 		.open &{
 			font-size: toRem(28);
 		} 
@@ -331,6 +356,10 @@ body {
 			text-align: center;
 			font-size: toRem(18);
 			position: relative;
+			@media (max-width: toEm(1088)) {
+				font-size: toRem(28);
+				
+			} 
 			.open &{
 				font-size: toRem(28);
 			}
@@ -344,7 +373,7 @@ body {
 				height: 8px;
 				transition: all 0.3s;
 				.open &{
-					display: none;
+				  display: none;
 				}
 			}
 
@@ -1542,7 +1571,7 @@ body {
 	}
 	// .item-client__text
 	&__text {
-		color: #0a0404;
+		color: #dacece;
 		font-family: "Inter";
 		font-size: toRem(18);
 		line-height: 1.46; /* 26.314px */
@@ -2347,7 +2376,7 @@ body {
 		justify-content: space-between;
 		column-gap: toRem(15);
 		align-items: center;
-		margin-bottom: toRem(14);
+		margin-bottom: toRem(4);
 		@media (max-width: toEm(1200)) {
 			display: grid;
 			row-gap: toRem(5);
@@ -2761,12 +2790,33 @@ body {
 	object-fit: cover;
 }
 
+
+.swiper-pagination-bullet.swiper-pagination-bullet{
+	
+	background: #b1a9b0;
+
+} 
+
+.swiper-pagination-bullet-active.swiper-pagination-bullet-active{
+	
+		background: #e3e4e9;
+	
+} 
+
+.swiper-pagination-bullet-active.swiper-pagination-bullet-active{
+	
+	background: #e3e4e9;
+
+} 
+
+
+
 /*     */
 .info-sushi {
 	
 	// .info-sushi__container
 	&__container {
-		padding: 50px 0px;
+		padding: 50px 10px;
 		
 	}
 	// .info-sushi__taitle
