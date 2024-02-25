@@ -94,6 +94,11 @@ body {
   border-radius: 5px;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
 .wrapper {
   overflow: clip;
   display: -webkit-box;
@@ -276,7 +281,7 @@ body {
 }
 
 .sub-heder {
-  padding: 34px 0px;
+  padding: 20px 0px;
 }
 .sub-heder__container {
   display: -webkit-box;
@@ -326,7 +331,7 @@ body {
   top: 50%;
   margin-top: -1px;
 }
-@media (max-width: 68em) {
+@media (max-width: 70.31125em) {
   .sub-heder__container button {
     display: block;
     opacity: 1;
@@ -408,7 +413,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
 }
-@media (max-width: 68em) {
+@media (max-width: 70.37375em) {
   .info {
     padding-top: 3.125rem;
     -webkit-box-orient: vertical;
@@ -454,7 +459,7 @@ body {
   text-align: center;
   font-size: 1.125rem;
 }
-@media (max-width: 68em) {
+@media (max-width: 70.37375em) {
   .info__item {
     font-size: 1.75rem;
   }
@@ -468,7 +473,7 @@ body {
   font-size: 1.125rem;
   position: relative;
 }
-@media (max-width: 68em) {
+@media (max-width: 70.37375em) {
   .info__item--arrow {
     font-size: 1.75rem;
   }
@@ -568,7 +573,7 @@ body {
   font-weight: 600;
   text-transform: capitalize;
   background: #6B77E5;
-  padding: 1.375rem 2.1875rem;
+  padding: 0.75rem 1.5625rem;
   white-space: nowrap;
   border-radius: 10px;
   z-index: 7;
@@ -592,14 +597,15 @@ body {
   }
 }
 
-.open body {
+.open body,
+.popup body {
   overflow: hidden;
 }
 
 .page {
   padding-top: 12.5rem;
 }
-@media (max-width: 68em) {
+@media (max-width: 70.37375em) {
   .page {
     padding-top: 8.25rem;
   }
@@ -1647,7 +1653,7 @@ body {
 
 .our-client__container {
   padding-top: clamp(3.75rem, 2.8898rem + 4.3011vw, 6.25rem);
-  padding-bottom: clamp(5rem, 0.6667rem + 21.6667vw, 17.1875rem);
+  padding-bottom: clamp(1.875rem, 0.7997rem + 5.3763vw, 5rem);
 }
 .our-client__items {
   border-top: 2px solid #C5C5C5;
@@ -3300,6 +3306,16 @@ body {
      object-fit: cover;
 }
 
+.popup3_clouse img {
+  cursor: pointer;
+  padding: 10px;
+}
+.popup3_clouse img:hover {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 @media (max-width: 963px) {
   .popup3_body {
     max-width: 100%;
@@ -3478,10 +3494,16 @@ body {
   color: #DDD;
   font-size: 18px;
   margin-bottom: 5px;
+  padding-top: 10px;
 }
 .footer__top-info h5 {
   color: #DDD;
   font-size: 16px;
+}
+
+#yutube svg {
+  path: red;
+  fill: #F4F4F4;
 }
 
 .footer__top-info {

@@ -119,22 +119,27 @@ const swiper = new Swiper('.swiper', {
 
 	tabConsult.addEventListener('click', function () {
 		 tabMain.classList.remove('hidden');
-		 
+		 document.documentElement.classList.toggle('popup');
 	});
    tabHeaders.addEventListener('click', function () {
 		tabMain.classList.add('hidden');
-		
+		document.documentElement.classList.toggle('popup');
   });
 
 });
+
 
 const orderImg = document.querySelector('.popup3_order');
 const order = document.querySelector(".popup3_btn_right");
 order.addEventListener('click', function () {
 	orderImg.classList.toggle('hidden');
-	document.documentElement.classList.toggle('open');
+	
 	
 });
+
+
+
+
   // Прокрутка сайна нагору
   // Get the scroll-top-container element
   var scrollContainer = document.querySelector('.scroll-top-container');
