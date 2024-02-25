@@ -480,11 +480,16 @@ body {
 		text-wrap: wrap;
 	}
 }
-.open body,
+.open body {
+	overflow: hidden;
+
+}
+
 .popup body {
 	overflow: hidden;
 
 }
+
 
 .page {
 	padding-top: toRem(200);
