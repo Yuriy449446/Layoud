@@ -111,31 +111,37 @@ const swiper = new Swiper('.swiper', {
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const tabHeaders = document.querySelector('.popup3_clouse');
+    const tabMain = document.querySelector('.popup3');
+    const tabConsult = document.querySelector('.sub-heder__link');
+    const orderImg = document.querySelector('.popup3_order');
+    const order = document.querySelector(".popup3_btn_right");
 
- document.addEventListener('DOMContentLoaded', function () {
-	const tabHeaders = document.querySelector('.popup3_clouse');
-	const tabMain = document.querySelector('.popup3');
-	const tabConsult = document.querySelector('.sub-heder__link');
+    tabConsult.addEventListener('click', function () {
+        tabMain.classList.remove('hidden');
+        document.documentElement.classList.toggle('popup');
+        // Перевірка і приховання orderImg
+        if (tabMain.classList.contains('hidden')) {
+            orderImg.classList.add('hidden');
+        }
+    });
 
-	tabConsult.addEventListener('click', function () {
-		 tabMain.classList.remove('hidden');
-		 document.documentElement.classList.toggle('popup');
-	});
-   tabHeaders.addEventListener('click', function () {
-		tabMain.classList.add('hidden');
-		document.documentElement.classList.toggle('popup');
-  });
+    tabHeaders.addEventListener('click', function () {
+        tabMain.classList.add('hidden');
+        document.documentElement.classList.toggle('popup');
+        // Приховання orderImg
+        orderImg.classList.add('hidden');
+    });
 
+    order.addEventListener('click', function () {
+        orderImg.classList.toggle('hidden');
+    });
 });
 
 
-const orderImg = document.querySelector('.popup3_order');
-const order = document.querySelector(".popup3_btn_right");
-order.addEventListener('click', function () {
-	orderImg.classList.toggle('hidden');
-	
-	
-});
+
+
 
 
 

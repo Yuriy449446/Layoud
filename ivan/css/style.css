@@ -429,8 +429,8 @@ body {
           flex-direction: column;
   padding-top: 180px;
   row-gap: 20px;
-  -webkit-transition: all 3s ease;
-  transition: all 3s ease;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 @media (max-width: 70.37375em) {
   .info {
@@ -440,8 +440,8 @@ body {
     overflow: auto;
     top: 0;
     left: -100%;
-    -webkit-transition: all 1s ease;
-    transition: all 1s ease;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
     padding-top: 180px;
     row-gap: 20px;
   }
@@ -450,8 +450,8 @@ body {
   left: 0%;
   background-color: #fff;
   z-index: 2;
-  -webkit-transition: all 1.3s ease;
-  transition: all 1.3s ease;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
   padding-top: 180px;
 }
 .info__item {
@@ -3026,6 +3026,18 @@ body {
 
 .swiper-pagination-bullet-active.swiper-pagination-bullet-active {
   background: #e3e4e9;
+}
+
+@media (max-width: 31.25em) {
+  .swiper-button-next:after, .swiper-button-prev:after {
+    font-family: swiper-icons;
+    font-size: 30px !important;
+    font-weight: 600;
+    text-transform: none !important;
+    letter-spacing: 0;
+    font-variant: initial;
+    line-height: 1;
+  }
 }
 
 /*     */

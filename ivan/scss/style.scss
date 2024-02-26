@@ -317,7 +317,7 @@ body {
 		flex-direction: column;
 		  	padding-top: 180px;
 		  row-gap: 20px;
-		  transition: all 3s ease;
+		  transition: all 0.3s linear;
 	  }
 	@media (max-width: toEm(1125.98)) {
 		position: fixed;
@@ -326,7 +326,7 @@ body {
 		overflow: auto;
 		top: 0;
 	   left: -100%;
-		transition: all 1s ease;
+		transition: all 0.3s linear;
 		padding-top: 180px;
 		row-gap: 20px;
 		
@@ -335,7 +335,7 @@ body {
 		left: 0%;
 		background-color: #fff;
 		z-index: 2;
-		transition: all 1.3s ease;
+		transition: all 0.3s linear;
 		padding-top: 180px;
 	}
 
@@ -2814,8 +2814,18 @@ body {
 	background: #e3e4e9;
 
 } 
-
-
+.swiper-button-next:after,.swiper-button-prev:after {
+	@media (max-width: toEm(500)) {
+		font-family: swiper-icons;
+	font-size: 30px !important;
+	font-weight: 600;
+	text-transform: none!important;
+	letter-spacing: 0;
+	font-variant: initial;
+	line-height: 1
+	}
+	
+}
 
 /*     */
 .info-sushi {
