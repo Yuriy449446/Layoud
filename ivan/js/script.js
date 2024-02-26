@@ -138,7 +138,20 @@ document.addEventListener('DOMContentLoaded', function () {
         orderImg.classList.toggle('hidden');
     });
 });
-
+ 
+  
+function confirmOrder() {
+	// Виводимо повідомлення "Підтвердити замовлення"
+	var confirmation = confirm("Підтвердити замовлення?");
+	
+	// Перевіряємо результат від користувача
+	if (confirmation) {
+	  alert("Замовлення підтверджено!");
+	} else {
+	  alert("Замовлення скасовано.");
+	}
+ }
+ 
 
 
 
