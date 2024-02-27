@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
  
-  
+/*
 function confirmOrder() {
 	// Виводимо повідомлення "Підтвердити замовлення"
 	var confirmation = confirm("Підтвердити замовлення?");
@@ -152,6 +152,27 @@ function confirmOrder() {
 	}
  }
  
+*/
+  
+  const tabOrderFast = document.querySelectorAll('.item__link');
+  const tabFormFast = document.querySelector('.page__check');
+  const tabFormClouse = document.querySelector('.check-out_clouse');
+  tabOrderFast.forEach(icon => {
+	icon.addEventListener('click', function () {
+		tabFormFast.classList.remove('hidden');
+		 document.documentElement.classList.toggle('popup');
+		 
+	});
+});
+tabFormClouse.addEventListener('click', function () {
+	tabFormFast.classList.add('hidden');
+	document.documentElement.classList.toggle('popup');
+	
+});
+
+	
+	
+
 
 
 
@@ -179,3 +200,25 @@ function confirmOrder() {
 			 behavior: 'smooth'  // Add smooth scrolling effect
 		});
   });
+
+
+  /* перевірка відправлення форми*/ 
+   
+  
+  document.getElementById('form-check-phone').addEventListener('input', function () {
+	var phoneValue = this.value;
+
+	// Remove non-digit characters
+	var cleanedValue = phoneValue.replace(/\D/g, '');
+
+	// Update the input value with cleaned value
+	this.value = cleanedValue;
+
+	// Clear previous error message
+	document.getElementById('phoneError').innerText = '';
+
+	// Check if there are non-digit characters in the cleaned value
+	if (/[^0-9]/.test(cleanedValue)) {
+		 document.getElementById('phoneError').innerText = 'Введіть лише цифри у поле "Телефон".';
+	}
+});
