@@ -3241,7 +3241,7 @@ body {
 			  column-gap: 32px;
 	row-gap: 27px;
 	
-	padding-bottom: clamp(5rem, 3.3659rem + 8.0447vw, 9.5rem);
+	padding-bottom: 30px;
 	@media (max-width: 960.98px) {
 		grid-template-columns: 1fr;
 		padding-bottom: 20px;
@@ -3256,7 +3256,9 @@ body {
 	}
 	 
  }
- 
+ .business__title{
+	padding-top: 50px;
+ }
  
  .item {
 	background: #F4F4F4;
@@ -3479,7 +3481,7 @@ body {
 			
 			@media (max-height: 600.98px) {
 				
-				padding-top: 180px;
+				padding-top: 80px;
 			 }
 		}
 		

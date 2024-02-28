@@ -3459,7 +3459,7 @@ body {
   -moz-column-gap: 32px;
   column-gap: 32px;
   row-gap: 27px;
-  padding-bottom: clamp(5rem, 3.3659rem + 8.0447vw, 9.5rem);
+  padding-bottom: 30px;
 }
 @media (max-width: 960.98px) {
   .business__items {
@@ -3475,6 +3475,10 @@ body {
   .business__item {
     padding: 30px 20px;
   }
+}
+
+.business__title {
+  padding-top: 50px;
 }
 
 .item {
@@ -3709,7 +3713,7 @@ body {
 }
 @media (max-height: 600.98px) {
   .check-out {
-    padding-top: 180px;
+    padding-top: 80px;
   }
 }
 
