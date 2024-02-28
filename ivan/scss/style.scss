@@ -488,12 +488,12 @@ body {
 }
 .open body {
 	overflow: hidden;
-
+  
 }
 
 .popup body {
 	overflow: hidden;
-
+	
 }
 
 
@@ -1501,9 +1501,9 @@ body {
 .our-client {
 	// .our-client__container
 	&__container {
-		padding-top:clamp(3.75rem, 2.8898rem + 4.3011vw, 6.25rem);
+		padding-top:30px;
 		//padding-bottom: clamp(5rem, 0.6667rem + 21.6667vw, 17.1875rem);
-		padding-bottom:clamp(1.875rem, 0.7997rem + 5.3763vw, 5rem);;
+		padding-bottom:50px;
 	}
 	// .our-client__items
 	&__items {
@@ -2915,9 +2915,47 @@ body {
 	}
 	// .info-sushi__img
 	&__img {
+		display: grid;
 		transition: all 0.3s ease 0s;
+				height: 100%;
+		  
+		 
+		h5{
+			
+			font-size: 16px;
+			color: #e3e4e9;
+		}
+		h4{
+			font-size: 18px;
+			color: #e3e4e9;
+			font-weight: 600;
+			font-family: "Cabin";
+			display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+	 height: 40px;
+		}
+		button{
+			display:block;
+			padding: 10px 15px;
+			font-size: 18px;
+			color: #e3e4e9;
+			border: 3px solid#e3e4e9;
+			border-radius: 15px;
+			transition: all 0.3s ease 0s;
+			justify-content: flex-end;
+			@media (any-hover: hover) {
+				 &:hover{
+				  border:3px solid #FFB342;
+				  transform: scale(0.95);
+				  
+			  }
+		  }
+		}
+
 		@media (any-hover: hover) {
-			 a:hover {
+			 &:hover {
 				outline: #FFB342;
 				transform: scale(0.9);
 				transition: all 0.3s ease 0s;
@@ -2928,6 +2966,8 @@ body {
 			object-fit: cover;
 			width: 100%;
 			border: solid 3px transparent;
+			transition: all 0.3s ease 0s;
+			margin-bottom: 5px;
 			@media (any-hover: hover) {
 				&:hover {
 					border: solid 3px yellow;
@@ -2939,6 +2979,18 @@ body {
 	}
 	
 	
+}
+.info-sushi__wraper{
+	align-self: flex-end;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.info-sushi__prase{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	align-self: flex-start;
 }
 
 .info-sushi__gif{
@@ -3192,7 +3244,7 @@ body {
 	padding-bottom: clamp(5rem, 3.3659rem + 8.0447vw, 9.5rem);
 	@media (max-width: 960.98px) {
 		grid-template-columns: 1fr;
-		
+		padding-bottom: 20px;
 	 }
  }
  
@@ -3390,7 +3442,7 @@ body {
 			right: 20px;
 			text-align: center;
 			overflow: hidden;
-			z-index: 9999;
+			z-index: 15;
 			opacity: 0.5;
 			img{
 				width: 40px;
@@ -3424,6 +3476,7 @@ body {
 			justify-content: center;
 			align-items: center;
 			overflow: auto;
+			
 			@media (max-height: 600.98px) {
 				
 				padding-top: 180px;

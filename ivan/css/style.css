@@ -1658,8 +1658,8 @@ body {
 }
 
 .our-client__container {
-  padding-top: clamp(3.75rem, 2.8898rem + 4.3011vw, 6.25rem);
-  padding-bottom: clamp(1.875rem, 0.7997rem + 5.3763vw, 5rem);
+  padding-top: 30px;
+  padding-bottom: 50px;
 }
 .our-client__items {
   border-top: 2px solid #C5C5C5;
@@ -3108,11 +3108,49 @@ body {
   }
 }
 .info-sushi__img {
+  display: grid;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  height: 100%;
+}
+.info-sushi__img h5 {
+  font-size: 16px;
+  color: #e3e4e9;
+}
+.info-sushi__img h4 {
+  font-size: 18px;
+  color: #e3e4e9;
+  font-weight: 600;
+  font-family: "Cabin";
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  height: 40px;
+}
+.info-sushi__img button {
+  display: block;
+  padding: 10px 15px;
+  font-size: 18px;
+  color: #e3e4e9;
+  border: 3px solid #e3e4e9;
+  border-radius: 15px;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 @media (any-hover: hover) {
-  .info-sushi__img a:hover {
+  .info-sushi__img button:hover {
+    border: 3px solid #FFB342;
+    -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+            transform: scale(0.95);
+  }
+}
+@media (any-hover: hover) {
+  .info-sushi__img:hover {
     outline: #FFB342;
     -webkit-transform: scale(0.9);
         -ms-transform: scale(0.9);
@@ -3127,6 +3165,9 @@ body {
      object-fit: cover;
   width: 100%;
   border: solid 3px transparent;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  margin-bottom: 5px;
 }
 @media (any-hover: hover) {
   .info-sushi__img img:hover {
@@ -3134,6 +3175,32 @@ body {
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
   }
+}
+
+.info-sushi__wraper {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.info-sushi__prase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }
 
 .info-sushi__gif {
@@ -3397,6 +3464,7 @@ body {
 @media (max-width: 960.98px) {
   .business__items {
     grid-template-columns: 1fr;
+    padding-bottom: 20px;
   }
 }
 
@@ -3596,7 +3664,7 @@ body {
   right: 20px;
   text-align: center;
   overflow: hidden;
-  z-index: 9999;
+  z-index: 15;
   opacity: 0.5;
 }
 .scroll-top-container img {
