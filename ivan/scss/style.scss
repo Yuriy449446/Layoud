@@ -200,7 +200,9 @@ body {
 		justify-content: space-between;
 		column-gap: toRem(15);
 		align-items: center;
-		
+		@media (max-width: toEm(420.98)) {
+			column-gap: toRem(5);
+		}
 		& button {
 			width: 30px;
 			display: block;
@@ -208,7 +210,7 @@ body {
 			height: 18px;
 			position: relative;
 			z-index: 60;
-	
+	      padding-right: 10px;
 			display: none;
 			opacity: 0;
 	
@@ -482,8 +484,9 @@ body {
 		font-size: toRem(14);
 		padding: toRem(12) toRem(25);
 	}
-	@media (max-width: toEm(370.98)) {
+	@media (max-width: toEm(425.98)) {
 		text-wrap: wrap;
+		padding: toRem(10) toRem(5);
 	}
 }
 .open body {
@@ -2939,6 +2942,7 @@ body {
 		button{
 			display:block;
 			padding: 10px 15px;
+			margin-top: 10px;
 			font-size: 18px;
 			color: #e3e4e9;
 			border: 3px solid#e3e4e9;
@@ -3593,4 +3597,50 @@ body {
 			gap: 10px;
 			font-weight: 400;
 		}
+		
+		.header__actions {
+			flex-shrink: 0;
+		}
+		.actions-header {
+			display: flex;
+			align-items: center;
+			gap: 23px;
+			position: relative;
+			z-index: 25;
+		}
+		.actions-header__item {
+			flex: 0 0 32px;
+			position: relative;
+			z-index: 25;
+			transition: transform 0.3s;
+		}
+		
+		@media (any-hover: hover) {
+			.actions-header__item:hover {
+				transform: scale(1.1);
+			}
+		}
+		
+		.actions-header__item img {
+			max-width: 100%;
+			
+			
+		}
+		.actions-header__item span {
+			position: absolute;
+			z-index: 55;
+			right: 0;
+			top: 0;
+			border-radius: 50%;
+			background-color: #ff3333;
+			width: 12px;
+			height: 12px;
+			color: #fff;
+			z-index: 999;
+			font-size: 9px;
+			text-align: center;
+			line-height: 12px;
+			display: block;
+		}
+
 		
