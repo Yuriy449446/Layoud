@@ -2958,24 +2958,19 @@ body {
 		  }
 		}
 
-		@media (any-hover: hover) {
-			 &:hover {
-				outline: #FFB342;
-				transform: scale(0.9);
-				transition: all 0.3s ease 0s;
-			}
-		}
+		
 		img{
 			aspect-ratio: 300 / 200;
 			object-fit: cover;
 			width: 100%;
 			border: solid 3px transparent;
 			transition: all 0.3s ease 0s;
-			margin-bottom: 5px;
+			margin-bottom: 10px;
 			@media (any-hover: hover) {
 				&:hover {
 					border: solid 3px yellow;
 				  transition: all 0.3s ease 0s;
+				  transform: scale(0.95);
 			  }
 		  }
 		}
@@ -2984,6 +2979,8 @@ body {
 	
 	
 }
+
+
 .info-sushi__wraper{
 	align-self: flex-end;
 	display: flex;
@@ -3391,10 +3388,7 @@ body {
 		
 	 }
  }
- #prise{
-	
- }
-
+ 
  
 
 
@@ -3641,6 +3635,23 @@ body {
 			text-align: center;
 			line-height: 12px;
 			display: block;
+			
+		}
+		#span{
+			transform: scale(1);
 		}
 
-		
+		#info-sushi-sale{
+        color: #9a0b28;
+		 text-decoration: line-through;
+		font-size: 16px;
+		}
+		#info-sushi-prase{
+        color: #DDD;
+		}
+		.info-sushi__prase{
+			span{
+				color: #DDD;
+				font-size: 18px;
+			}
+		}

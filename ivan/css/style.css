@@ -3159,16 +3159,6 @@ body {
             transform: scale(0.95);
   }
 }
-@media (any-hover: hover) {
-  .info-sushi__img:hover {
-    outline: #FFB342;
-    -webkit-transform: scale(0.9);
-        -ms-transform: scale(0.9);
-            transform: scale(0.9);
-    -webkit-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-  }
-}
 .info-sushi__img img {
   aspect-ratio: 300/200;
   -o-object-fit: cover;
@@ -3177,13 +3167,16 @@ body {
   border: solid 3px transparent;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 @media (any-hover: hover) {
   .info-sushi__img img:hover {
     border: solid 3px yellow;
     -webkit-transition: all 0.3s ease 0s;
     transition: all 0.3s ease 0s;
+    -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+            transform: scale(0.95);
   }
 }
 
@@ -3892,4 +3885,25 @@ body {
   text-align: center;
   line-height: 12px;
   display: block;
+}
+
+#span {
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+
+#info-sushi-sale {
+  color: #9a0b28;
+  text-decoration: line-through;
+  font-size: 16px;
+}
+
+#info-sushi-prase {
+  color: #DDD;
+}
+
+.info-sushi__prase span {
+  color: #DDD;
+  font-size: 18px;
 }
