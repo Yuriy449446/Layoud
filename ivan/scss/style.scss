@@ -9,7 +9,8 @@
 
 body {
 	//background: #FFF;
-	background: #2e2f34;
+	//background: #2e2f34;
+	background: rgba(4, 151, 158, 1.00);
 		color: #7D7D7D;
 	font-family: "Inter", sans-serif;
 	line-height: 1.2;
@@ -466,8 +467,8 @@ body {
 	font-size: toRem(18);
 	font-style: normal;
 	font-weight: 600;
-	text-transform: capitalize;
-	background: #6B77E5;
+	
+	background: #04979e;
 	padding: toRem(12) toRem(25);
 	white-space: nowrap;
 	border-radius: 10px;
@@ -475,7 +476,7 @@ body {
 
 	@media (any-hover: hover) {
 		&:hover {
-			background: #1928b2;
+			background: #a3b219;
 			transition: all 0.3s ease 0s;
 		}
 	}
@@ -1550,7 +1551,7 @@ body {
 			height:50px;
 			position: relative;
 			bottom: 7px;
-			background: url(../img/brend/logo.svg);
+			background: url(../img/ivan/ivan-logo.jpeg);
 			flex: 0 0 50px;
 			border-radius: 50%;
 			background-size: contain;
@@ -1734,6 +1735,7 @@ body {
 				font-weight: 500;
 				display: flex;
 		column-gap:6px;
+		
 		&:not(:last-child){
 			margin-bottom: toRem(16);
 		}
@@ -1749,6 +1751,7 @@ body {
 			
 			
 		}
+		
 	}
 	// .business__sub-title
 	&__sub-title {
@@ -1757,6 +1760,7 @@ body {
 		font-size: toRem(40);
 		font-weight: 700;
 		line-height: 1.21; /* 48.4px */
+		
 		&:not(:last-child){
 			margin-bottom: toRem(20);
 		}
@@ -1837,6 +1841,8 @@ body {
 	&__free {
 	}
 }
+
+
 .diagram-business {
 	// .diagram-business__img
 	align-items: center;
@@ -2377,7 +2383,7 @@ body {
 
 
 .footer {
-	background-color: #37393F;
+	background-color: rgba(4, 151, 158, 1.00);
 
 	// .footer__container
 	&__container {
@@ -3221,13 +3227,13 @@ body {
 			width:50px;
 			height:50px;
 			position: relative;
-			background: url(../img/brend/logo.svg);
+			background: url(../img/ivan/ivan-logo.jpeg);
 			flex: 0 0 50px;
 			border-radius: 50%;
 			background-size: contain;
  }
  .business__title--big {
-	color: #85878e;
+	color: #f0f1f4;
 	text-align: center;
 	font-size: clamp(1.875rem, 1.648rem + 1.1173vw, 2.5rem);
 	font-weight: 700;
@@ -3338,7 +3344,7 @@ body {
 	font-weight: 600;
 	text-transform: capitalize;
 	padding: 12px;
- 			background-color: #6c6d72;
+ 			background-color: #04979e;
  			border-radius: 20px;
 			max-width: 150px;
 			border: 1px solid transparent;
@@ -3351,7 +3357,7 @@ body {
  @media (any-hover: hover) {
 	.item__link:hover {
 	  
-	  color: #6B77E5;
+	  color: #c7a147;
 	  -webkit-transition: all 0.3s ease 0s;
 	  transition: all 0.3s ease 0s;
 	  transform: scale(0.9);
@@ -3655,3 +3661,31 @@ body {
 				font-size: 18px;
 			}
 		}
+
+		.item-new__link{
+			width: 100%;
+			border-radius: 20px;
+			height: 100%;
+			img{
+				height: 100%;
+				object-fit: contain;
+				border-radius: 20px;
+				width: 100%;
+				@media (max-height: 250.98px) {
+					
+					
+					
+				 }
+			}
+		} 
+
+		.item-client-foto{
+			margin-top: 20px;
+			
+		}
+
+		
+.swiper-initialized {
+	overflow: hidden;
+ }
+		

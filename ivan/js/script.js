@@ -11,8 +11,7 @@ icons.forEach(icon => {
 });
 
 
-
-
+/*
 const swiper = new Swiper('.swiper', {
 	// Optional parameters
 	spaceBetween: 20,
@@ -40,6 +39,120 @@ const swiper = new Swiper('.swiper', {
 	}
 	
  });
+
+ const newSlider = document.querySelector('.new');
+if (newSlider) {
+	new Swiper('.new__slider', {
+		// Optional parameters
+		loop: true,
+		autoHeight: true,
+		speed: 800,
+		spaceBetween: 5,
+		slidesPerView: 1,
+		// Navigation arrows
+		navigation: {
+			nextEl: '.new__arrow--right',
+			prevEl: '.new__arrow--left',
+		},
+
+		// Responsive breakpoints
+		breakpoints: {
+			// when window width is >= 320px
+			300: {
+				slidesPerView: 1.5,
+				spaceBetween: 15
+			},
+			420: {
+				slidesPerView: 2,
+				spaceBetween: 15
+			},
+			620: {
+				slidesPerView: 3,
+				spaceBetween: 15
+			},
+			// when window width is >= 480px
+			820: {
+				slidesPerView: 4,
+				spaceBetween: 15
+			},
+			// when window width is >= 640px
+			950: {
+				slidesPerView: 5,
+				spaceBetween: 35
+			},
+			1400: {
+				slidesPerView: 2,
+				spaceBetween: 5
+			},
+		}
+	});
+}
+ 
+
+
+
+*/
+const mainSlider = new Swiper('.swiper', {
+	spaceBetween: 20,
+	loop: true,
+	pagination: {
+	  el: '.swiper-pagination',
+	  clickable: true,
+	},
+	navigation: {
+	  nextEl: '.swiper-button-next',
+	  prevEl: '.swiper-button-prev',
+	},
+	breakpoints: {
+	  480: {
+		 spaceBetween: 15,
+	  },
+	},
+ });
+ 
+ const newSliderContainer = document.querySelector('.new');
+ if (newSliderContainer) {
+	const newSlider = new Swiper('.new__slider', {
+		spaceBetween: 20,
+		loop: true,
+		pagination: {
+		  el: '.swiper-pagination',
+		  clickable: true,
+		},
+	  navigation: {
+		 nextEl: '.new__arrow--right',
+		 prevEl: '.new__arrow--left',
+	  },
+	  breakpoints: {
+		 300: {
+			slidesPerView: 1.5,
+			spaceBetween: 15,
+		 },
+		 420: {
+			slidesPerView: 2,
+			spaceBetween: 15,
+		 },
+		 620: {
+			slidesPerView: 3,
+			spaceBetween: 15,
+		 },
+		 820: {
+			slidesPerView: 4,
+			spaceBetween: 15,
+		 },
+		 950: {
+			slidesPerView: 5,
+			spaceBetween: 35,
+		 },
+		 1400: {
+			slidesPerView: 2.5,
+			spaceBetween: 15,
+		 },
+	  },
+	});
+ }
+ 
+
 
 
  /*
