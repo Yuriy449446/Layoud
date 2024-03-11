@@ -267,6 +267,7 @@ body {
 	@media (max-width: toEm(500.98)) {
 		padding: 14px 0px;
 	}
+	
 }
 
 .logo {
@@ -294,11 +295,15 @@ body {
 	}
 
 	img {
-		width: 40px;
-		height: 40px;
+		width: 70px;
+		height: 70px;
 		object-fit: contain;
 		overflow: hidden;
 		border-radius: 50%;
+		@media (max-width: toEm(500.98)) {
+			width: 55px;
+		   height: 55px;
+		}
 	}
    
 	
