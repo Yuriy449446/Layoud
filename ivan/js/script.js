@@ -266,7 +266,7 @@ function confirmOrder() {
  }
  
 */
-  
+  /// Виклик форми
   const tabOrderFast = document.querySelectorAll('.item__link');
   const tabFormFast = document.querySelector('.page__check');
   const tabFormClouse = document.querySelector('.check-out_clouse');
