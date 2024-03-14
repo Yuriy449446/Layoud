@@ -429,8 +429,13 @@ body {
 		& li:hover {
 			text-decoration: underline;
 		}
-
+     
 	}
+ 
+	.touch.info__sub-menu{
+		opacity: 1;
+	  }
+
 
 	@media (any-hover: hover) {
 		&__item:hover a {

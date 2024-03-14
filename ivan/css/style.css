@@ -554,6 +554,9 @@ body {
 .info__sub-menu li:hover {
   text-decoration: underline;
 }
+.info .touch.info__sub-menu {
+  opacity: 1;
+}
 @media (any-hover: hover) {
   .info__item:hover a {
     text-decoration: underline;

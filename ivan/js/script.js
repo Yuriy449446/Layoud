@@ -335,3 +335,13 @@ tabFormClouse.addEventListener('click', function () {
 		 document.getElementById('phoneError').innerText = 'Введіть лише цифри у поле "Телефон".';
 	}
 });
+
+/// Робота тачскріну на мобільному телефоні
+
+document.getElementById('touchButton').addEventListener('touchstart', function() {
+	this.classList.add('touch');
+});
+
+document.getElementById('touchButton').addEventListener('touchend', function() {
+	this.classList.remove('touch');
+});
