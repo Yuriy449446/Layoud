@@ -144,7 +144,7 @@ body {
   background: #37393F;
   min-height: 3.75rem;
 }
-@media (max-width: 68em) {
+@media (max-width: 70.37375em) {
   .header {
     display: none;
   }
@@ -533,41 +533,43 @@ body {
     transition: all 0.3s;
   }
 }
-.info__sub-menu {
-  display: none;
-  background-color: rgb(202, 197, 197);
-  color: rgb(9, 9, 9);
-  width: 100px;
-  padding: 10px;
-  border-radius: 10px;
-  -webkit-transform: translate(0px, 100%);
-      -ms-transform: translate(0px, 100%);
-          transform: translate(0px, 100%);
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  pointer-events: none;
+@media (min-width: 70.37375em) {
+  .info__sub-menu {
+    display: none;
+    background-color: rgb(202, 197, 197);
+    color: rgb(9, 9, 9);
+    width: 120px;
+    padding: 10px;
+    border-radius: 10px;
+    -webkit-transform: translate(0px, 100%);
+        -ms-transform: translate(0px, 100%);
+            transform: translate(0px, 100%);
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+  .info__sub-menu li {
+    font-size: 18px;
+  }
+  .info__sub-menu li:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .info__sub-menu li:hover {
+    text-decoration: underline;
+  }
 }
-.info__sub-menu li:not(:last-child) {
-  margin-bottom: 15px;
-}
-.info__sub-menu li:hover {
-  text-decoration: underline;
-}
-.info .touch.info__sub-menu {
-  opacity: 1;
-}
-@media (any-hover: hover) {
+@media (min-width: 70.37375em) and (any-hover: hover) {
   .info__item:hover a {
     text-decoration: underline;
   }
 }
-@media (any-hover: hover) {
+@media (min-width: 70.37375em) and (any-hover: hover) {
   .info__item--arrow:hover > a {
     text-decoration: underline;
   }
 }
-@media (any-hover: hover) {
+@media (min-width: 70.37375em) and (any-hover: hover) {
   .info__item--arrow:hover .info__sub-menu {
     display: block;
     opacity: 1;
@@ -583,6 +585,18 @@ body {
   .info__item--arrow:hover .info__sub-menu a:hover {
     text-decoration: underline;
   }
+}
+
+.info__sab-item {
+  font-size: 24px;
+  padding-top: 10px;
+}
+.info__sab-item:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+#touchButton.hidden {
+  display: none;
 }
 
 .sub-heder__link {
@@ -3000,7 +3014,7 @@ body {
 .sushi-slader {
   margin-top: 250px;
 }
-@media (max-width: 68em) {
+@media (max-width: 70.37375em) {
   .sushi-slader {
     margin-top: 150px;
   }

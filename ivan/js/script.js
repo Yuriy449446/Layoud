@@ -189,39 +189,44 @@ const mainSlider = new Swiper('.swiper', {
 
 
  */ 
+ 
  document.addEventListener('DOMContentLoaded', function() {
 	// Получаем ссылку на объект
 	var myObject = document.getElementById('myObject');
 
-	// Функция для проверки видимости объекта во вьюпорте
-	function isElementInViewport(el) {
-		 var rect = el.getBoundingClientRect();
-		 return (
-			  rect.top >= 0 &&
-			  rect.left >= 0 &&
-			  rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-			  rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-		 );
-	}
-
-	// Функция для добавления/удаления класса при видимости/невидимости объекта
-	function handleVisibility() {
-		 if (isElementInViewport(myObject)) {
-			  myObject.classList.add('show');
-		 } else {
-			  myObject.classList.remove('show');
+	// Проверяем, существует ли объект в DOM
+	if (myObject) {
+		 // Функция для проверки видимости объекта во вьюпорте
+		 function isElementInViewport(el) {
+			  var rect = el.getBoundingClientRect();
+			  return (
+					rect.top >= 0 &&
+					rect.left >= 0 &&
+					rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+					rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+			  );
 		 }
+
+		 // Функция для добавления/удаления класса при видимости/невидимости объекта
+		 function handleVisibility() {
+			  if (isElementInViewport(myObject)) {
+					myObject.classList.add('show');
+			  } else {
+					myObject.classList.remove('show');
+			  }
+		 }
+
+		 // Добавляем обработчик события scroll
+		 window.addEventListener('scroll', handleVisibility);
+
+		 // Вызываем handleVisibility сразу после загрузки страницы для проверки видимости
+		 handleVisibility();
+
+		 // Добавляем обработчик события resize для обновления видимости при изменении размеров окна
+		 window.addEventListener('resize', handleVisibility);
 	}
-
-	// Добавляем обработчик события scroll
-	window.addEventListener('scroll', handleVisibility);
-
-	// Вызываем handleVisibility сразу после загрузки страницы для проверки видимости
-	handleVisibility();
-
-	// Добавляем обработчик события resize для обновления видимости при изменении размеров окна
-	window.addEventListener('resize', handleVisibility);
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -267,6 +272,8 @@ function confirmOrder() {
  
 */
   /// Виклик форми
+  const tauchOpen = document.querySelectorAll('.info__item--arrow');
+  const tauchOpenSub = document.getElementById('touchButton');
   const tabOrderFast = document.querySelectorAll('.item__link');
   const tabFormFast = document.querySelector('.page__check');
   const tabFormClouse = document.querySelector('.check-out_clouse');
@@ -283,36 +290,54 @@ tabFormClouse.addEventListener('click', function () {
 	
 });
 
+
+
 	
+tauchOpen.forEach(icon => {
+	icon.addEventListener('click', function () {
+		 // Проверяем, есть ли у tauchOpenSub класс open
+		 tauchOpenSub.classList.toggle('hidden');
+	});
+});
+
+
+
+
+
+
+
+   // Прокрутка сайна нагору
+   // Function to initialize scroll-to-top functionality
+function initializeScrollToTop() {
+	var scrollContainer = document.querySelector('.scroll-top-container');
 	
+	if (scrollContainer) {
+		 // Show/hide the scroll-top-container based on scroll position
+		 window.addEventListener('scroll', function () {
+			  if (window.scrollY > 500) {
+					scrollContainer.style.display = 'block';
+			  } else {
+					scrollContainer.style.display = 'none';
+			  }
+		 });
+
+		 // Add click event listener to scroll to the top
+		 scrollContainer.addEventListener('click', function () {
+			  window.scrollTo({
+					top: 0,
+					behavior: 'smooth'  // Add smooth scrolling effect
+			  });
+		 });
+	}
+}
+
+// Call the function to initialize scroll-to-top functionality when DOM content is loaded
+document.addEventListener('DOMContentLoaded', initializeScrollToTop);
 
 
 
 
 
-
-
-
-  // Прокрутка сайна нагору
-  // Get the scroll-top-container element
-  var scrollContainer = document.querySelector('.scroll-top-container');
-
-  // Show/hide the scroll-top-container based on scroll position
-  window.addEventListener('scroll', function () {
-		if (window.scrollY > 500) {
-			 scrollContainer.style.display = 'block';
-		} else {
-			 scrollContainer.style.display = 'none';
-		}
-  });
-
-  // Add click event listener to scroll to the top
-  scrollContainer.addEventListener('click', function () {
-		window.scrollTo({
-			 top: 0,
-			 behavior: 'smooth'  // Add smooth scrolling effect
-		});
-  });
 
 
   /* перевірка відправлення форми*/ 
@@ -336,12 +361,3 @@ tabFormClouse.addEventListener('click', function () {
 	}
 });
 
-/// Робота тачскріну на мобільному телефоні
-
-document.getElementById('touchButton').addEventListener('touchstart', function() {
-	this.classList.add('touch');
-});
-
-document.getElementById('touchButton').addEventListener('touchend', function() {
-	this.classList.remove('touch');
-});

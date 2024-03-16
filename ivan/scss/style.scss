@@ -79,7 +79,7 @@ body {
 
 	min-height: toRem(60);
 
-	@media (max-width: toEm(1088)) {
+	@media (max-width: toEm(1125.98)) {
 		display: none;
 
 	}
@@ -357,6 +357,7 @@ body {
 		color: #37393F;
 		text-align: center;
 		font-size: toRem(18);
+		
 		@media (max-width: toEm(1125.98)) {
 			font-size: toRem(28);
 			
@@ -389,7 +390,7 @@ body {
 				  display: none;
 				}
 			}
-
+			            
 			@media (any-hover: hover) {
 				.menu__item--parent:hover .sub-menu {
 					opacity: 1;
@@ -408,68 +409,84 @@ body {
 		}
 
 	}
-
-	&__sub-menu {
-		display: none;
-		background-color: rgb(202, 197, 197);
-		color: rgb(9, 9, 9);
-		width: 100px;
-		padding: 10px;
-		border-radius: 10px;
-		transform: translate(0px, 100%);
-		opacity: 0;
-		transition: all 0.3s;
-		pointer-events: none;
-
-		li:not(:last-child) {
-			margin-bottom: 15px;
-
-		}
-
-		& li:hover {
-			text-decoration: underline;
-		}
-     
-	}
- 
-	.touch.info__sub-menu{
-		opacity: 1;
-	  }
-
-
-	@media (any-hover: hover) {
-		&__item:hover a {
-			text-decoration: underline;
-		}
-	}
-
-	@media (any-hover: hover) {
-		&__item--arrow:hover>a {
-			text-decoration: underline;
-		}
-	}
-
-	@media (any-hover: hover) {
-		&__item--arrow:hover &__sub-menu {
-			display: block;
-			opacity: 1;
-			position: absolute;
-			top: 100%;
-			pointer-events: all;
-
-			transform: translate(0px, 0%);
+	@media (min-width: toEm(1125.98)) {
+		&__sub-menu {
+			display: none;
+			background-color: rgb(202, 197, 197);
+			color: rgb(9, 9, 9);
+			width: 120px;
+			padding: 10px;
+			border-radius: 10px;
+			transform: translate(0px, 100%);
+			opacity: 0;
 			transition: all 0.3s;
-
-			a:hover {
+			pointer-events: none;
+			li{
+				font-size: 18px;
+			}
+			li:not(:last-child) {
+				margin-bottom: 10px;
+	         
+			}
+	
+			& li:hover {
+				text-decoration: underline;
+				
+			}
+			
+		}
+	   
+		
+	
+		@media (any-hover: hover) {
+			&__item:hover a {
 				text-decoration: underline;
 			}
 		}
+	
+		@media (any-hover: hover) {
+			&__item--arrow:hover>a {
+				text-decoration: underline;
+			}
+		}
+	
+		@media (any-hover: hover) {
+			&__item--arrow:hover &__sub-menu {
+				display: block;
+				opacity: 1;
+				position: absolute;
+				top: 100%;
+				pointer-events: all;
+	
+				transform: translate(0px, 0%);
+				transition: all 0.3s;
+	
+				a:hover {
+					text-decoration: underline;
+				}
+			}
+		}
+	
+		
 	}
-
+	
 
 
 }
- 
+.info__sab-item{
+	font-size: 24px;
+	padding-top: 10px;
+	&:not(:last-child){
+		margin-bottom: 5px;
+	}
+}
+	
+
+#touchButton.hidden{
+  display: none;
+  
+}
+
 .sub-heder__link {
 	
 	color: #FFF;
@@ -2796,7 +2813,7 @@ body {
 /*     */
 .sushi-slader{
 	margin-top: 250px;
-	@media (max-width: toEm(1088)) {
+	@media (max-width: toEm(1125.98)) {
 		margin-top: 150px;
 	}
 	@media (max-width: toEm(500)) {
