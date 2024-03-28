@@ -155,40 +155,7 @@ const mainSlider = new Swiper('.swiper', {
 
 
 
- /*
-  document.addEventListener('DOMContentLoaded', function() {
-	// Получаем ссылку на объект
-	var myObject = document.getElementById('myObject');
-
-	// Функция для проверки видимости объекта во вьюпорте
-	function isElementInViewport(el) {
-	  var rect = el.getBoundingClientRect();
-	  return (
-		 rect.top >= 0 &&
-		 rect.left >= 0 &&
-		 rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-		 rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-	  );
-	}
-
-	// Функция для добавления/удаления класса при видимости/невидимости объекта
-	function handleScroll() {
-	  if (isElementInViewport(myObject)) {
-		 myObject.classList.add('show');
-	  } else {
-		 myObject.classList.remove('show');
-	  }
-	}
-
-	// Добавляем обработчик события scroll
-	window.addEventListener('scroll', handleScroll);
-
-	// Вызываем handleScroll сразу после загрузки страницы для проверки видимости
-	handleScroll();
- });
-
-
- */ 
+ 
  
  document.addEventListener('DOMContentLoaded', function() {
 	// Получаем ссылку на объект
@@ -361,3 +328,480 @@ document.addEventListener('DOMContentLoaded', initializeScrollToTop);
 	}
 });
 
+
+
+
+/*Фільтр розміру піци*/
+// Получаем все радиокнопки размеров
+const sizeInputsFilter = document.querySelectorAll('.input-size__input');
+const sizzePizza = document.querySelectorAll('.img-pup-ap');
+// Для каждой радиокнопки добавляем обработчик события клика
+sizeInputsFilter.forEach(input => {
+    input.addEventListener('click', function() {
+        // Убираем класс 'checked' у всех меток
+        const labels = document.querySelectorAll('.input-size__label');
+        labels.forEach(label => {
+            label.classList.remove('checked');
+        });
+
+        // Получаем метку, соответствующую выбранной радиокнопке
+        const selectedLabel = document.querySelector(`label[for="${input.id}"]`);
+        // Добавляем класс 'checked' к выбранной метке
+        selectedLabel.classList.add('checked');
+    });
+});
+
+// Функція для зміни ширини зображення після кліку на певному елементі
+function changeImageWidth(event) {
+    const img = document.getElementById('pizzaImage');
+    const width = event.target.dataset.width;
+    if (img) {
+        img.setAttribute('width', width);
+    }
+}
+
+// Получаем всі радіокнопки розмірів
+const sizeInputs = document.querySelectorAll('[data-testid^="menu__pizza_size_"]');
+
+// Додаємо обробник подій для кожної радіокнопки розмірів
+sizeInputs.forEach(input => {
+    input.addEventListener('click', changeImageWidth);
+});
+
+// Функція для зміни базового інгредієнту
+function changeBaseIngredient(event) {
+    const isEnabled = event.target.dataset.disabled === "false";
+    if (isEnabled) {
+        const radioInputs = document.querySelectorAll('[data-testid^="base_ingredient_"]');
+        radioInputs.forEach(input => {
+            input.disabled = false;
+        });
+        event.target.disabled = true;
+    }
+}
+
+
+
+
+// Получаем всі радіокнопки базового інгредієнту
+const baseIngredientInputs = document.querySelectorAll('[data-testid^="base_ingredient_"]');
+
+// Додаємо обробник подій для кожної радіокнопки базового інгредієнту
+baseIngredientInputs.forEach(input => {
+    input.addEventListener('click', changeBaseIngredient);
+});
+
+// Получаем все радиокнопки размеров пиццы
+const sizeInputsForPizza = document.querySelectorAll('[data-testid^="menu__pizza_size_"]');
+
+// Добавляем обработчик клика для каждой радиокнопки
+sizeInputsForPizza.forEach(input => {
+    input.addEventListener('click', function() {
+        // Удаляем все классы связанные с размерами пиццы у элемента с классом 'pup-ap-pizza__img'
+        const pizzaImg = document.querySelector('.pup-ap-pizza__img');
+        pizzaImg.classList.remove('small', 'middle', 'big');
+
+        // Получаем значение data-testid текущей радиокнопки
+        const size = input.getAttribute('data-testid');
+
+        // Добавляем соответствующий класс в зависимости от выбранного размера пиццы
+        if (size === 'menu__pizza_size_small') {
+            pizzaImg.classList.add('small');
+        } else if (size === 'menu__pizza_size_middle') {
+            pizzaImg.classList.add('middle');
+        } else if (size === 'menu__pizza_size_big') {
+            pizzaImg.classList.add('big');
+        }
+    });
+});
+
+
+
+
+/*Фільтр товщіни тіста піци*/
+// Получаем все метки выбора типа теста
+const doughLabels = document.querySelectorAll('.input-dough__label');
+
+// Добавляем обработчик клика для каждой метки
+doughLabels.forEach(label => {
+    label.addEventListener('click', function() {
+        // Удаляем класс 'dough' у всех меток
+        doughLabels.forEach(doughLabel => {
+            doughLabel.classList.remove('dough');
+        });
+
+        // Добавляем класс 'dough' к выбранной метке
+        label.classList.add('dough');
+    });
+});
+
+
+
+
+// товщіна тіста, НЕ ПРАЦЮЄ
+const tabContainer = document.querySelector('.pup-ap-pizza__info');
+
+// Добавляем обработчик клика на родительский элемент
+tabContainer.addEventListener('click', function(event) {
+    // Проверяем, что клик произошел на элементе с атрибутом data-tab
+    if (event.target.dataset.tab) {
+        const tabId = event.target.dataset.tab; // Получаем значение атрибута data-tab текущего заголовка таба
+
+        // Получаем все контентные блоки
+        const contentBoxes = document.querySelectorAll('[data-tab-content]');
+
+        // Скрываем все контентные блоки перед показом нужного блока
+        contentBoxes.forEach(function (contentBox) {
+            contentBox.classList.add('hidden');
+        });
+
+        // Отображаем только соответствующий выбранному табу контентный блок
+        const selectedContentBox = document.querySelector('[data-tab-content="' + tabId + '"]');
+        if (selectedContentBox) { // Проверяем наличие контентного блока
+            selectedContentBox.classList.remove('hidden');
+        }
+    }
+});
+
+
+
+/*Додаємо чекед до вибору інгрідієнтів і червоний бордер*/
+// Отримуємо всі кнопки з класом "add-pizza__item"
+const pizzaItems = document.querySelectorAll('.add-pizza__item');
+
+// Додаємо обробник події кліку для кожної кнопки
+pizzaItems.forEach(item => {
+    item.addEventListener('click', function() {
+        // Перевіряємо, чи у кнопки є клас "activ"
+        const isActive = item.classList.contains('activ');
+        
+        // Якщо у кнопки є клас "activ", видаляємо його, в іншому випадку - додаємо
+        if (isActive) {
+            item.classList.remove('activ');
+        } else {
+            item.classList.add('activ');
+        }
+    });
+});
+
+
+
+
+//Баварія
+
+  // Функція для відображення елементу та додавання класу "open" до елементів з класом "pizza"
+  function showElement(elementId) {
+	var element = document.getElementById(elementId);
+	var pizzaElements = document.getElementsByClassName('pizza');
+	if (element) {
+	  element.classList.remove('hidden');
+	  for(var i = 0; i < pizzaElements.length; i++) {
+		 pizzaElements[i].classList.add('open');
+	  }
+	}
+ }
+
+ // Функція для приховування елементу та видалення класу "open" з елементів з класом "pizza"
+ function hideElement(elementId) {
+	var element = document.getElementById(elementId);
+	var pizzaElements = document.getElementsByClassName('pizza');
+	if (element) {
+	  element.classList.add('hidden');
+	  for(var i = 0; i < pizzaElements.length; i++) {
+		 pizzaElements[i].classList.remove('open');
+	  }
+	}
+ }
+
+ // Обробник події по кліку на елемент з id="chorizo-01"
+ document.getElementById('bavaria-01').addEventListener('click', function() {
+	showElement('bavaria');
+ });
+
+ // Обробник події по кліку на елементи з класом "pup-ap-pizza_clouse"
+ var closeButtons = document.querySelectorAll('.pup-ap-pizza_clouse');
+ closeButtons.forEach(function(button) {
+	button.addEventListener('click', function() {
+	  hideElement('bavaria');
+	});
+ });
+
+
+
+
+
+  //Чоризо фреш
+
+
+
+    // Функція для відображення елементу та додавання класу "open" до елементів з класом "pizza"
+	 function showElement(elementId) {
+		var element = document.getElementById(elementId);
+		var pizzaElements = document.getElementsByClassName('pizza');
+		if (element) {
+		  element.classList.remove('hidden');
+		  for(var i = 0; i < pizzaElements.length; i++) {
+			 pizzaElements[i].classList.add('open');
+		  }
+		}
+	 }
+  
+	 // Функція для приховування елементу та видалення класу "open" з елементів з класом "pizza"
+	 function hideElement(elementId) {
+		var element = document.getElementById(elementId);
+		var pizzaElements = document.getElementsByClassName('pizza');
+		if (element) {
+		  element.classList.add('hidden');
+		  for(var i = 0; i < pizzaElements.length; i++) {
+			 pizzaElements[i].classList.remove('open');
+		  }
+		}
+	 }
+  
+	 // Обробник події по кліку на елемент з id="chorizo-01"
+	 document.getElementById('chorizo-01').addEventListener('click', function() {
+		showElement('chorizo');
+	 });
+  
+	 // Обробник події по кліку на елементи з класом "pup-ap-pizza_clouse"
+	 var closeButtons = document.querySelectorAll('.pup-ap-pizza_clouse');
+	 closeButtons.forEach(function(button) {
+		button.addEventListener('click', function() {
+		  hideElement('chorizo');
+		});
+	 });
+
+
+	 //Карбонара
+
+    // Функція для відображення елементу та додавання класу "open" до елементів з класом "pizza"
+	 function showElement(elementId) {
+		var element = document.getElementById(elementId);
+		var pizzaElements = document.getElementsByClassName('pizza');
+		if (element) {
+		  element.classList.remove('hidden');
+		  for(var i = 0; i < pizzaElements.length; i++) {
+			 pizzaElements[i].classList.add('open');
+		  }
+		}
+	 }
+  
+	 // Функція для приховування елементу та видалення класу "open" з елементів з класом "pizza"
+	 function hideElement(elementId) {
+		var element = document.getElementById(elementId);
+		var pizzaElements = document.getElementsByClassName('pizza');
+		if (element) {
+		  element.classList.add('hidden');
+		  for(var i = 0; i < pizzaElements.length; i++) {
+			 pizzaElements[i].classList.remove('open');
+		  }
+		}
+	 }
+  
+	 // Обробник події по кліку на елемент з id="chorizo-01"
+	 document.getElementById('karbonara-01').addEventListener('click', function() {
+		showElement('karbonara');
+	 });
+  
+	 // Обробник події по кліку на елементи з класом "pup-ap-pizza_clouse"
+	 var closeButtons = document.querySelectorAll('.pup-ap-pizza_clouse');
+	 closeButtons.forEach(function(button) {
+		button.addEventListener('click', function() {
+		  hideElement('karbonara');
+		});
+	 });
+
+	  //Папероні фреш
+
+    // Функція для відображення елементу та додавання класу "open" до елементів з класом "pizza"
+	 function showElement(elementId) {
+		var element = document.getElementById(elementId);
+		var pizzaElements = document.getElementsByClassName('pizza');
+		if (element) {
+		  element.classList.remove('hidden');
+		  for(var i = 0; i < pizzaElements.length; i++) {
+			 pizzaElements[i].classList.add('open');
+		  }
+		}
+	 }
+  
+	 // Функція для приховування елементу та видалення класу "open" з елементів з класом "pizza"
+	 function hideElement(elementId) {
+		var element = document.getElementById(elementId);
+		var pizzaElements = document.getElementsByClassName('pizza');
+		if (element) {
+		  element.classList.add('hidden');
+		  for(var i = 0; i < pizzaElements.length; i++) {
+			 pizzaElements[i].classList.remove('open');
+		  }
+		}
+	 }
+  
+	 // Обробник події по кліку на елемент з id="chorizo-01"
+	 document.getElementById('paperoni-01').addEventListener('click', function() {
+		showElement('paperoni');
+	 });
+  
+	 // Обробник події по кліку на елементи з класом "pup-ap-pizza_clouse"
+	 var closeButtons = document.querySelectorAll('.pup-ap-pizza_clouse');
+	 closeButtons.forEach(function(button) {
+		button.addEventListener('click', function() {
+		  hideElement('paperoni');
+		});
+	 });
+
+	  //Шитка та огірки
+
+    // Функція для відображення елементу та додавання класу "open" до елементів з класом "pizza"
+	 function showElement(elementId) {
+		var element = document.getElementById(elementId);
+		var pizzaElements = document.getElementsByClassName('pizza');
+		if (element) {
+		  element.classList.remove('hidden');
+		  for(var i = 0; i < pizzaElements.length; i++) {
+			 pizzaElements[i].classList.add('open');
+		  }
+		}
+	 }
+  
+	 // Функція для приховування елементу та видалення класу "open" з елементів з класом "pizza"
+	 function hideElement(elementId) {
+		var element = document.getElementById(elementId);
+		var pizzaElements = document.getElementsByClassName('pizza');
+		if (element) {
+		  element.classList.add('hidden');
+		  for(var i = 0; i < pizzaElements.length; i++) {
+			 pizzaElements[i].classList.remove('open');
+		  }
+		}
+	 }
+  
+	 // Обробник події по кліку на елемент з id="chorizo-01"
+	 document.getElementById('vetchina-01').addEventListener('click', function() {
+		showElement('vetchina');
+	 });
+  
+	 // Обробник події по кліку на елементи з класом "pup-ap-pizza_clouse"
+	 var closeButtons = document.querySelectorAll('.pup-ap-pizza_clouse');
+	 closeButtons.forEach(function(button) {
+		button.addEventListener('click', function() {
+		  hideElement('vetchina');
+		});
+	 });
+
+	  //Шитка та сир
+
+    // Функція для відображення елементу та додавання класу "open" до елементів з класом "pizza"
+	 function showElement(elementId) {
+		var element = document.getElementById(elementId);
+		var pizzaElements = document.getElementsByClassName('pizza');
+		if (element) {
+		  element.classList.remove('hidden');
+		  for(var i = 0; i < pizzaElements.length; i++) {
+			 pizzaElements[i].classList.add('open');
+		  }
+		}
+	 }
+  
+	 // Функція для приховування елементу та видалення класу "open" з елементів з класом "pizza"
+	 function hideElement(elementId) {
+		var element = document.getElementById(elementId);
+		var pizzaElements = document.getElementsByClassName('pizza');
+		if (element) {
+		  element.classList.add('hidden');
+		  for(var i = 0; i < pizzaElements.length; i++) {
+			 pizzaElements[i].classList.remove('open');
+		  }
+		}
+	 }
+  
+	 // Обробник події по кліку на елемент з id="chorizo-01"
+	 document.getElementById('vetcina-sir-01').addEventListener('click', function() {
+		showElement('vetcina-sir');
+	 });
+  
+	 // Обробник події по кліку на елементи з класом "pup-ap-pizza_clouse"
+	 var closeButtons = document.querySelectorAll('.pup-ap-pizza_clouse');
+	 closeButtons.forEach(function(button) {
+		button.addEventListener('click', function() {
+		  hideElement('vetcina-sir');
+		});
+	 });
+
+	  //Bay! Кебаб
+
+    // Функція для відображення елементу та додавання класу "open" до елементів з класом "pizza"
+	 function showElement(elementId) {
+		var element = document.getElementById(elementId);
+		var pizzaElements = document.getElementsByClassName('pizza');
+		if (element) {
+		  element.classList.remove('hidden');
+		  for(var i = 0; i < pizzaElements.length; i++) {
+			 pizzaElements[i].classList.add('open');
+		  }
+		}
+	 }
+  
+	 // Функція для приховування елементу та видалення класу "open" з елементів з класом "pizza"
+	 function hideElement(elementId) {
+		var element = document.getElementById(elementId);
+		var pizzaElements = document.getElementsByClassName('pizza');
+		if (element) {
+		  element.classList.add('hidden');
+		  for(var i = 0; i < pizzaElements.length; i++) {
+			 pizzaElements[i].classList.remove('open');
+		  }
+		}
+	 }
+  
+	 // Обробник події по кліку на елемент з id="chorizo-01"
+	 document.getElementById('kebab-01').addEventListener('click', function() {
+		showElement('kebab');
+	 });
+  
+	 // Обробник події по кліку на елементи з класом "pup-ap-pizza_clouse"
+	 var closeButtons = document.querySelectorAll('.pup-ap-pizza_clouse');
+	 closeButtons.forEach(function(button) {
+		button.addEventListener('click', function() {
+		  hideElement('kebab');
+		});
+	 });
+
+	   //Чотирі сезони
+
+    // Функція для відображення елементу та додавання класу "open" до елементів з класом "pizza"
+	 function showElement(elementId) {
+		var element = document.getElementById(elementId);
+		var pizzaElements = document.getElementsByClassName('pizza');
+		if (element) {
+		  element.classList.remove('hidden');
+		  for(var i = 0; i < pizzaElements.length; i++) {
+			 pizzaElements[i].classList.add('open');
+		  }
+		}
+	 }
+  
+	 // Функція для приховування елементу та видалення класу "open" з елементів з класом "pizza"
+	 function hideElement(elementId) {
+		var element = document.getElementById(elementId);
+		var pizzaElements = document.getElementsByClassName('pizza');
+		if (element) {
+		  element.classList.add('hidden');
+		  for(var i = 0; i < pizzaElements.length; i++) {
+			 pizzaElements[i].classList.remove('open');
+		  }
+		}
+	 }
+  
+	 // Обробник події по кліку на елемент з id="chorizo-01"
+	 document.getElementById('sezon-01').addEventListener('click', function() {
+		showElement('sezon');
+	 });
+  
+	 // Обробник події по кліку на елементи з класом "pup-ap-pizza_clouse"
+	 var closeButtons = document.querySelectorAll('.pup-ap-pizza_clouse');
+	 closeButtons.forEach(function(button) {
+		button.addEventListener('click', function() {
+		  hideElement('sezon');
+		});
+	 });
