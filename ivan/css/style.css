@@ -633,7 +633,6 @@ body {
 
 .open body {
   overflow: hidden;
-  pointer-events: none;
 }
 
 .popup body {
