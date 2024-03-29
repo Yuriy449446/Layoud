@@ -92,6 +92,7 @@ if (newSlider) {
 
 
 */
+
 const mainSlider = new Swiper('.swiper', {
 	spaceBetween: 20,
 	loop: true,
@@ -109,6 +110,11 @@ const mainSlider = new Swiper('.swiper', {
 	  },
 	},
  });
+
+
+
+
+ 
  
  const newSliderContainer = document.querySelector('.new');
  if (newSliderContainer) {
@@ -152,7 +158,52 @@ const mainSlider = new Swiper('.swiper', {
 	});
  }
  
+ 
 
+
+
+
+// Слайдер часто заказ
+new Swiper('.often-order-slader', {
+	slidesPerView: 4,
+	speed: 800,
+	spaceBetween: 10,
+	loop: true,
+	autoHeight: true,
+	autoplay: {
+		delay: 3000,
+	 },
+	 breakpoints: {
+		319: {
+			slidesPerView: 1,
+			spaceBetween: 15,
+		 },
+		400: {
+		  slidesPerView: 1,
+		  spaceBetween: 15,
+		},
+		500: {
+		  slidesPerView: 1.5,
+		  spaceBetween: 15,
+		},
+		600: {
+		  slidesPerView: 2.5,
+		  spaceBetween: 15,
+		},
+		900: {
+		  slidesPerView: 3,
+		  spaceBetween: 15,
+		},
+		1000: {
+		  slidesPerView: 3,
+		  spaceBetween: 15,
+		},
+		1200: {
+		  slidesPerView: 4,
+		  spaceBetween: 15,
+		},
+	 },
+ });
 
 
  
@@ -348,9 +399,10 @@ sizeInputsFilter.forEach(input => {
         const selectedLabel = document.querySelector(`label[for="${input.id}"]`);
         // Добавляем класс 'checked' к выбранной метке
         selectedLabel.classList.add('checked');
+		  
     });
 });
-
+  
 // Функція для зміни ширини зображення після кліку на певному елементі
 function changeImageWidth(event) {
     const img = document.getElementById('pizzaImage');
@@ -496,7 +548,7 @@ pizzaItems.forEach(item => {
 	if (element) {
 	  element.classList.remove('hidden');
 	  for(var i = 0; i < pizzaElements.length; i++) {
-		 pizzaElements[i].classList.add('open');
+		 pizzaElements[i].classList.add('closed');
 	  }
 	}
  }
@@ -508,7 +560,7 @@ pizzaItems.forEach(item => {
 	if (element) {
 	  element.classList.add('hidden');
 	  for(var i = 0; i < pizzaElements.length; i++) {
-		 pizzaElements[i].classList.remove('open');
+		 pizzaElements[i].classList.remove('closed');
 	  }
 	}
  }
@@ -541,7 +593,7 @@ pizzaItems.forEach(item => {
 		if (element) {
 		  element.classList.remove('hidden');
 		  for(var i = 0; i < pizzaElements.length; i++) {
-			 pizzaElements[i].classList.add('open');
+			 pizzaElements[i].classList.add('closed');
 		  }
 		}
 	 }
@@ -553,7 +605,7 @@ pizzaItems.forEach(item => {
 		if (element) {
 		  element.classList.add('hidden');
 		  for(var i = 0; i < pizzaElements.length; i++) {
-			 pizzaElements[i].classList.remove('open');
+			 pizzaElements[i].classList.remove('closed');
 		  }
 		}
 	 }
@@ -581,7 +633,7 @@ pizzaItems.forEach(item => {
 		if (element) {
 		  element.classList.remove('hidden');
 		  for(var i = 0; i < pizzaElements.length; i++) {
-			 pizzaElements[i].classList.add('open');
+			 pizzaElements[i].classList.add('closed');
 		  }
 		}
 	 }
@@ -593,7 +645,7 @@ pizzaItems.forEach(item => {
 		if (element) {
 		  element.classList.add('hidden');
 		  for(var i = 0; i < pizzaElements.length; i++) {
-			 pizzaElements[i].classList.remove('open');
+			 pizzaElements[i].classList.remove('closed');
 		  }
 		}
 	 }
@@ -620,7 +672,7 @@ pizzaItems.forEach(item => {
 		if (element) {
 		  element.classList.remove('hidden');
 		  for(var i = 0; i < pizzaElements.length; i++) {
-			 pizzaElements[i].classList.add('open');
+			 pizzaElements[i].classList.add('closed');
 		  }
 		}
 	 }
@@ -632,7 +684,7 @@ pizzaItems.forEach(item => {
 		if (element) {
 		  element.classList.add('hidden');
 		  for(var i = 0; i < pizzaElements.length; i++) {
-			 pizzaElements[i].classList.remove('open');
+			 pizzaElements[i].classList.remove('closed');
 		  }
 		}
 	 }
@@ -659,7 +711,7 @@ pizzaItems.forEach(item => {
 		if (element) {
 		  element.classList.remove('hidden');
 		  for(var i = 0; i < pizzaElements.length; i++) {
-			 pizzaElements[i].classList.add('open');
+			 pizzaElements[i].classList.add('closed');
 		  }
 		}
 	 }
@@ -671,7 +723,7 @@ pizzaItems.forEach(item => {
 		if (element) {
 		  element.classList.add('hidden');
 		  for(var i = 0; i < pizzaElements.length; i++) {
-			 pizzaElements[i].classList.remove('open');
+			 pizzaElements[i].classList.remove('closed');
 		  }
 		}
 	 }
@@ -698,7 +750,7 @@ pizzaItems.forEach(item => {
 		if (element) {
 		  element.classList.remove('hidden');
 		  for(var i = 0; i < pizzaElements.length; i++) {
-			 pizzaElements[i].classList.add('open');
+			 pizzaElements[i].classList.add('closed');
 		  }
 		}
 	 }
@@ -710,7 +762,7 @@ pizzaItems.forEach(item => {
 		if (element) {
 		  element.classList.add('hidden');
 		  for(var i = 0; i < pizzaElements.length; i++) {
-			 pizzaElements[i].classList.remove('open');
+			 pizzaElements[i].classList.remove('closed');
 		  }
 		}
 	 }
@@ -737,7 +789,7 @@ pizzaItems.forEach(item => {
 		if (element) {
 		  element.classList.remove('hidden');
 		  for(var i = 0; i < pizzaElements.length; i++) {
-			 pizzaElements[i].classList.add('open');
+			 pizzaElements[i].classList.add('closed');
 		  }
 		}
 	 }
@@ -749,7 +801,7 @@ pizzaItems.forEach(item => {
 		if (element) {
 		  element.classList.add('hidden');
 		  for(var i = 0; i < pizzaElements.length; i++) {
-			 pizzaElements[i].classList.remove('open');
+			 pizzaElements[i].classList.remove('closed');
 		  }
 		}
 	 }
@@ -776,7 +828,7 @@ pizzaItems.forEach(item => {
 		if (element) {
 		  element.classList.remove('hidden');
 		  for(var i = 0; i < pizzaElements.length; i++) {
-			 pizzaElements[i].classList.add('open');
+			 pizzaElements[i].classList.add('closed');
 		  }
 		}
 	 }
@@ -788,7 +840,7 @@ pizzaItems.forEach(item => {
 		if (element) {
 		  element.classList.add('hidden');
 		  for(var i = 0; i < pizzaElements.length; i++) {
-			 pizzaElements[i].classList.remove('open');
+			 pizzaElements[i].classList.remove('closed');
 		  }
 		}
 	 }
