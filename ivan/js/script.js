@@ -295,6 +295,8 @@ function confirmOrder() {
   const tabOrderFast = document.querySelectorAll('.item__link');
   const tabFormFast = document.querySelector('.page__check');
   const tabFormClouse = document.querySelector('.check-out_clouse');
+  const tabOrderPizza = document.querySelectorAll('.orders-button');
+  // Відкриття форми на сторінці Суші - замовити
   tabOrderFast.forEach(icon => {
 	icon.addEventListener('click', function () {
 		tabFormFast.classList.remove('hidden');
@@ -308,7 +310,13 @@ tabFormClouse.addEventListener('click', function () {
 	
 });
 
-
+// Відкриття форми на сторінці Піца - найбільше заказів
+tabOrderPizza.forEach(icon => {
+	icon.addEventListener('click', function () {
+		 // Проверяем, есть ли у tauchOpenSub класс open
+		 tabFormFast.classList.toggle('hidden');
+	});
+});
 
 	
 tauchOpen.forEach(icon => {
@@ -317,6 +325,7 @@ tauchOpen.forEach(icon => {
 		 tauchOpenSub.classList.toggle('hidden');
 	});
 });
+
 
 
 

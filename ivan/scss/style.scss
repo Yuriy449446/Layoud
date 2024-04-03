@@ -4130,19 +4130,27 @@ body {
 	}
 }
 
-.pzza {
+.pizza {
 
 	// .pzza_container
 	&__container {
-		padding-top: clamp(6.75rem, 3.852rem + 14.4898vw, 15.625rem);
+		padding-top: 50px;
 
 		h2 {
-			font-size: clamp(3.125rem, 3.5332rem + -2.0408vw, 1.875rem);
+			font-size:clamp(2.1875rem, 1.8814rem + 1.5306vw, 3.125rem);
 			color: #DDD;
 			margin-bottom: clamp(1.25rem, 1.0459rem + 1.0204vw, 1.875rem);
 		}
 	}
-
+   &--susi{
+		padding-top: 220px;
+		@media (max-width: toEm(1124.98)) {
+			padding-top: 100px;
+		}
+		@media (max-width: toEm(500.98)) {
+			padding-top: 60px;
+		}
+	}
 }
 
 .item-pizza {
@@ -4269,6 +4277,7 @@ body {
 	opacity: 1;
 	display: block;
 	transition: all 0.3s ease;
+	padding: 10px;
 	&.hidden{
 		opacity: 0;
 		display: none;
@@ -4530,7 +4539,6 @@ body {
 		&__items {
 			display: grid;
        grid-template-columns: 1fr 1fr 1fr;
-		 //grid-template-rows: repeat(6,1fr);
 		 column-gap: 10px;
 		 row-gap: 15px;
 		 @media (max-width: 750.98px) {
@@ -4585,7 +4593,100 @@ body {
 		}
 }
 
-.pizza.open{
+.pizza.closed{
 	overflow: hidden;
   pointer-events: none;
 } 
+
+
+.order-slader {
+	padding-top: 220px;
+	padding-left: 15px;
+	padding-right: 15px;
+	@media (max-width: toEm(1124.98)) {
+		padding-top: 120px;
+	}
+	&__сontainer {
+		
+	}
+	 
+	&__items {
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		column-gap: 25px;
+		row-gap: 40px;
+	}
+	 
+	& .item-order {
+		
+		padding: 15px 30px;
+		background-color: #d9d6d6;
+		border-radius: 10px;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+		min-height: 100%;
+	}
+}
+.item-order {
+	// .item-order__row
+	&__row {
+		display: flex;
+		justify-content: space-between;
+		row-gap: 20px;
+		column-gap: 15px;
+	}
+	// .item-order__link-img
+	&__link-img {
+		img{
+			width: 100px;
+			aspect-ratio: 1 / 1;
+			object-fit: cover;
+			object-position: center;
+						
+		}
+	}
+	// .item-order__info
+	&__info {
+		color: #424141;
+		font-weight: 600;
+		font-size: 18px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		h3{
+			margin-bottom: 10px;
+			
+		}
+		@media (max-width: toEm(599.98)) {
+			font-size: 16px;
+		}
+	}
+	// .item-order__price
+	&__price {
+		font-size: 16px;
+		display: flex;
+		flex-direction: column;
+		row-gap: 10px;
+		color: #831329;
+		button{
+			padding: 5px;
+			border-radius: 20px;
+			font-weight: 600;
+         background: #04979e;
+			color: #DDD;
+			@media (any-hover: hover) {
+				&:hover {
+					background: #a3b219;
+					transition: all 0.3s ease 0s;
+				}
+			}
+		}
+			
+		
+	}
+}
+
+.often-order__title{
+	color: #DDD;
+	font-size: 30px;
+	padding-bottom: 20px;
+}
