@@ -4323,7 +4323,7 @@ body {
 		
 		//width: 100%;
 		img {
-			transform: scale(0.7);
+			//transform: scale(0.7);
 			border-radius: 50%;
 			width: 570px;
 			aspect-ratio: 1 / 1;
@@ -4346,7 +4346,7 @@ body {
 			aspect-ratio: 1 / 1;
 			object-fit: cover;
 			object-position: center;
-			transform: scale(0.8);
+			//transform: scale(0.8);
 			@media (max-width: 750.98px) {
 
 				max-width: 300px;
@@ -4365,7 +4365,7 @@ body {
 			aspect-ratio: 1 / 1;
 			object-fit: cover;
 			object-position: center;
-			transform: scale(0.9);
+			//transform: scale(0.9);
 			
 			@media (max-width: 750.98px) {
 
@@ -4391,6 +4391,29 @@ body {
 			transform: scale(1.1);
 			
 		}
+	}
+}
+
+.pizza-pup-ap.pup-ap-pizza.small{
+	img{
+		transform: scale(0.7);
+	}
+}
+.pizza-pup-ap.pup-ap-pizza.middle{
+	img{
+		transform: scale(0.8);
+	}
+}
+.pizza-pup-ap.pup-ap-pizza{
+	img{
+		transform: scale(0.8);
+	}
+}
+
+
+.pizza-pup-ap.pup-ap-pizza.big{
+	img{
+		transform: scale(0.9);
 	}
 }
 
@@ -4424,9 +4447,15 @@ body {
 	&__input {
 		padding-top: 20px;
 	}
-	& .hidden {
-		display: none;
+	
+	&__thickness{
+		color: #a3b219;
+		&.hidden {
+			display: none;
+		}
 	}
+
+
 	&__send{
 		background-color: #c41235;
 		padding: 10px 20px;

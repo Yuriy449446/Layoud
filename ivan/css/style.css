@@ -4189,9 +4189,6 @@ body {
   }
 }
 .pup-ap-pizza__img.small img {
-  -webkit-transform: scale(0.7);
-      -ms-transform: scale(0.7);
-          transform: scale(0.7);
   border-radius: 50%;
   width: 570px;
   aspect-ratio: 1/1;
@@ -4213,9 +4210,6 @@ body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  -webkit-transform: scale(0.8);
-      -ms-transform: scale(0.8);
-          transform: scale(0.8);
 }
 @media (max-width: 750.98px) {
   .pup-ap-pizza__img.middle img {
@@ -4230,9 +4224,6 @@ body {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  -webkit-transform: scale(0.9);
-      -ms-transform: scale(0.9);
-          transform: scale(0.9);
 }
 @media (max-width: 750.98px) {
   .pup-ap-pizza__img.big img {
@@ -4253,6 +4244,30 @@ body {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.pizza-pup-ap.pup-ap-pizza.small img {
+  -webkit-transform: scale(0.7);
+      -ms-transform: scale(0.7);
+          transform: scale(0.7);
+}
+
+.pizza-pup-ap.pup-ap-pizza.middle img {
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.pizza-pup-ap.pup-ap-pizza img {
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.pizza-pup-ap.pup-ap-pizza.big img {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
 }
 
 .info-pizza::-webkit-scrollbar {
@@ -4281,7 +4296,10 @@ body {
 .info-pizza__input {
   padding-top: 20px;
 }
-.info-pizza .hidden {
+.info-pizza__thickness {
+  color: #a3b219;
+}
+.info-pizza__thickness.hidden {
   display: none;
 }
 .info-pizza__send {

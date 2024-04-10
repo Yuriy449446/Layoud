@@ -103,7 +103,7 @@
 					
 					<!-- Slider main container -->
 					<div class="swiper swiper__container often-order-slader">
-						<h3 class="often-order__title">Найбільше заказів</h3>
+						<h3 class="often-order__title">Найбільше замовлень</h3>
 						<!-- Additional required wrapper -->
 						<div class="swiper-wrapper">
 							<!-- Slides -->
@@ -342,7 +342,7 @@
 					<div class="pup-ap-pizza_clouse"><img src="img/POP-AP/Closet.svg" alt=""> </div>
 					<div class="pup-ap-pizza__row">
 						<div class="pup-ap-pizza__img middle">
-							<img class="img-pup-ap" src="img/catalog/bavaria-01.webp" alt="img" id="pizzaImage">
+							<img class="img-pup-ap" src="img/catalog/bavaria-01.webp" alt="img">
 							<!-- Додали id="pizzaImage" -->
 						</div>
 						<div class="pup-ap-pizza__wrapper">
@@ -353,27 +353,27 @@
 									моцарелла, фірмовий томатний соус
 								</h4>
 								<h5 data-tab-content id="tab-1" class="info-pizza__thickness">традиційне тісто 35, 710 г</h5>
-								<h5 data-tab-content id="tab-2" class="info-pizza__thickness">тонке тісто 25, 470 г г</h5>
+								<h5 data-tab-content id="tab-2" class="info-pizza__thickness hidden">тонке тісто 25, 470 г г</h5>
 								<div class="info-pizza__input">
 									<div class="pizza-input__size input-size">
-										<input type="radio" id="Маленькая" name="size" class="input-size__input" value="Маленькая"
+										<input type="radio" id="bavaria-small" name="size" class="input-size__input" value="Маленькая"
 											data-testid="menu__pizza_size_small">
-										<label for="Маленькая" class="input-size__label">Маленькая</label>
-										<input type="radio" id="Средняя" name="size" class="input-size__input" value="Средняя"
+										<label for="bavaria-small" class="input-size__label">Маленькая</label>
+										<input type="radio" id="bavaria-middle" name="size" class="input-size__input" value="Средняя"
 											data-testid="menu__pizza_size_middle" checked="">
-										<label for="Средняя" class="input-size__label checked">Средняя</label>
-										<input type="radio" id="Большая" name="size" class="input-size__input" value="Большая"
+										<label for="bavaria-middle" class="input-size__label checked">Средняя</label>
+										<input type="radio" id="bavaria-big" name="size" class="input-size__input" value="Большая"
 											data-testid="menu__pizza_size_big">
-										<label for="Большая" class="input-size__label">Большая</label>
+										<label for="bavaria-big" class="input-size__label">Большая</label>
 									</div>
 									<div class="pizza-input__dough input-dough">
-										<input type="radio" id="iibi" name="base_ingredient_iibi" data-tab="tab-1"
+										<input type="radio" id="iibi-bavaria" name="base_ingredient_iibi" data-tab="tab-1"
 											class="input-dough__input" value="iibi" checked="">
-										<label for="iibi" data-disabled="false"
+										<label for="iibi-bavaria" data-tab="tab-1"
 											class="input-dough__label dough">Традиційне</label>
-										<input type="radio" id="isnb" name="base_ingredient_isnb" data-tab="tab-2"
+										<input type="radio" id="isnb-bavaria" name="base_ingredient_isnb" data-tab="tab-2"
 											class="input-dough__input" value="isnb" disabled="">
-										<label for="isnb" data-disabled="true" class="input-dough__label">Тонке</label>
+										<label for="isnb-bavaria" data-tab="tab-2" class="input-dough__label">Тонке</label>
 									</div>
 								</div>
 								<div class="info-pizza-add add-pizza">
@@ -485,9 +485,8 @@
 					<div class="pup-ap-pizza_clouse"><img src="img/POP-AP/Closet.svg" alt=""> </div>
 					<div class="pup-ap-pizza__row">
 						<div class="pup-ap-pizza__img middle">
-							<img id="chorizo-01" class="img-pup-ap" src="img/catalog/chorizo-freh.webp" alt="img"
-								id="pizzaImage">
-							<!-- Додали id="pizzaImage" -->
+							<img  class="img-pup-ap" src="img/catalog/chorizo-freh.webp" alt="img">
+							
 						</div>
 						<div class="pup-ap-pizza__wrapper">
 							<div class="pup-ap-pizza__info info-pizza">
@@ -495,28 +494,28 @@
 								<h4 class="info-pizza__text">
 									Томатний соус, моцарелла, гостра чорізо з курчати, солодкий перець.
 								</h4>
-								<h5 data-tab-content id="tab-1" class="info-pizza__thickness">традиційне тісто 35, 710 г</h5>
-								<h5 data-tab-content id="tab-2" class="info-pizza__thickness">тонке тісто 25, 470 г г</h5>
+								<h5 data-tab-content id="tab-3" class="info-pizza__thickness">традиційне тісто 35, 710 г</h5>
+								<h5 data-tab-content id="tab-4" class="info-pizza__thickness hidden">тонке тісто 25, 470 г г</h5>
 								<div class="info-pizza__input">
 									<div class="pizza-input__size input-size">
-										<input type="radio" id="Маленькая" name="size" class="input-size__input" value="Маленькая"
+										<input type="radio" id="chorizo-small" name="size" class="input-size__input" value="Маленькая"
 											data-testid="menu__pizza_size_small">
-										<label for="Маленькая" class="input-size__label">Маленькая</label>
-										<input type="radio" id="Средняя" name="size" class="input-size__input" value="Средняя"
+										<label for="chorizo-small" class="input-size__label">Маленькая</label>
+										<input type="radio" id="chorizo-middle" name="size" class="input-size__input" value="Средняя"
 											data-testid="menu__pizza_size_middle" checked="">
-										<label for="Средняя" class="input-size__label checked">Средняя</label>
-										<input type="radio" id="Большая" name="size" class="input-size__input" value="Большая"
+										<label for="chorizo-middle" class="input-size__label checked">Средняя</label>
+										<input type="radio" id="chorizo-big" name="size" class="input-size__input" value="Большая"
 											data-testid="menu__pizza_size_big">
-										<label for="Большая" class="input-size__label">Большая</label>
+										<label for="chorizo-big" class="input-size__label">Большая</label>
 									</div>
 									<div class="pizza-input__dough input-dough">
-										<input type="radio" id="iibi" name="base_ingredient_iibi" data-tab="tab-1"
+										<input type="radio" id="iibi-chorizo" name="base_ingredient_iibi" 
 											class="input-dough__input" value="iibi" checked="">
-										<label for="iibi" data-disabled="false"
+										<label for="iibi-chorizo" data-tab="tab-3"
 											class="input-dough__label dough">Традиційне</label>
-										<input type="radio" id="isnb" name="base_ingredient_isnb" data-tab="tab-2"
+										<input type="radio" id="isnb-chorizo" name="base_ingredient_isnb" 
 											class="input-dough__input" value="isnb" disabled="">
-										<label for="isnb" data-disabled="true" class="input-dough__label">Тонке</label>
+										<label for="isnb-chorizo" data-tab="tab-4" class="input-dough__label">Тонке</label>
 									</div>
 								</div>
 								<div class="info-pizza-add add-pizza">
@@ -628,8 +627,8 @@
 					<div class="pup-ap-pizza_clouse"><img src="img/POP-AP/Closet.svg" alt=""> </div>
 					<div class="pup-ap-pizza__row">
 						<div class="pup-ap-pizza__img middle">
-							<img class="img-pup-ap" src="img/catalog/karbonara.webp" alt="img" id="pizzaImage">
-							<!-- Додали id="pizzaImage" -->
+							<img class="img-pup-ap" src="img/catalog/karbonara.webp" alt="img">
+							
 						</div>
 						<div class="pup-ap-pizza__wrapper">
 							<div class="pup-ap-pizza__info info-pizza">
@@ -638,28 +637,28 @@
 									Шинка з курчати, сири чеддер і пармезан, моцарелла, томати, червона цибуля, часник, соус
 									альфредо, італійські трави.
 								</h4>
-								<h5 data-tab-content id="tab-1" class="info-pizza__thickness">традиційне тісто 35, 710 г</h5>
-								<h5 data-tab-content id="tab-2" class="info-pizza__thickness">тонке тісто 25, 470 г г</h5>
+								<h5 data-tab-content id="tab-5" class="info-pizza__thickness">традиційне тісто 35, 710 г</h5>
+								<h5 data-tab-content id="tab-6" class="info-pizza__thickness hidden">тонке тісто 25, 470 г г</h5>
 								<div class="info-pizza__input">
 									<div class="pizza-input__size input-size">
-										<input type="radio" id="Маленькая" name="size" class="input-size__input" value="Маленькая"
+										<input type="radio" id="karbonara-small" name="size" class="input-size__input" value="Маленькая"
 											data-testid="menu__pizza_size_small">
-										<label for="Маленькая" class="input-size__label">Маленькая</label>
-										<input type="radio" id="Средняя" name="size" class="input-size__input" value="Средняя"
+										<label for="karbonara-small" class="input-size__label">Маленькая</label>
+										<input type="radio" id="karbonara-middle" name="size" class="input-size__input" value="Средняя"
 											data-testid="menu__pizza_size_middle" checked="">
-										<label for="Средняя" class="input-size__label checked">Средняя</label>
-										<input type="radio" id="Большая" name="size" class="input-size__input" value="Большая"
+										<label for="karbonara-middle" class="input-size__label checked">Средняя</label>
+										<input type="radio" id="karbonara-big" name="size" class="input-size__input" value="Большая"
 											data-testid="menu__pizza_size_big">
-										<label for="Большая" class="input-size__label">Большая</label>
+										<label for="karbonara-big" class="input-size__label">Большая</label>
 									</div>
 									<div class="pizza-input__dough input-dough">
-										<input type="radio" id="iibi" name="base_ingredient_iibi" data-tab="tab-1"
+										<input type="radio" id="iibi-karbonara" name="base_ingredient_iibi" 
 											class="input-dough__input" value="iibi" checked="">
-										<label for="iibi" data-disabled="false"
+										<label for="iibi-karbonara" data-tab="tab-5"
 											class="input-dough__label dough">Традиційне</label>
-										<input type="radio" id="isnb" name="base_ingredient_isnb" data-tab="tab-2"
+										<input type="radio" id="isnb-karbonara" name="base_ingredient_isnb" 
 											class="input-dough__input" value="isnb" disabled="">
-										<label for="isnb" data-disabled="true" class="input-dough__label">Тонке</label>
+										<label for="isnb-karbonara" data-tab="tab-6" class="input-dough__label">Тонке</label>
 									</div>
 								</div>
 								<div class="info-pizza-add add-pizza">
@@ -771,7 +770,7 @@
 					<div class="pup-ap-pizza_clouse"><img src="img/POP-AP/Closet.svg" alt=""> </div>
 					<div class="pup-ap-pizza__row">
 						<div class="pup-ap-pizza__img middle">
-							<img class="img-pup-ap" src="img/catalog/paperoni-grib-01.webp" alt="img" id="pizzaImage">
+							<img class="img-pup-ap" src="img/catalog/paperoni-grib-01.webp" alt="img">
 							<!-- Додали id="pizzaImage" -->
 						</div>
 						<div class="pup-ap-pizza__wrapper">
@@ -780,28 +779,28 @@
 								<h4 class="info-pizza__text">
 									ГПепероні з курчати, збільшена порція моцарелли, томати, томатний соус.
 								</h4>
-								<h5 data-tab-content id="tab-1" class="info-pizza__thickness">традиційне тісто 35, 710 г</h5>
-								<h5 data-tab-content id="tab-2" class="info-pizza__thickness">тонке тісто 25, 470 г г</h5>
+								<h5 data-tab-content id="tab-7" class="info-pizza__thickness">традиційне тісто 35, 710 г</h5>
+								<h5 data-tab-content id="tab-8" class="info-pizza__thickness hidden">тонке тісто 25, 470 г г</h5>
 								<div class="info-pizza__input">
 									<div class="pizza-input__size input-size">
-										<input type="radio" id="Маленькая" name="size" class="input-size__input" value="Маленькая"
+										<input type="radio" id="paperoni-small" name="size" class="input-size__input" value="Маленькая"
 											data-testid="menu__pizza_size_small">
-										<label for="Маленькая" class="input-size__label">Маленькая</label>
-										<input type="radio" id="Средняя" name="size" class="input-size__input" value="Средняя"
+										<label for="paperoni-small" class="input-size__label">Маленькая</label>
+										<input type="radio" id="paperoni-middle" name="size" class="input-size__input" value="Средняя"
 											data-testid="menu__pizza_size_middle" checked="">
-										<label for="Средняя" class="input-size__label checked">Средняя</label>
-										<input type="radio" id="Большая" name="size" class="input-size__input" value="Большая"
+										<label for="paperoni-middle" class="input-size__label checked">Средняя</label>
+										<input type="radio" id="paperoni-big" name="size" class="input-size__input" value="Большая"
 											data-testid="menu__pizza_size_big">
-										<label for="Большая" class="input-size__label">Большая</label>
+										<label for="paperoni-big" class="input-size__label">Большая</label>
 									</div>
 									<div class="pizza-input__dough input-dough">
-										<input type="radio" id="iibi" name="base_ingredient_iibi" data-tab="tab-1"
+										<input type="radio" id="iibi-paperoni" name="base_ingredient_iibi" 
 											class="input-dough__input" value="iibi" checked="">
-										<label for="iibi" data-disabled="false"
+										<label for="iibi-paperoni" data-tab="tab-7"
 											class="input-dough__label dough">Традиційне</label>
-										<input type="radio" id="isnb" name="base_ingredient_isnb" data-tab="tab-2"
+										<input type="radio" id="isnb-paperoni" name="base_ingredient_isnb" 
 											class="input-dough__input" value="isnb" disabled="">
-										<label for="isnb" data-disabled="true" class="input-dough__label">Тонке</label>
+										<label for="isnb-paperoni" data-tab="tab-8" class="input-dough__label">Тонке</label>
 									</div>
 								</div>
 								<div class="info-pizza-add add-pizza">
@@ -913,7 +912,7 @@
 					<div class="pup-ap-pizza_clouse"><img src="img/POP-AP/Closet.svg" alt=""> </div>
 					<div class="pup-ap-pizza__row">
 						<div class="pup-ap-pizza__img middle">
-							<img class="img-pup-ap" src="img/catalog/vetchina-ogurik-01.webp" alt="img" id="pizzaImage">
+							<img class="img-pup-ap" src="img/catalog/vetchina-ogurik-01.webp" alt="img">
 							<!-- Додали id="pizzaImage" -->
 						</div>
 						<div class="pup-ap-pizza__wrapper">
@@ -922,28 +921,28 @@
 								<h4 class="info-pizza__text">
 									Соус ранч, шинка з курчати, моцарелла, мариновані огірочки, червона цибуля.
 								</h4>
-								<h5 data-tab-content id="tab-1" class="info-pizza__thickness">традиційне тісто 35, 710 г</h5>
-								<h5 data-tab-content id="tab-2" class="info-pizza__thickness">тонке тісто 25, 470 г г</h5>
+								<h5 data-tab-content id="tab-9" class="info-pizza__thickness">традиційне тісто 35, 710 г</h5>
+								<h5 data-tab-content id="tab-10" class="info-pizza__thickness hidden">тонке тісто 25, 470 г г</h5>
 								<div class="info-pizza__input">
 									<div class="pizza-input__size input-size">
-										<input type="radio" id="Маленькая" name="size" class="input-size__input" value="Маленькая"
+										<input type="radio" id="vetchina-small" name="size" class="input-size__input" value="Маленькая"
 											data-testid="menu__pizza_size_small">
-										<label for="Маленькая" class="input-size__label">Маленькая</label>
-										<input type="radio" id="Средняя" name="size" class="input-size__input" value="Средняя"
+										<label for="vetchina-small" class="input-size__label">Маленькая</label>
+										<input type="radio" id="vetchina-middle" name="size" class="input-size__input" value="Средняя"
 											data-testid="menu__pizza_size_middle" checked="">
-										<label for="Средняя" class="input-size__label checked">Средняя</label>
-										<input type="radio" id="Большая" name="size" class="input-size__input" value="Большая"
+										<label for="vetchina-middle" class="input-size__label checked">Средняя</label>
+										<input type="radio" id="vetchina-big" name="size" class="input-size__input" value="Большая"
 											data-testid="menu__pizza_size_big">
-										<label for="Большая" class="input-size__label">Большая</label>
+										<label for="vetchina-big" class="input-size__label">Большая</label>
 									</div>
 									<div class="pizza-input__dough input-dough">
-										<input type="radio" id="iibi" name="base_ingredient_iibi" data-tab="tab-1"
+										<input type="radio" id="iibi-vetchina" name="base_ingredient_iibi" 
 											class="input-dough__input" value="iibi" checked="">
-										<label for="iibi" data-disabled="false"
+										<label for="iibi-vetchina" data-tab="tab-9"
 											class="input-dough__label dough">Традиційне</label>
-										<input type="radio" id="isnb" name="base_ingredient_isnb" data-tab="tab-2"
+										<input type="radio" id="isnb-vetchina" name="base_ingredient_isnb" 
 											class="input-dough__input" value="isnb" disabled="">
-										<label for="isnb" data-disabled="true" class="input-dough__label">Тонке</label>
+										<label for="isnb-vetchina" data-tab="tab-10" class="input-dough__label">Тонке</label>
 									</div>
 								</div>
 								<div class="info-pizza-add add-pizza">
@@ -1055,7 +1054,7 @@
 					<div class="pup-ap-pizza_clouse"><img src="img/POP-AP/Closet.svg" alt=""> </div>
 					<div class="pup-ap-pizza__row">
 						<div class="pup-ap-pizza__img middle">
-							<img class="img-pup-ap" src="img/catalog/vetcina-sir.webp" alt="img" id="pizzaImage">
+							<img class="img-pup-ap" src="img/catalog/vetcina-sir.webp" alt="img">
 							<!-- Додали id="pizzaImage" -->
 						</div>
 						<div class="pup-ap-pizza__wrapper">
@@ -1064,28 +1063,28 @@
 								<h4 class="info-pizza__text">
 									Шинка з курчати, моцарелла, соус альфредо.
 								</h4>
-								<h5 data-tab-content id="tab-1" class="info-pizza__thickness">традиційне тісто 35, 710 г</h5>
-								<h5 data-tab-content id="tab-2" class="info-pizza__thickness">тонке тісто 25, 470 г г</h5>
+								<h5 data-tab-content id="tab-11" class="info-pizza__thickness">традиційне тісто 35, 710 г</h5>
+								<h5 data-tab-content id="tab-12" class="info-pizza__thickness hidden">тонке тісто 25, 470 г г</h5>
 								<div class="info-pizza__input">
 									<div class="pizza-input__size input-size">
-										<input type="radio" id="Маленькая" name="size" class="input-size__input" value="Маленькая"
+										<input type="radio" id="vetcina-sir-small" name="size" class="input-size__input" value="Маленькая"
 											data-testid="menu__pizza_size_small">
-										<label for="Маленькая" class="input-size__label">Маленькая</label>
-										<input type="radio" id="Средняя" name="size" class="input-size__input" value="Средняя"
+										<label for="vetcina-sir-small" class="input-size__label">Маленькая</label>
+										<input type="radio" id="vetcina-sir-middle" name="size" class="input-size__input" value="Средняя"
 											data-testid="menu__pizza_size_middle" checked="">
-										<label for="Средняя" class="input-size__label checked">Средняя</label>
-										<input type="radio" id="Большая" name="size" class="input-size__input" value="Большая"
+										<label for="vetcina-sir-middle" class="input-size__label checked">Средняя</label>
+										<input type="radio" id="vetcina-sir-big" name="size" class="input-size__input" value="Большая"
 											data-testid="menu__pizza_size_big">
-										<label for="Большая" class="input-size__label">Большая</label>
+										<label for="vetcina-sir-big" class="input-size__label">Большая</label>
 									</div>
 									<div class="pizza-input__dough input-dough">
-										<input type="radio" id="iibi" name="base_ingredient_iibi" data-tab="tab-1"
+										<input type="radio" id="iibi-vetcina-sir" name="base_ingredient_iibi" 
 											class="input-dough__input" value="iibi" checked="">
-										<label for="iibi" data-disabled="false"
+										<label for="iibi-vetcina-sir" data-tab="tab-11"
 											class="input-dough__label dough">Традиційне</label>
-										<input type="radio" id="isnb" name="base_ingredient_isnb" data-tab="tab-2"
+										<input type="radio" id="isnb-vetcina-sir" name="base_ingredient_isnb" 
 											class="input-dough__input" value="isnb" disabled="">
-										<label for="isnb" data-disabled="true" class="input-dough__label">Тонке</label>
+										<label for="isnb-vetcina-sir" data-tab="tab-12" class="input-dough__label">Тонке</label>
 									</div>
 								</div>
 								<div class="info-pizza-add add-pizza">
@@ -1197,7 +1196,7 @@
 					<div class="pup-ap-pizza_clouse"><img src="img/POP-AP/Closet.svg" alt=""> </div>
 					<div class="pup-ap-pizza__row">
 						<div class="pup-ap-pizza__img middle">
-							<img class="img-pup-ap" src="img/catalog/wau-kebab-01.webp" alt="img" id="pizzaImage">
+							<img class="img-pup-ap" src="img/catalog/wau-kebab-01.webp" alt="img">
 							<!-- Додали id="pizzaImage" -->
 						</div>
 						<div class="pup-ap-pizza__wrapper">
@@ -1207,28 +1206,28 @@
 									Кебаб із яловичини, соус ранч, моцарелла, солодкий перець, томати, червона цибуля, фірмовий
 									томатний соус.
 								</h4>
-								<h5 data-tab-content id="tab-1" class="info-pizza__thickness">традиційне тісто 35, 710 г</h5>
-								<h5 data-tab-content id="tab-2" class="info-pizza__thickness">тонке тісто 25, 470 г г</h5>
+								<h5 data-tab-content id="tab-13" class="info-pizza__thickness">традиційне тісто 35, 710 г</h5>
+								<h5 data-tab-content id="tab-14" class="info-pizza__thickness hidden">тонке тісто 25, 470 г г</h5>
 								<div class="info-pizza__input">
 									<div class="pizza-input__size input-size">
-										<input type="radio" id="Маленькая" name="size" class="input-size__input" value="Маленькая"
+										<input type="radio" id="kebab-small" name="size" class="input-size__input" value="Маленькая"
 											data-testid="menu__pizza_size_small">
-										<label for="Маленькая" class="input-size__label">Маленькая</label>
-										<input type="radio" id="Средняя" name="size" class="input-size__input" value="Средняя"
+										<label for="kebab-small" class="input-size__label">Маленькая</label>
+										<input type="radio" id="kebab-middle" name="size" class="input-size__input" value="Средняя"
 											data-testid="menu__pizza_size_middle" checked="">
-										<label for="Средняя" class="input-size__label checked">Средняя</label>
-										<input type="radio" id="Большая" name="size" class="input-size__input" value="Большая"
+										<label for="kebab-middle" class="input-size__label checked">Средняя</label>
+										<input type="radio" id="kebab-big" name="size" class="input-size__input" value="Большая"
 											data-testid="menu__pizza_size_big">
-										<label for="Большая" class="input-size__label">Большая</label>
+										<label for="kebab-big" class="input-size__label">Большая</label>
 									</div>
 									<div class="pizza-input__dough input-dough">
-										<input type="radio" id="iibi" name="base_ingredient_iibi" data-tab="tab-1"
+										<input type="radio" id="iibi-kebab" name="base_ingredient_iibi"
 											class="input-dough__input" value="iibi" checked="">
-										<label for="iibi" data-disabled="false"
+										<label for="iibi-kebab" data-tab="tab-13"
 											class="input-dough__label dough">Традиційне</label>
-										<input type="radio" id="isnb" name="base_ingredient_isnb" data-tab="tab-2"
+										<input type="radio" id="isnb-kebab" name="base_ingredient_isnb" 
 											class="input-dough__input" value="isnb" disabled="">
-										<label for="isnb" data-disabled="true" class="input-dough__label">Тонке</label>
+										<label for="isnb-kebab" data-tab="tab-14" class="input-dough__label">Тонке</label>
 									</div>
 								</div>
 								<div class="info-pizza-add add-pizza">
@@ -1340,7 +1339,7 @@
 					<div class="pup-ap-pizza_clouse"><img src="img/POP-AP/Closet.svg" alt=""> </div>
 					<div class="pup-ap-pizza__row">
 						<div class="pup-ap-pizza__img middle">
-							<img class="img-pup-ap" src="img/catalog/for-sezon.webp" alt="img" id="pizzaImage">
+							<img class="img-pup-ap" src="img/catalog/for-sezon.webp" alt="img">
 							<!-- Додали id="pizzaImage" -->
 						</div>
 						<div class="pup-ap-pizza__wrapper">
@@ -1349,28 +1348,28 @@
 								<h4 class="info-pizza__text">
 									Моцарелла, сири чеддер та пармезан, сир блю чіз, соус альфредо.
 								</h4>
-								<h5 data-tab-content id="tab-1" class="info-pizza__thickness">традиційне тісто 35, 710 г</h5>
-								<h5 data-tab-content id="tab-2" class="info-pizza__thickness">тонке тісто 25, 470 г г</h5>
+								<h5 data-tab-content id="tab-15" class="info-pizza__thickness">традиційне тісто 35, 710 г</h5>
+								<h5 data-tab-content id="tab-16" class="info-pizza__thickness hidden">тонке тісто 25, 470 г г</h5>
 								<div class="info-pizza__input">
 									<div class="pizza-input__size input-size">
-										<input type="radio" id="Маленькая" name="size" class="input-size__input" value="Маленькая"
+										<input type="radio" id="sezon-small" name="size" class="input-size__input" value="Маленькая"
 											data-testid="menu__pizza_size_small">
-										<label for="Маленькая" class="input-size__label">Маленькая</label>
-										<input type="radio" id="Средняя" name="size" class="input-size__input" value="Средняя"
+										<label for="sezon-small" class="input-size__label">Маленькая</label>
+										<input type="radio" id="sezon-middle" name="size" class="input-size__input" value="Средняя"
 											data-testid="menu__pizza_size_middle" checked="">
-										<label for="Средняя" class="input-size__label checked">Средняя</label>
-										<input type="radio" id="Большая" name="size" class="input-size__input" value="Большая"
+										<label for="sezon-middle" class="input-size__label checked">Средняя</label>
+										<input type="radio" id="sezon-big" name="size" class="input-size__input" value="Большая"
 											data-testid="menu__pizza_size_big">
-										<label for="Большая" class="input-size__label">Большая</label>
+										<label for="sezon-big" class="input-size__label">Большая</label>
 									</div>
 									<div class="pizza-input__dough input-dough">
-										<input type="radio" id="iibi" name="base_ingredient_iibi" data-tab="tab-1"
+										<input type="radio" id="iibi-sezon" name="base_ingredient_iibi"
 											class="input-dough__input" value="iibi" checked="">
-										<label for="iibi" data-disabled="false"
+										<label for="iibi-sezon" data-tab="tab-15"
 											class="input-dough__label dough">Традиційне</label>
-										<input type="radio" id="isnb" name="base_ingredient_isnb" data-tab="tab-2"
+										<input type="radio" id="isnb-sezon" name="base_ingredient_isnb" 
 											class="input-dough__input" value="isnb" disabled="">
-										<label for="isnb" data-disabled="true" class="input-dough__label">Тонке</label>
+										<label for="isnb-sezon" data-tab="tab-16" class="input-dough__label">Тонке</label>
 									</div>
 								</div>
 								<div class="info-pizza-add add-pizza">
@@ -1541,6 +1540,9 @@
 
 				</div>
 
+			</div>
+			<div class="scroll-top-container">
+				<a><img src="img/scroll-up.png" alt="img"></a>
 			</div>
 		</main>
 	</div>

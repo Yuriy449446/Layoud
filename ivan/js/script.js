@@ -452,19 +452,24 @@ baseIngredientInputs.forEach(input => {
     input.addEventListener('click', changeBaseIngredient);
 });
 
-// Получаем все радиокнопки размеров пиццы
-const sizeInputsForPizza = document.querySelectorAll('[data-testid^="menu__pizza_size_"]');
 
+
+// Зміна розміру картинки піци
+//const sizeInputsForPizza = document.querySelectorAll('[data-testid^="menu__pizza_size_"]');
+const sizeInputsForPizza = document.querySelectorAll('[data-testid^="menu__pizza_size_"]');
 // Добавляем обработчик клика для каждой радиокнопки
 sizeInputsForPizza.forEach(input => {
     input.addEventListener('click', function() {
         // Удаляем все классы связанные с размерами пиццы у элемента с классом 'pup-ap-pizza__img'
-        const pizzaImg = document.querySelector('.pup-ap-pizza__img');
+		  const inputId = input.id.split('-')[0];
+        const pizzaImg = document.getElementById(inputId);
+		 
         pizzaImg.classList.remove('small', 'middle', 'big');
-
+		  
         // Получаем значение data-testid текущей радиокнопки
         const size = input.getAttribute('data-testid');
-
+		  
+		  
         // Добавляем соответствующий класс в зависимости от выбранного размера пиццы
         if (size === 'menu__pizza_size_small') {
             pizzaImg.classList.add('small');
@@ -473,16 +478,18 @@ sizeInputsForPizza.forEach(input => {
         } else if (size === 'menu__pizza_size_big') {
             pizzaImg.classList.add('big');
         }
+		  console.log(pizzaImg)
     });
 });
 
 
 
 
-/*Фільтр товщіни тіста піци*/
+/*Фільтр товщіни тіста піци зміна кольору кнопок*/
 // Получаем все метки выбора типа теста
 const doughLabels = document.querySelectorAll('.input-dough__label');
 
+	
 // Добавляем обработчик клика для каждой метки
 doughLabels.forEach(label => {
     label.addEventListener('click', function() {
@@ -490,39 +497,43 @@ doughLabels.forEach(label => {
         doughLabels.forEach(doughLabel => {
             doughLabel.classList.remove('dough');
         });
-
+		  
         // Добавляем класс 'dough' к выбранной метке
         label.classList.add('dough');
+		  
     });
 });
 
 
+/*Фільтр товщіни тіста піци зміна тексту відповідно натуснутій кнопки*/
+const tabDough = document.querySelectorAll('[data-tab]');
+const contentBoxes = document.querySelectorAll('[data-tab-content]');
 
 
-// товщіна тіста, НЕ ПРАЦЮЄ
-const tabContainer = document.querySelector('.pup-ap-pizza__info');
+tabDough.forEach( function(item){
+    item.addEventListener("click",function(){
+     
+                 
+     contentBoxes.forEach(function(item){
+        
+        item.classList.add('hidden')
+                   
 
-// Добавляем обработчик клика на родительский элемент
-tabContainer.addEventListener('click', function(event) {
-    // Проверяем, что клик произошел на элементе с атрибутом data-tab
-    if (event.target.dataset.tab) {
-        const tabId = event.target.dataset.tab; // Получаем значение атрибута data-tab текущего заголовка таба
+     })
+     
+     const contentBox = document.querySelector('#' + this.dataset.tab);
 
-        // Получаем все контентные блоки
-        const contentBoxes = document.querySelectorAll('[data-tab-content]');
+      
+         
+     contentBox.classList.remove('hidden')
+	  
 
-        // Скрываем все контентные блоки перед показом нужного блока
-        contentBoxes.forEach(function (contentBox) {
-            contentBox.classList.add('hidden');
-        });
+    })
+})
 
-        // Отображаем только соответствующий выбранному табу контентный блок
-        const selectedContentBox = document.querySelector('[data-tab-content="' + tabId + '"]');
-        if (selectedContentBox) { // Проверяем наличие контентного блока
-            selectedContentBox.classList.remove('hidden');
-        }
-    }
-});
+
+
+
 
 
 
