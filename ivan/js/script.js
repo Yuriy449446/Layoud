@@ -789,14 +789,14 @@ pizzaItems.forEach(item => {
   
 	 // Обробник події по кліку на елемент з id="chorizo-01"
 	 document.getElementById('vetcina-sir-01').addEventListener('click', function() {
-		showElement('vetcina-sir');
+		showElement('vetcinasir');
 	 });
   
 	 // Обробник події по кліку на елементи з класом "pup-ap-pizza_clouse"
 	 var closeButtons = document.querySelectorAll('.pup-ap-pizza_clouse');
 	 closeButtons.forEach(function(button) {
 		button.addEventListener('click', function() {
-		  hideElement('vetcina-sir');
+		  hideElement('vetcinasir');
 		});
 	 });
 

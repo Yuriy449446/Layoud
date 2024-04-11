@@ -4246,25 +4246,25 @@ body {
           transform: scale(1.1);
 }
 
-.pizza-pup-ap.pup-ap-pizza.small img {
+.pizza-pup-ap.pup-ap-pizza.small img.img-pup-ap {
   -webkit-transform: scale(0.7);
       -ms-transform: scale(0.7);
           transform: scale(0.7);
 }
 
-.pizza-pup-ap.pup-ap-pizza.middle img {
+.pizza-pup-ap.pup-ap-pizza.middle img.img-pup-ap {
   -webkit-transform: scale(0.8);
       -ms-transform: scale(0.8);
           transform: scale(0.8);
 }
 
-.pizza-pup-ap.pup-ap-pizza img {
+.pizza-pup-ap.pup-ap-pizza img.img-pup-ap {
   -webkit-transform: scale(0.8);
       -ms-transform: scale(0.8);
           transform: scale(0.8);
 }
 
-.pizza-pup-ap.pup-ap-pizza.big img {
+.pizza-pup-ap.pup-ap-pizza.big img.img-pup-ap {
   -webkit-transform: scale(0.9);
       -ms-transform: scale(0.9);
           transform: scale(0.9);

@@ -4394,27 +4394,19 @@ body {
 	}
 }
 
-.pizza-pup-ap.pup-ap-pizza.small{
-	img{
-		transform: scale(0.7);
-	}
+.pizza-pup-ap.pup-ap-pizza.small img.img-pup-ap{
+	transform: scale(0.7);
 }
-.pizza-pup-ap.pup-ap-pizza.middle{
-	img{
-		transform: scale(0.8);
-	}
+.pizza-pup-ap.pup-ap-pizza.middle img.img-pup-ap{
+	transform: scale(0.8);
 }
-.pizza-pup-ap.pup-ap-pizza{
-	img{
-		transform: scale(0.8);
-	}
+.pizza-pup-ap.pup-ap-pizza img.img-pup-ap{
+	transform: scale(0.8);
 }
 
 
-.pizza-pup-ap.pup-ap-pizza.big{
-	img{
-		transform: scale(0.9);
-	}
+.pizza-pup-ap.pup-ap-pizza.big img.img-pup-ap{
+	transform: scale(0.9);
 }
 
 .info-pizza::-webkit-scrollbar {
