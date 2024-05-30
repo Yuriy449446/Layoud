@@ -1,0 +1,170 @@
+.page {
+	margin-left: 15px;
+	margin-right: 15px;
+	padding-top: 30px;
+	// .page__container
+	&__container {
+		border-radius: 20px;
+		background-color: rgb(193, 195, 162);
+		border: 1px solid grey;
+		
+	}
+}
+.info-page {
+	padding-top: 20px;
+	
+	// .info-page__top
+	&__top {
+		
+	}
+	// .info-page__bottom
+	&__bottom {
+	}
+}
+.top-info {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 25px;
+	// .top-info__tatle
+	&__tatle {
+		max-width: 50%;
+		font-size: 21px;
+		font-weight: 500;
+		font-family: "Wix Madefor Text", sans-serif;
+	}
+	&__img{
+		width: 30px;
+		height: 35px;
+		background-color: black;
+		border-bottom-left-radius: 50%;
+		border-bottom-right-radius: 50%;
+		display: flex;
+		
+		
+		img{
+		  width: 20px;
+		  height: 30px;
+		  text-align: center;
+		  margin: 0 auto;
+		}
+	}
+	
+}
+.bottom-info {
+	// .bottom-info__age
+	padding-bottom: 100px;
+	&__age {
+		margin-bottom: 25px;
+		h5{
+			font-size: 12px;
+			margin-bottom: 5px;
+		}
+		h4{
+			font-size: 16px;
+			font-weight: 500;
+		}
+	}
+	&__time{
+      h5{
+			font-size: 12px;
+			margin-bottom: 5px;
+		}
+		h4{
+			font-size: 16px;
+			font-weight: 500;
+		}
+	}
+}
+
+
+.footer {
+	// .footer__container
+	&__container {
+	}
+}
+.info-footer {
+	// .info-footer__list
+	&__list {
+		display: flex;
+		margin-bottom: 15px;
+		//background-color: rgba(85, 27, 27, 0.623);
+		background-color: #855E42;
+		margin-left: -15px;
+		margin-right: -15px;
+		color:rgb(245, 248, 247);
+		overflow: hidden;
+		white-space: nowrap;
+		
+		li{
+			font-size: 13px;
+			margin-left: 5px;
+			padding: toRem(10) toRem(10);
+			display: inline-block;
+			display: flex;
+			
+         animation: marquee 30s linear infinite;
+			span::after{
+				content: " ";
+				display: block;
+				width: 3px;
+				height: 3px;
+				border-radius: 50%;
+				background-color: rgb(245, 248, 247);
+				
+				
+				
+			}
+			 span{
+				padding: toRem(0) toRem(5);
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+	// .info-footer__wrapper
+	&__wrapper {
+	}
+}
+@keyframes marquee {
+	from {
+		 transform: translateX(100%);
+	}
+	to {
+		 transform: translateX(-100%);
+	}
+}
+.name-box {
+	
+	h5{
+		font-size: 12px;
+			margin-bottom: 5px;
+	}
+	&__neme{
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 10px;
+		h3{
+			//font-family:"Roboto";
+			font-family: "Wix Madefor Text", sans-serif;
+				  font-weight: 500;
+				  font-size: 21px;
+				 max-width: 50%;
+		}
+		button{
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background-color: rgb(243, 153, 36);
+			align-self: flex-end;
+			margin-bottom: 10px;
+			&span{
+				color: black;
+				
+				display: flex;
+				justify-self: center;
+				align-self: center;
+				
+			}
+		}
+	}
+}

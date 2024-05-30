@@ -1,0 +1,122 @@
+		.header {
+          position: relative;
+			 padding-top: 20px;
+			// .header__container
+			&__container {
+				position: sticky;
+				top: 0;
+				left: 0;
+				width: 100%;
+				z-index: 50;
+				background-color:rgb(245, 242, 225);
+				display: flex;
+				justify-content: space-between;
+				h2{
+             font-family:"Roboto";
+				  //font-family: "Wix Madefor Text", sans-serif;
+				  font-weight: 700;
+				  font-size: 18px;
+				  display: flex;
+				  text-transform: uppercase;
+				  span{
+					display:flex;
+					color: rgb(243, 153, 36);
+					height: 10px;
+					padding-bottom: 5px;
+				  }
+				}
+			}
+		}
+
+		
+
+		.page {
+			&__container {
+				
+			}
+
+			.info-page {
+
+				// .info-page__top
+				&__top {}
+
+				// .info-page__bottom
+				&__bottom {}
+			}
+
+			.top-info {
+
+				// .top-info__tatle
+				&__tatle {}
+			}
+
+			.bottom-info {
+
+				// .bottom-info__age
+				&__age {}
+			}
+
+		}
+
+		// .page__container
+
+		//Підключення меню бургер 
+		//Burger Icon
+		.icon-menu {
+			display: none;
+
+			@media (max-width: toEm(1024.98)) {
+				display: block;
+				position: relative;
+				width: toRem(25);
+				height: toRem(18);
+				z-index: 5;
+				align-self: center;
+             
+
+				@media (any-hover: none) {
+					cursor: default;
+				}
+
+				span,
+				&::before,
+				&::after {
+					content: "";
+					transition: all 0.3s ease 0s;
+					right: 0;
+					position: absolute;
+					width: 100%;
+					height: toRem(2);
+					background-color: #0e0e0e;
+					z-index: 5;
+				}
+
+				&::before {
+					top: 0;
+				}
+
+				&::after {
+					bottom: 0;
+				}
+
+				span {
+					top: calc(50% - toRem(1));
+				}
+
+				.menu-open & {
+					span {
+						width: 0;
+					}
+
+					&::before {
+						top: calc(50% - toRem(1));
+						transform: rotate(-45deg);
+					}
+
+					&::after {
+						bottom: calc(50% - toRem(1));
+						transform: rotate(45deg);
+					}
+				}
+			}
+		}
