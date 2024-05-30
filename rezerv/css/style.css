@@ -328,7 +328,7 @@ textarea {
 }
 
 .bottom-info {
-  padding-bottom: 100px;
+  padding-bottom: 200px;
 }
 .bottom-info__age {
   margin-bottom: 25px;
@@ -427,7 +427,7 @@ textarea {
   font-family: "Wix Madefor Text", sans-serif;
   font-weight: 500;
   font-size: 21px;
-  max-width: 50%;
+  max-width: 35%;
 }
 .name-box__neme button {
   width: 30px;
