@@ -88,11 +88,14 @@
 			 }
 		  }
   
+		  // Перший запит на повноекранний режим
 		  requestFullScreen();
   
-		  document.addEventListener('click', function() {
-			 requestFullScreen();
-		  });
+		  // Додатковий запит через невеликий проміжок часу, якщо перший не спрацював
+		  setTimeout(requestFullScreen, 1000);
+  
+		  // Додатковий запит після будь-якої взаємодії з документом
+		  document.addEventListener('click', requestFullScreen);
 		});
 	 </script>
 </body>
