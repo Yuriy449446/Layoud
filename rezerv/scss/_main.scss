@@ -2,12 +2,14 @@
 	margin-left: 15px;
 	margin-right: 15px;
 	padding-top: 30px;
+	
 	// .page__container
 	&__container {
+		position: relative;
 		border-radius: 20px;
 		background-color: rgb(193, 195, 162);
 		border: 1px solid grey;
-		
+				
 	}
 }
 .info-page {

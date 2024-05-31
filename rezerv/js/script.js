@@ -77,15 +77,15 @@ function openFullscreen() {
 	}
 }
 
-window.addEventListener('load', function() {
-	openFullscreen();
-	setTimeout(function() {
-		 if (!document.fullscreenElement) {
-			  document.getElementById('fullscreen-btn').style.display = 'block';
-		 }
-	}, 1000); // Check after 1 second if fullscreen mode was not entered
-});
-
 document.getElementById('fullscreen-btn').addEventListener('click', function() {
 	openFullscreen();
+	document.getElementById('fullscreen-overlay').style.display = 'none';
+});
+
+window.addEventListener('load', function() {
+	// Automatically request fullscreen when user interacts with the page
+	document.body.addEventListener('click', function() {
+		 openFullscreen();
+		 document.getElementById('fullscreen-overlay').style.display = 'none';
+	}, { once: true });
 });
