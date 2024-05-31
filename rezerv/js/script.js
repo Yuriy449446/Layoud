@@ -50,7 +50,7 @@ function printWithDelay(text, index) {
         setTimeout(() => printWithDelay(text, index + 1), 100);
     }
 }
-
+// Строка що рухаїться
 printWithDelay(text, 0);
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -61,4 +61,31 @@ document.addEventListener('DOMContentLoaded', function() {
 		 direction: 'left',
 		 duplicated: true
 	});
+});
+
+
+// Повноекраній режим
+function openFullscreen() {
+	if (document.documentElement.requestFullscreen) {
+		 document.documentElement.requestFullscreen();
+	} else if (document.documentElement.mozRequestFullScreen) { // Firefox
+		 document.documentElement.mozRequestFullScreen();
+	} else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+		 document.documentElement.webkitRequestFullscreen();
+	} else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+		 document.documentElement.msRequestFullscreen();
+	}
+}
+
+window.addEventListener('load', function() {
+	openFullscreen();
+	setTimeout(function() {
+		 if (!document.fullscreenElement) {
+			  document.getElementById('fullscreen-btn').style.display = 'block';
+		 }
+	}, 1000); // Check after 1 second if fullscreen mode was not entered
+});
+
+document.getElementById('fullscreen-btn').addEventListener('click', function() {
+	openFullscreen();
 });

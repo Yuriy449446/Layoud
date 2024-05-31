@@ -209,7 +209,7 @@ textarea {
 .header__container h2 {
   font-family: "Roboto";
   font-weight: 700;
-  font-size: 18px;
+  font-size: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -334,7 +334,7 @@ textarea {
   margin-bottom: 25px;
 }
 .bottom-info__age h5 {
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 5px;
 }
 .bottom-info__age h4 {
@@ -342,7 +342,7 @@ textarea {
   font-weight: 500;
 }
 .bottom-info__time h5 {
-  font-size: 12px;
+  font-size: 14px;
   margin-bottom: 5px;
 }
 .bottom-info__time h4 {
