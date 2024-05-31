@@ -65,27 +65,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // Повноекраній режим
-function openFullscreen() {
-	if (document.documentElement.requestFullscreen) {
-		 document.documentElement.requestFullscreen();
-	} else if (document.documentElement.mozRequestFullScreen) { // Firefox
-		 document.documentElement.mozRequestFullScreen();
-	} else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
-		 document.documentElement.webkitRequestFullscreen();
-	} else if (document.documentElement.msRequestFullscreen) { // IE/Edge
-		 document.documentElement.msRequestFullscreen();
+document.addEventListener("DOMContentLoaded", function () {
+	function requestFullScreen() {
+	  if (!document.fullscreenElement) {
+		 document.documentElement.requestFullscreen().catch(err => {
+			console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+		 });
+	  }
 	}
-}
-
-document.getElementById('fullscreen-btn').addEventListener('click', function() {
-	openFullscreen();
-	document.getElementById('fullscreen-overlay').style.display = 'none';
-});
-
-window.addEventListener('load', function() {
-	// Automatically request fullscreen when user interacts with the page
-	document.body.addEventListener('click', function() {
-		 openFullscreen();
-		 document.getElementById('fullscreen-overlay').style.display = 'none';
-	}, { once: true });
-});
+ 
+	requestFullScreen();
+ 
+	document.addEventListener('click', function() {
+	  requestFullScreen();
+	});
+ });
+ 

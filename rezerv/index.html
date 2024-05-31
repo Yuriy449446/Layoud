@@ -67,6 +67,7 @@
 					<h4>Зачекайте будь ласка.</h4>
 				</div>
 			</div>
+			
 		</main>
 
 		<footer class="footer">
@@ -77,6 +78,23 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<!-- Підключення JS-файлу з кодом -->
 	<script src="js/script.js"></script>
+	<script>
+		document.addEventListener("DOMContentLoaded", function () {
+		  function requestFullScreen() {
+			 if (!document.fullscreenElement) {
+				document.documentElement.requestFullscreen().catch(err => {
+				  console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+				});
+			 }
+		  }
+  
+		  requestFullScreen();
+  
+		  document.addEventListener('click', function() {
+			 requestFullScreen();
+		  });
+		});
+	 </script>
 </body>
 
 </html>
