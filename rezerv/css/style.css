@@ -109,7 +109,7 @@
 
 ._icon-plus:before {
   content: "\ea0a";
-  font-size: 14px;
+  font-size: 16px;
 }
 
 *,
@@ -431,8 +431,8 @@ textarea {
   max-width: 35%;
 }
 .name-box__neme button {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: rgb(243, 153, 36);
   -ms-flex-item-align: end;
