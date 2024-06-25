@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="css/style.css">
+
+	<title>Studybay</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">м
+			<div class="header__container">
+				<img class="header__logo" src="img/logo/logo.svg" alt="Image">
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item--parent  ">
+								<a href="#" class="menu__link menu__link _icon-arrov-heder">Writing Center</a>
+								<div class="sub-menu">
+									<ul class="sub-menu__list">
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Product #1</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Product #2</a>
+										</li>
+										<li class="sub-menu__item">
+											<a href="#" class="sub-menu__link">Product #3</a>
+										</li>
+
+									</ul>
+								</div>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Plagiarism Checker</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Studybank</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Blog</a>
+							</li>
+
+						</ul>
+
+					</nav>
+					<div class="header__actions button-actions--mobail">
+						<button class="button-actions__log">Log In</button>
+						<button class="button-actions__sign">Sign Up</button>
+
+					</div>
+				</div>
+
+
+				<div class="header__actions button-actions">
+					<button class="button-actions__log">Log In</button>
+					<button class="button-actions__sign">Sign Up</button>
+
+				</div>
+				<button class="icon-menu"><span></span></button>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__main-foto maim-foto">
+				<div class="maim-foto__container">
+					<div class="maim-foto__body">
+						<h1 class="maim-foto__tatle">Do you have essays sitting idle on your laptop?</h1>
+						<p class="maim-foto__text"> Why not sell them and make some cash? Selling essays online is a great
+							choice if you want to make some pocket change! Studybay can pay up to $150 for your high-quality
+							essays.</p>
+
+					</div>
+					<div class="maim-foto__foto">
+						<img src="img/main.foto/brooke-1.png" alt="img">
+					</div>
+				</div>
+			</section>
+			<section class="page__upload upload-work">
+				<div class="upload-work__container">
+					<h2 class="upload-work__title">Upload Work And Earn Money</h2>
+					<div class="upload-work__items">
+						<div class="upload-work__item">
+							<a id="after" class="upload-work__link" href="#"><span> <img src="img/uploud-work/01.svg"
+										alt="img"></span></a>
+							<h4 class="upload-work__text">
+								Attach a document in Google Docs or DOC/DOCX format
+							</h4>
+						</div>
+						<div class="upload-work__item">
+							<a class="upload-work__link" href="#"><span> <img src="img/uploud-work/02.svg"
+										alt="img"></span></a>
+							<h4 class="upload-work__text">
+								We check the work
+							</h4>
+						</div>
+						<div class="upload-work__item">
+							<a class="upload-work__link" href="#"><span> <img src="img/uploud-work/03.svg"
+										alt="img"></span></a>
+							<h4 class="upload-work__text">
+								You will receive a response with an offer within 1-2 weeks
+							</h4>
+						</div>
+						<div class="upload-work__item">
+							<a id="before" class="upload-work__link" href="#"><span> <img src="img/uploud-work/04.svg"
+										alt="img"></span></a>
+							<h4 class="upload-work__text">
+								We pay money for your work
+							</h4>
+						</div>
+
+					</div>
+				</div>
+			</section>
+			<div id="already-paid-on" class="page__already already-paid ">
+				<div class="already-paid__container">
+					<img class="already-paid__foto" src="img/already/ok-hand.svg" alt="img">
+					<h3 class="already-paid__text">We have already paid <span>$153.015</span></h3>
+				</div>
+			</div>
+			<section class="page__step step">
+				<div class="step__container">
+					<div class="step__wrapper">
+						<div class="step__tab tab-items">
+							<ul class="tab-items__list-group">
+								<li class="list-group-item activ" data-tab="tab-1">Step 1</li>
+								<li class="list-group-item" data-tab="tab-2">Step 2</li>
+							</ul>
+						</div>
+						<form id="some-form" enctype="multipart/form-data" method="GET" class="step__form form" action="#">
+							<div class="form__row">
+								<div class="form__mail mail-form">
+									<div class="mail-form__line">
+										<!-- Тип email - Однорядковий ввід поштової адреси -->
+										<label for="mail">E-mail</label>
+										<input id="mail" name="mail" type="email">
+									</div>
+									<div class="mail-form__line">
+										<label for="some-id">Project Title</label>
+										<input id="some-id" autocomplete="off" name="name" type="text">
+									</div>
+								</div>
+								<div class="form__area area">
+									<fieldset class="area__wrapper">
+										<div class="area__img"><img src="img/step/clip.svg" alt="img"></div>
+										<label id="label-off" for="fileUpload">Drag & Drop to upload or <br> <a
+												href="#">Browse</a> </label>
+										<label id="label-on" for="fileUpload"> <a href="#">Browse</a> to upload </label>
+										<input type="text" name="fileUpload" id="fileUpload">
+									</fieldset>
+								</div>
+							</div>
+							<button id="step-1-button" form="some-form" type="submit">Next Step</button>
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="page__step step--step-2 hidden">
+				<div id="step-radius" class="step__container">
+					<div class="step__wrapper">
+
+						<form id="some-form-2" enctype="multipart/form-data" method="GET" class="step__form form" action="#">
+							<div class="form__row--step-2">
+								<div class="form__mail mail-form">
+									<div class="mail-form__grid-top">
+										<div class="mail-form__line">
+											<!-- Тип email - Однорядковий ввід поштової адреси -->
+											<label for="project">Project Type</label>
+											<input id="project" name="project" type="text" placeholder="Essay">
+											<img src="img/step-2/arrow.svg" alt="img">
+										</div>
+										<div class="mail-form__line">
+											<!-- Тип email - Однорядковий ввід поштової адреси -->
+											<label for="subject">Subject</label>
+											<input id="subject" name="subject" type="text" placeholder="Math">
+											<img src="img/step-2/arrow.svg" alt="img">
+										</div>
+										<div class="mail-form__line">
+											<!-- Тип email - Однорядковий ввід поштової адреси -->
+											<label for="formating">Formating</label>
+											<input id="formating" name="formating" type="text" placeholder="APA">
+											<img src="img/step-2/arrow.svg" alt="img">
+										</div>
+									</div>
+									<div class="mail-form__grid-bottom">
+										<div class="mail-form__line">
+											<!-- Тип email - Однорядковий ввід поштової адреси -->
+											<label for="educational">Educational Institution Name</label>
+											<input id="educational" name="educational" type="text" placeholder="Harvard">
+											<img src="img/step-2/arrow.svg" alt="img">
+										</div>
+										<div class="mail-form__line">
+											<!-- Тип email - Однорядковий ввід поштової адреси -->
+											<label for="course">Course Title</label>
+											<input id="course" name="course" type="text">
+										</div>
+										<div class="toggle-container">
+											<label class="toggle-label" for="reference-switch">Reference list</label>
+											<input type="checkbox" id="reference-switch" class="toggle-input">
+											<span class="toggle-slider"></span>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="form__buttom-send">
+								<button id="previous-form" class="wite" form="some-form-2" type="submit">Previous Step</button>
+								<button id="send-form" form="some-form-2" type="submit">Send</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</section>
+			<section class="page__step step--ok hidden">
+				<div id="step-radius-ok" class="step__container">
+					<div class="step__wrapper">
+						<div class="step__form ok">
+							<div class="ok__body">
+								<span><img class="ok__img" src="img/step-2/like.svg" alt="img"></span>
+								<h3 class="ok__title">Thank you for <br>uploading your work!</h3>
+								<h4 class="ok__text">Within one to two weeks, our experts will review it.<br>And if your work is
+									fit for us, we will notify you.</h4>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+			<div id="already-paid-off" class="page__already already-paid ">
+				<div class="already-paid__container">
+					<img class="already-paid__foto" src="img/already/ok-hand.svg" alt="img">
+					<h3 class="already-paid__text">We have already paid <span>$153.015</span></h3>
+				</div>
+			</div>
+			<section class="page__hero text-hero">
+				<div class="text-hero__container">
+					<div class="text-hero__items">
+						<div class="text-hero__item">
+							<div class="text-hero__title">How Can You Get Started?</div>
+							<div class="text-hero__text">
+								<p>
+									Many websites claim to give you a good price for your essays. However, you need to look out for
+									red flags. Some websites may never pay, while some request a deposit from your end to get the
+									ball rolling. So, where to sell essays online?
+								</p> 
+								<p>
+									At Studybay, we do not want your deposit; we want your quality essays! We believe your words
+									will speak louder, and here is how you can get started.
+								</p>
+								<ol>
+									<li>Pick one of your essays, and make sure it’s free of errors, plagiarism, and any SPIN content.</li>
+									<li>
+										Please submit your essay via email to support@studybay.com or upload it to our website using the
+										contact form.
+									</li>
+									<li>You will be notified via email that your essay has been received and processed.</li>
+									<li>
+										After receiving your essay, our professionals will review it, check for plagiarism, and consider
+										other criteria before responding to you within five working days.
+									</li>
+									<li>After your essay is approved, we will send you an email with an offer.</li>
+									<li>If you accept our offer, we will deposit cash into your PayPal account.</li>
+									<li>
+										The essay then becomes our sole property after you receive the payment, and we are allowed to
+										use it as we see fit.
+									</li>
+								</ol>
+								<p>
+									Now keep in mind that the more work you put into your essay, the more likely it will get
+									accepted. As the best website for buying and selling essays, we believe quality inputs lead to
+									quality results. Let’s take a look at the terms of acceptance for an essay.
+								</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eius animi, odit consequuntur quo laborum? Est aspernatur, itaque cupiditate odio ducimus beatae! Eos sit ipsum adipisci quasi sequi repellendus praesentium?</p>
+
+							</div>
+						</div>
+						<div class="text-hero__item">
+							<div class="text-hero__title">Our Standards of Acceptance</div>
+							<div class="text-hero__text">
+								<p>
+									We take pride in our quality of work and will only accept essays for money that are up to our
+									standards. We take essays that fulfill the following conditions:
+								</p> 
+								<ul>
+									<li>We expect the essay to have a minimum of 500 words.</li>
+									<li>The essays need to be original with no SPIN or AI-generated text.</li>
+									<li>We make sure there is no plagiarized content and that the text passes Grammarly’s check.</li>
+									<li>
+										The essay must not be available anywhere else on the internet. Once sold, we would like you to
+										know that it is no longer “my” intellectual property and cannot be sold or published elsewhere.
+									</li>
+								</ul>
+								<p>
+									To be fair to our customers, we strive to provide them with the best essays. So when you sell us
+									your old college essays or high school essays for money, we make sure that they help students
+									out in their time of need.
+								</p>
+
+							</div>
+						</div>
+						<div class="text-hero__item">
+							<div class="text-hero__title">How Much Will You Get Paid?</div>
+							<div class="text-hero__text">
+								<p>
+									This question has no straightforward answer. However, we will tell you all the factors that are
+									considered while calculating your pay.
+								</p>
+								<ul>
+									<li>The length of your paper is directly proportional to the money you get paid.</li>
+									<li>
+										The project type is another consideration. Just as weekly quizzes don’t have the same value as
+										the final paper, assignment papers pay less than a final essay paper.
+									</li>
+									<li>
+										The subject plays a factor in the price. We understand the ease of a subject is subjective to
+										students and writers, but we do have to segregate them. Technical papers do tend to pay more.
+									</li>
+									<li>
+										Language plays a major role when selling papers online. Sometimes it is considered on its own,
+										but often it is paired with the subject or the project type.
+									</li>
+									<li>
+										What academic level is the essay written for? When you sell school essays, they are priced lower
+										than university or college papers.
+									</li>
+									<li>Other factors include the course title, which is the primary attracting factor for your essay.</li>
+									<li>Reference list is one of the factors affecting the price.</li>
+									<li>
+										In-text citations of research sources (using MLA, APA, or Chicago style) might as well affect
+										the cost.
+									</li>
+								</ul>
+								Don’t be afraid; we know this is a long list, but this is what it takes to be a reliable source
+								of papers online for the students of today! If all the factors don’t fall into place for you, a
+								few of them surely will, which is enough to get you a reasonable price for your hard work.
+
+							</div>
+						</div>
+						<div class="text-hero__item">
+							<div class="text-hero__title">What Else Must You Keep in Mind?</div>
+							<div  class="text-hero__text">
+								<p>
+									An extremely important aspect of your essay needs to be originality. We expect the seller to be
+									the owner of their product. We don’t want our reputations tarnished, nor yours. For a continued
+									relationship between you and Studybay, we request you only sell essays that you have written. So
+									please pick the papers you consider as “my essays”.
+								</p>
+								<p>
+									We do not accept articles that seem like they were AI-generated. We have a strict “No SPIN”
+									policy on all our writers, and this is to protect the students who will eventually use your work
+									for their projects.
+								</p>
+								<p>
+									<span>And finally, if your essay has not been accepted, we may not explain our reasons.</span> If we feel the
+									articles were mass-produced or generated using AI, we have the right to reject your submission
+									without an explanation. As mentioned above, this is part of our protocol against SPIN.
+								</p>
+
+							</div>
+						</div>
+						<div class="text-hero__item">
+							<div class="text-hero__title">Ready to Make Some Cash?</div>
+							<div class="text-hero__text">
+								If you have worked hard on your essays, you don't need to hesitate. We have scrutinized enough
+								essays to get a sense of original work and quality. We are certain that your hard work will be
+								well rewarded. We hope to hear from you soon!
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="page__footer footer-info">
+				<div class="footer-info__container">
+					<div class="footer-info__activ-block block-activ">
+						<a class="block-activ__tel"  href="tel:1-855-407-7728">1-855-407-7728</a>
+						<a class="block-activ__mail" href="mailto:support@studybay.com">support@studybay.com</a>
+						<button class="block-activ__button">Get Help</button>
+						<div class="block-activ__row">
+							<a class="block-activ__app" href="#">
+								<img id="app-320" src="img/footer-info/app.svg" alt="img">
+								
+								
+						</a>
+							<a class="block-activ__google" href="#">
+								<img src="img/footer-info/google.svg" alt="img">
+								
+							</a>
+						</div>
+					</div>
+					<div class="footer-info__info-block block-info">
+               <div class="block-info__items">
+						<div class="block-info__item">
+							<h4 class="block-info__title">Studybay Products</h4>
+							<ul class="block-info__list">
+								<a href="#"><li>Place a Project</li></a>
+								<a href="#"><li>Studybank</li></a>
+								<a href="#"><li>Blog</li></a>
+								<a href="#"><li>Plagiarism Checker</li></a>
+								<a href="#"><li>Become an Expert</li></a>
+							</ul>
+						</div>
+						<div class="block-info__item">
+							<h4 class="block-info__title">Legal & Policies</h4>
+							<ul class="block-info__list">
+								<a href="#"><li>Privacy Policy</li></a>
+								<a href="#"><li>User Agreement</li></a>
+								<a href="#"><li>Cookie Policy</li></a>
+								<a href="#"><li>Data Security</li></a>
+						  </ul>
+						</div>
+						<div class="block-info__item">
+							<h4 class="block-info__title">Company</h4>
+							<ul class="block-info__list">
+								<a href="#"><li>About Us</li></a>
+								<a href="#"><li>Affiliate Program</li></a>
+								<a href="#"><li>Honor Code</li></a>
+								
+							</ul>
+						</div>
+						<div class="block-info__item">
+							<h4 class="block-info__title">Customer Service</h4>
+							<ul class="block-info__list">
+								<a href="#"><li>FAQ</li></a>
+								<a href="#"><li>Reviews</li></a>
+								<a href="#"><li>Expert Ratings</li></a>
+								<a href="#"><li>Latest Projects</li></a>
+								<a href="#"><li>Project Types</li></a>
+							</ul>
+						</div>
+					</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__wrapper-top top-wrapper">
+
+					<div class="top-wrapper__social social-link">
+						<h5 id="footer-tex-on">© 2011–2021 Studybay All Rights Reserved</h5>
+						<div class="social-link__box">
+							<a class="social-link__item" href="">
+								<img src="img/footer/social/instagram.svg" alt="img">
+							</a>
+							<a class="social-link__item" href="">
+								<img src="img/footer/social/facebook.svg" alt="img">
+							</a>
+							<a class="social-link__item" href="">
+								<img src="img/footer/social/twitter.svg" alt="img">
+							</a>
+							<a class="social-link__item" href="">
+								<img src="img/footer/social/in.svg" alt="img">
+							</a>
+							<a class="social-link__item" href="">
+								<img src="img/footer/social/yutube.svg" alt="img">
+							</a>
+							<a class="social-link__item" href="">
+								<img src="img/footer/social/pain.svg" alt="img">
+							</a>
+						</div>
+					</div>
+					<div class="top-wrapper__pay pay-link">
+						<a class="pay-link__item">
+							<img src="img/footer/pay/pay.svg" alt="img">
+						</a>
+						<a class="pay-link__item">
+							<img src="img/footer/pay/google-pay.svg" alt="img">
+						</a>
+						<a class="pay-link__item">
+							<img src="img/footer/pay/master-card.svg" alt="img">
+						</a>
+						<a class="pay-link__item">
+							<img src="img/footer/pay/visa.svg" alt="img">
+						</a>
+						<a class="pay-link__item">
+							<img src="img/footer/pay/pay-pal.svg" alt="img">
+						</a>
+						<a class="pay-link__item">
+							<img src="img/footer/pay/discover.svg" alt="img">
+						</a>
+					</div>
+				</div>
+				<div class="footer__wrapper-bottom bottom-wrapper">
+
+					<div class="bottom-wrapper__row">
+						<div class="bottom-wrapper__text">
+							<h5 id="footer-tex-off">© 2011–2021 Studybay All Rights Reserved</h5>
+							<p>
+								Tossox Holdings Ltd, Reg.number HE 355390 Registered office Lordou Vyronos, 1, P. Lordos Centre,
+								Block C, office 202, 3105 Limassol, Cyprus
+
+							</p>
+						</div>
+						<div class="bottom-wrapper__protected protected-imems">
+							<img class="protected-imems__img" src="img/footer/protected.svg" alt="img">
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<!-- Підключення слайдеру Swiper -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<!-- Підключення JS-файлу з кодом -->
+	<script src="js/script.js"></script>
+</body>
+
+</html>

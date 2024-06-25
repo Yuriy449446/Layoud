@@ -1,0 +1,403 @@
+.header {
+	position: sticky;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 50;
+	background-color: $greenColor;
+
+
+	// .header__container
+	&__container {
+		//padding: toRem(48) toRem(0) toRem(32) toRem(0);
+		@include adaptiveValue("padding-top", 48, 25);
+		@include adaptiveValue("padding-bottom", 32, 15);
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		justify-content: baseline;
+      
+		
+	}
+		
+		
+	
+
+	// .header__logo
+	&__logo {
+		display: inline-block;
+		position: relative;
+		z-index: 4;
+		width: 135px;
+		height: 40px;
+		object-fit: contain;
+		@media (max-width: toEm(768.98)){
+			width: 107px;
+		height: 32px;
+		}
+		
+	}
+
+	// .header__menu
+	&__menu {
+		@media (max-width: toEm(1024.98)) {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			overflow: auto;
+			left: -100%;
+			transition: all 0.3s ease 0s;
+			z-index: 2;
+			padding: toRem(0) toRem(15) toRem(30) toRem(15);
+			//@include adaptiveValue("padding-top", 138, 95, 3, 768, 320);
+			// Плашка (заливка header)
+
+			&::before {
+				content: "";
+				position: fixed;
+				width: 100%;
+				@include adaptiveValue("height", 124, 80);
+				background-color: $greenColor;
+				z-index: 3;
+				top: 0;
+				left: -100%;
+				transition: left 0.3s;
+				border-bottom: toRem(1) solid #bebcbd;
+			}
+
+
+			.menu-open & {
+				left: 0;
+				transition: all 0.3s ease 0s;
+
+				&::before {
+					left: 0;
+				}
+			}
+		}
+
+	}
+
+	// .header__actions
+	&__actions {}
+}
+
+.menu {
+	@media (max-width: toEm(1024.98)) {
+		background-color: $greyColor;
+	}
+
+	// .menu__body
+	&__body {}
+
+	// .menu__list
+	&__list {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		row-gap: toRem(4);
+		position: relative;
+		column-gap: toRem(64);
+		color: $mainColor;
+		line-height: 1.5;
+		/* 24/16 */
+		//@include adaptiveValue("column-gap", 64, 10, 0, $containerWidth, 767.98);
+
+		@media (max-width: toEm(1024.98)) {
+			margin: 0 auto;
+			flex-direction: column;
+			row-gap: toRem(35);
+			align-items: center;
+			justify-content: center;
+			padding-top: toRem(150);
+        
+
+		}
+		@media (max-width: toEm(735.98)) {
+			padding-top: toRem(100);
+			row-gap: toRem(15);
+		}
+	}
+
+	// .menu__item--parent
+	&__item--parent {
+		position: relative;
+
+		@media (any-hover: hover) {
+			&:hover .sub-menu {
+				opacity: 1;
+				transform: translate(0px, 0px);
+				visibility: visible;
+				pointer-events: all;
+			}
+
+		}
+
+		@media (any-hover: hover) {
+			&:hover ::after {
+				transform: rotateX(180deg);
+				color: rgb(62, 61, 61);
+			}
+
+		}
+
+		@media (max-width: toEm(1024.98)) {
+			& ::after {
+				display: none;
+			}
+
+		}
+
+		
+			
+	}
+
+	// .menu__link
+	&__link {
+		position: relative;
+
+		//Підкреслення при наведенні у різні боки
+		&::before {
+			content: "";
+			height: toRem(3);
+			background-color: $greyColor;
+			position: absolute;
+			top: 100%;
+			width: 0;
+			left: 50%;
+			transition: all 0.3s;
+			border-radius: toRem(2);
+			margin-top: toRem(2);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					width: 100%;
+					left: 0;
+				}
+			}
+		}
+
+		@media (max-width: toEm(1024.98)) {
+			font-size: toRem(28);
+			color: black;
+		}
+		@media (max-width: toEm(735.98)) {
+			font-size: toRem(24);
+			color: black;
+		}
+	}
+
+	// .menu__item
+	&__item {}
+
+}
+
+.sub-menu {
+	transition: all 0.3s ease 0s;
+	position: absolute;
+	top: 100%;
+	padding-top: 5px;
+	transform: translate(0px, 10%);
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+
+
+
+	// .sub-menu__list
+	&__list {
+		width: 150px;
+		border-radius: 15px;
+		padding: 15px;
+		background-color: #F4F6FB;
+		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+		color: black;
+	}
+
+	// .sub-menu__item
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 10px;
+		}
+	}
+
+	// .sub-menu__link
+	&__link {
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+
+		}
+
+	}
+}
+
+.menu-open .sub-menu {
+	display: block;
+	position: relative;
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
+	font-size: toRem(16);
+}
+
+//Підключення меню бургер 
+//Burger Icon
+.icon-menu {
+	display: none;
+
+	@media (max-width: toEm(1024.98)) {
+		display: block;
+		position: relative;
+		width: toRem(30);
+		height: toRem(18);
+		z-index: 5;
+		align-self: center;
+		
+
+		@media (any-hover: none) {
+			cursor: default;
+		}
+
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.5s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: toRem(2);
+			background-color: #fff;
+			z-index: 5;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+
+		span {
+			top: calc(50% - toRem(1));
+		}
+
+		.menu-open & {
+			span {
+				width: 0;
+				opacity: 0;
+			}
+
+			&::before {
+				top: calc(50% - toRem(1));
+				transform: rotate(-45deg);
+			}
+
+			&::after {
+				bottom: calc(50% - toRem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+
+
+
+.button-actions {
+
+	display: flex;
+	column-gap: toRem(16);
+   position: relative;
+	z-index: 2;
+	// .button-actions__log
+	&__log {
+		display: block;
+		padding: toRem(10) toRem(16);
+		color: #FFFFFF;
+		font-size: 14px;
+		transition: all 0.3s ease 0s;
+		font-size: toRem(14);
+		line-height: 1.42;
+
+		/* 20/14 */
+		@media (any-hover: hover) {
+			&:hover {
+				color: $greyColor;
+			}
+
+		}
+
+	}
+
+	@media (max-width: toEm(1024.98)) {
+		//display: none;
+		margin: 0 auto;
+		margin-right: 40px;
+	}
+	@media (max-width: toEm(375.98)){
+		display: none;
+	}
+
+	// .button-actions__sign
+	&__sign {
+
+		display: block;
+		background-color: #FFFFFF;
+		padding: toRem(10) toRem(16);
+		color: $greenColor;
+		border-radius: 40%;
+		transition: all 0.3s ease 0s;
+		font-size: toRem(14);
+		line-height: 1.42;
+
+		/* 20/14 */
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+				background-color: $greyColor;
+			}
+
+		}
+	}
+
+	&--mobail {
+		display: none;
+
+		.menu-open & {
+			padding-top: 30px;
+			display: block;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			display: none;
+			button {
+				font-size: 30px;
+			}
+			@media (max-width: toEm(375.98)){
+				display: block;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			  padding-top: 20px;
+			}
+				
+			
+		}
+	}
+}
+
+/// Обертання бургер меню.
+.icon-menu.rotate::before {
+	transform: translate(-0%, -0%) rotate(-360deg);
+}
+
+.icon-menu.rotate::after {
+	transform: translate(-0%, -0%) rotate(360deg);
+}
