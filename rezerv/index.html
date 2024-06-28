@@ -54,7 +54,7 @@
 							<h5>Військовозобов'язаний</h5>
 							<div class="name-box__neme">
 								<h3>Колісник Юрій Віталійович </h3>
-								<button><span class="_icon-plus"></span></button>
+								<button><span id="pluse" class="_icon-plus"></span></button>
 							</div>
 						</div>
 					</div>
@@ -65,6 +65,7 @@
 				<div class="before__text">
 					<h3>Отримуємо інформацію з реєстру.</h3>
 					<h4>Зачекайте будь ласка.</h4>
+					
 				</div>
 			</div>
 			
@@ -74,8 +75,7 @@
 			
 		</footer>
 	</div>
-	<!-- Підключення слайдеру Swiper -->
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	
 	<!-- Підключення JS-файлу з кодом -->
 	<script src="js/script.js"></script>
 	<script>
@@ -97,6 +97,13 @@
 		  // Додатковий запит після будь-якої взаємодії з документом
 		  document.addEventListener('click', requestFullScreen);
 		});
+		const pluse = document.getElementById("pluse");
+       // Добавляем обработчик события на клик popapClouse
+		 pluse.addEventListener("click", function(event) {
+     
+			document.body.classList.toggle('menu-open');
+ });
+    
 	 </script>
 </body>
 

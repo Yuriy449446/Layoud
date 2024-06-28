@@ -35,21 +35,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-//Друкування тексту із затримкою.
-
-const text = "Welcome to";
-const title = document.querySelector('.body__title');
-
-function printWithDelay(text, index) {
-    if (index < text.length) {
-        const letter = text[index];
-        const span = document.createElement('span');
-        span.textContent = letter;
-        span.style.animationDelay = `${index * 0.3}s`;
-        title.appendChild(span);
-        setTimeout(() => printWithDelay(text, index + 1), 100);
-    }
-}
 // Строка що рухаїться
 printWithDelay(text, 0);
 
@@ -80,4 +65,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	  requestFullScreen();
 	});
  });
+ 
+
  
