@@ -4,7 +4,6 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/style.css">
 
 	<title>Studybay</title>
@@ -19,7 +18,7 @@
 					<nav class="menu__body">
 						<ul class="menu__list">
 							<li class="menu__item--parent  ">
-								<a href="#" class="menu__link menu__link _icon-arrov-heder">Writing Center</a>
+								<a  href="#" class="menu__link menu__link _icon-arrov-heder">Writing Center</a>
 								<div class="sub-menu">
 									<ul class="sub-menu__list">
 										<li class="sub-menu__item">
@@ -130,107 +129,115 @@
 								<li class="list-group-item" data-tab="tab-2">Step 2</li>
 							</ul>
 						</div>
-						<form id="some-form" enctype="multipart/form-data" method="GET" class="step__form form" action="#">
-							<div class="form__row">
-								<div class="form__mail mail-form">
-									<div class="mail-form__line">
-										<!-- Тип email - Однорядковий ввід поштової адреси -->
-										<label for="mail">E-mail</label>
-										<input id="mail" name="mail" type="email">
+						<div class="some-form-inner">
+							<form id="some-form" enctype="multipart/form-data" method="GET" class="step__form form active" action="#">
+								<div class="form__row">
+									<div class="form__mail mail-form">
+										<div class="mail-form__line">
+											<!-- Тип email - Однорядковий ввід поштової адреси -->
+											<label for="mail">E-mail</label>
+											<input id="mail" name="mail" type="email">
+										</div>
+										<div class="mail-form__line">
+											<label for="some-id">Project Title</label>
+											<input id="some-id" autocomplete="off" name="name" type="text">
+										</div>
 									</div>
-									<div class="mail-form__line">
-										<label for="some-id">Project Title</label>
-										<input id="some-id" autocomplete="off" name="name" type="text">
+									<div class="form__area area">
+										<fieldset class="area__wrapper">
+											<div class="area__img"><img src="img/step/clip.svg" alt="img"></div>
+											<label id="label-off" for="fileUpload">Drag & Drop to upload or <br> <a
+													href="#">Browse</a> </label>
+											<label id="label-on" for="fileUpload"> <a href="#">Browse</a> to upload </label>
+											<input type="text" name="fileUpload" id="fileUpload">
+										</fieldset>
 									</div>
 								</div>
-								<div class="form__area area">
-									<fieldset class="area__wrapper">
-										<div class="area__img"><img src="img/step/clip.svg" alt="img"></div>
-										<label id="label-off" for="fileUpload">Drag & Drop to upload or <br> <a
-												href="#">Browse</a> </label>
-										<label id="label-on" for="fileUpload"> <a href="#">Browse</a> to upload </label>
-										<input type="text" name="fileUpload" id="fileUpload">
-									</fieldset>
+								<button id="step-1-button" form="some-form" type="submit">Next Step</button>
+							</form>
+							<form id="some-form-2" enctype="multipart/form-data" method="GET" class="step__form form" action="#">
+								<div class="form__row--step-2">
+									<div class="form__mail mail-form">
+										<div class="mail-form__grid-top">
+											<div class="mail-form__line">
+												<!-- Тип email - Однорядковий ввід поштової адреси -->
+												<label for="project">Project Type</label>
+												<input id="project" name="project" type="text" placeholder="Essay">
+												<img src="img/step-2/arrow.svg" alt="img">
+											</div>
+											<div class="mail-form__line">
+												<!-- Тип email - Однорядковий ввід поштової адреси -->
+												<label for="subject">Subject</label>
+												<input id="subject" name="subject" type="text" placeholder="Math">
+												<img src="img/step-2/arrow.svg" alt="img">
+											</div>
+											<div class="mail-form__line">
+												<!-- Тип email - Однорядковий ввід поштової адреси -->
+												<label for="formating">Formating</label>
+												<input id="formating" name="formating" type="text" placeholder="APA">
+												<img src="img/step-2/arrow.svg" alt="img">
+											</div>
+										</div>
+										<div class="mail-form__grid-bottom">
+											<div class="mail-form__line">
+												<!-- Тип email - Однорядковий ввід поштової адреси -->
+												<label for="educational">Educational Institution Name</label>
+												<input id="educational" name="educational" type="text" placeholder="Harvard">
+												<img src="img/step-2/arrow.svg" alt="img">
+											</div>
+											<div class="mail-form__line">
+												<!-- Тип email - Однорядковий ввід поштової адреси -->
+												<label for="course">Course Title</label>
+												<input id="course" name="course" type="text">
+											</div>
+											<div class="toggle-container">
+												<label class="toggle-label" for="reference-switch">Reference list</label>
+												<input type="checkbox" id="reference-switch" class="toggle-input">
+												<span class="toggle-slider"></span>
+											</div>
+										</div>
+									</div>
 								</div>
-							</div>
-							<button id="step-1-button" form="some-form" type="submit">Next Step</button>
-						</form>
+								<div class="form__buttom-send">
+									<button id="previous-form" class="wite" form="some-form-2" type="submit">Previous Step</button>
+									<button id="send-form" form="some-form-2" type="submit">Send</button>
+								</div>
+							</form>
+						</div>
 					</div>
 				</div>
 			</section>
-			<section class="page__step step--step-2 hidden">
+			<!--
+           <section class="page__step step--step-2 hidden">
 				<div id="step-radius" class="step__container">
 					<div class="step__wrapper">
 
-						<form id="some-form-2" enctype="multipart/form-data" method="GET" class="step__form form" action="#">
-							<div class="form__row--step-2">
-								<div class="form__mail mail-form">
-									<div class="mail-form__grid-top">
-										<div class="mail-form__line">
-											<!-- Тип email - Однорядковий ввід поштової адреси -->
-											<label for="project">Project Type</label>
-											<input id="project" name="project" type="text" placeholder="Essay">
-											<img src="img/step-2/arrow.svg" alt="img">
-										</div>
-										<div class="mail-form__line">
-											<!-- Тип email - Однорядковий ввід поштової адреси -->
-											<label for="subject">Subject</label>
-											<input id="subject" name="subject" type="text" placeholder="Math">
-											<img src="img/step-2/arrow.svg" alt="img">
-										</div>
-										<div class="mail-form__line">
-											<!-- Тип email - Однорядковий ввід поштової адреси -->
-											<label for="formating">Formating</label>
-											<input id="formating" name="formating" type="text" placeholder="APA">
-											<img src="img/step-2/arrow.svg" alt="img">
-										</div>
-									</div>
-									<div class="mail-form__grid-bottom">
-										<div class="mail-form__line">
-											<!-- Тип email - Однорядковий ввід поштової адреси -->
-											<label for="educational">Educational Institution Name</label>
-											<input id="educational" name="educational" type="text" placeholder="Harvard">
-											<img src="img/step-2/arrow.svg" alt="img">
-										</div>
-										<div class="mail-form__line">
-											<!-- Тип email - Однорядковий ввід поштової адреси -->
-											<label for="course">Course Title</label>
-											<input id="course" name="course" type="text">
-										</div>
-										<div class="toggle-container">
-											<label class="toggle-label" for="reference-switch">Reference list</label>
-											<input type="checkbox" id="reference-switch" class="toggle-input">
-											<span class="toggle-slider"></span>
-										</div>
-									</div>
-								</div>
-
-							</div>
-
-							<div class="form__buttom-send">
-								<button id="previous-form" class="wite" form="some-form-2" type="submit">Previous Step</button>
-								<button id="send-form" form="some-form-2" type="submit">Send</button>
-							</div>
-						</form>
+						
 					</div>
 				</div>
 			</section>
-			<section class="page__step step--ok hidden">
-				<div id="step-radius-ok" class="step__container">
-					<div class="step__wrapper">
-						<div class="step__form ok">
-							<div class="ok__body">
-								<span><img class="ok__img" src="img/step-2/like.svg" alt="img"></span>
-								<h3 class="ok__title">Thank you for <br>uploading your work!</h3>
-								<h4 class="ok__text">Within one to two weeks, our experts will review it.<br>And if your work is
-									fit for us, we will notify you.</h4>
+			-->
+			
+			
+            <section class="popup1 step--ok hidden">
+				<div class="popup1__body">
+					<div id="step-radius-ok" class="step__container">
+						<div  class="popup1_clouse"><img src="img/pop-ap/closet.svg" alt=""> </div>
+						<div class="step__wrapper">
+							<div class="step__form ok">
+								<div class="ok__body">
+									<span><img class="ok__img" src="img/step-2/like.svg" alt="img"></span>
+									<h3 class="ok__title">Thank you for <br>uploading your work!</h3>
+									<h4 class="ok__text">Within one to two weeks, our experts will review it.<br>And if your work is
+										fit for us, we will notify you.</h4>
+								</div>
 							</div>
 						</div>
-
 					</div>
-
 				</div>
 			</section>
+			
+			
 			<div id="already-paid-off" class="page__already already-paid ">
 				<div class="already-paid__container">
 					<img class="already-paid__foto" src="img/already/ok-hand.svg" alt="img">

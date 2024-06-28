@@ -48,7 +48,7 @@
 			top: 0;
 			overflow: auto;
 			left: -100%;
-			transition: all 0.3s ease 0s;
+			transition: all 0.5s ease 0s;
 			z-index: 2;
 			padding: toRem(0) toRem(15) toRem(30) toRem(15);
 			//@include adaptiveValue("padding-top", 138, 95, 3, 768, 320);
@@ -60,17 +60,18 @@
 				width: 100%;
 				@include adaptiveValue("height", 124, 80);
 				background-color: $greenColor;
-				z-index: 3;
+				z-index: 5;
 				top: 0;
 				left: -100%;
-				transition: left 0.3s;
+				transition: left 0.5s;
 				border-bottom: toRem(1) solid #bebcbd;
+				//transition: all 0.5s ease 0s;
 			}
 
 
 			.menu-open & {
 				left: 0;
-				transition: all 0.3s ease 0s;
+				transition: all 0.5s ease 0s;
 
 				&::before {
 					left: 0;
@@ -149,11 +150,11 @@
 			}
 
 		}
-
+      
 		
 			
 	}
-
+	
 	// .menu__link
 	&__link {
 		position: relative;
@@ -352,7 +353,7 @@
 		background-color: #FFFFFF;
 		padding: toRem(10) toRem(16);
 		color: $greenColor;
-		border-radius: 40%;
+		border-radius: 20px;
 		transition: all 0.3s ease 0s;
 		font-size: toRem(14);
 		line-height: 1.42;

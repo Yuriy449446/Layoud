@@ -32,73 +32,76 @@ document.querySelector('.icon-menu').addEventListener('click', function() {
 
 // Step-1  step-2
 
-
 const buttonOne = document.getElementById("step-1-button");
 const formOne = document.getElementById("some-form");
 const stepGreen = document.querySelectorAll(".list-group-item");
 const sendForm = document.getElementById("send-form");
 const ok = document.querySelector(".step--ok");
-const formTwo = document.querySelector(".step--step-2");
-const sendFormOk = document.getElementById("some-form-2");
+const formTwo = document.getElementById("some-form-2");
 const previous = document.getElementById("previous-form");
+const popapClouse = document.querySelector(".popup1_clouse");
 
-// Добавляем обработчик события на клик Nex Step
-buttonOne.addEventListener("click", function() {
-    formOne.classList.add("hidden");
-    formTwo.classList.remove("hidden");
 
-    stepGreen.forEach(function(item) {
-        if (item.classList.contains("activ")) {
-            item.classList.remove("activ");
-        } else {
-            item.classList.add("activ");
-        }
+if (buttonOne && formOne && formTwo && stepGreen.length > 0) {
+    buttonOne.addEventListener("click", function (event) {
+        event.preventDefault(); 
+        formOne.classList.remove("active");
+        formTwo.classList.add("active");
+
+        stepGreen.forEach(function (item) {
+            item.classList.toggle("activ");
+        });
     });
-});
+}
 
-// Добавляем обработчик события на клик Previous Step
-previous.addEventListener("click", function() {
-    formOne.classList.remove("hidden");
-    formTwo.classList.add("hidden");
+if (previous && formOne && formTwo && stepGreen.length > 0) {
+    previous.addEventListener("click", function (event) {
+        event.preventDefault();
+        formTwo.classList.remove("active");
+        formOne.classList.add("active");
 
-    stepGreen.forEach(function(item) {
-        if (item.classList.contains("activ")) {
-            item.classList.remove("activ");
-        } else {
-            item.classList.add("activ");
-        }
+        stepGreen.forEach(function (item) {
+            item.classList.toggle("activ");
+        });
     });
-});
+}
+
+//if (sendForm && ok && formTwo && formOne) {
+   // sendForm.addEventListener("click", function (event) {
+      //  event.preventDefault(); 
+
+      //  ok.classList.remove("active");
+       // formTwo.classList.add("active");
+       // setTimeout(function () {
+        //    formTwo.submit(); 
+       // }, 3000);
+    //});
+//}
+//const sendForm2 = document.getElementById("send-form");
+//const ok2 = document.querySelector(".step--ok");
+//const formTwo2 = document.querySelector(".step--step-2");
+//const sendFormOk = document.getElementById("some-form-2");
+
 
 // Добавляем обработчик события на клик Send
 sendForm.addEventListener("click", function(event) {
-    event.preventDefault();  // Предотвращаем мгновенное обновление страницы
+    //event.preventDefault();  // Предотвращаем мгновенное обновление страницы
     
     ok.classList.remove("hidden");
-    formTwo.classList.add("hidden");
+    formTwo.classList.remove("active");
+    formOne.classList.add("active");
+    stepGreen.forEach(function (item) {
+        item.classList.toggle("activ");
+        document.body.classList.add('popap-lock');
+    });
 
-    // Добавляем задержку в 3 секунды перед обновлением страницы
-    setTimeout(function() {
-		sendFormOk.submit();  // Отправляем форму
-    }, 3000);
+    
 });
 
-// Замена кнопки APP STORE
-document.addEventListener('DOMContentLoaded', function() {
-    function updateImage() {
-        var image = document.getElementById('app-320');
-        if (window.innerWidth <= 425.98) {
-            console.log('Screen width is less than or equal to 425.98px, switching to app-320.svg');
-            image.src = 'img/footer-info/app-320.svg';
-        } else {
-            console.log('Screen width is greater than 425.98px, switching to app.svg');
-            image.src = 'img/footer-info/app.svg';
-        }
-    }
-
-    // Обновляем изображение при загрузке страницы
-    updateImage();
-
-    // Обновляем изображение при изменении размера окна
-    window.addEventListener('resize', updateImage);
+// Добавляем обработчик события на клик popapClouse
+popapClouse.addEventListener("click", function(event) {
+     
+    ok.classList.toggle("hidden");
+    document.body.classList.remove('popap-lock');
 });
+
