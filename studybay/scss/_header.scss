@@ -238,6 +238,7 @@
 	}
 }
 
+
 .menu-open .sub-menu {
 	display: block;
 	position: relative;
@@ -245,6 +246,14 @@
 	visibility: visible;
 	pointer-events: all;
 	font-size: toRem(16);
+	
+	&__list {
+		
+		background-color: $greyColor;
+		box-shadow: none;
+		color: black;
+	}
+	
 }
 
 //Підключення меню бургер 

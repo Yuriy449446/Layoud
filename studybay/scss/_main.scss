@@ -248,7 +248,11 @@
 //========================================================================================================================================================
 
 .step {
-	//margin-bottom: toRem(32);
+	
+	@media (max-width: toEm(768.98)) {
+		margin-bottom: toRem(32);
+	}
+
 
 	// .step__container
 	&__container {
@@ -256,7 +260,7 @@
 		//border-radius: 16px
 		border-top-left-radius: 16px;
 		border-top-right-radius: 16px;
-
+		
 
 	}
 
@@ -389,7 +393,19 @@
 	.mail-form__line &__line {}
 
 }
-
+// Значок скрепки, позициювання.
+#clip-label{
+	display: flex;
+	 flex-direction: column;
+	 justify-content: center;
+	 align-items: center;
+	 @media (max-width: toEm(768.98)){
+		padding-bottom: toRem(24);
+		
+	 }
+      
+	 
+}
 .area {
 
 	// .area__wrapper
@@ -397,11 +413,14 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-
+      min-width: 372px;
+		@media (max-width: toEm(768.98)){
+			min-width: auto;
+		}
 		label {
 			text-align: center;
 			font-weight: 700;
-
+         
 		}
 
 		a {
@@ -460,11 +479,11 @@
 	visibility: hidden;
 }
 
-@media (max-width: toEm(768.98)) {
+@media (max-width: toEm(1024.98)) {
 	#label-on {
 		display: block;
 		visibility: visible;
-		padding-bottom: 5px;
+		//padding-bottom: 5px;
 	}
 
 	#label-off {
@@ -581,11 +600,12 @@
 
 .form {
 	margin-top: 0px;
-	padding-top: 40px;
+	@include adaptiveValue("padding-top", 40, 24);
 
 	// .form__row--step-2
 	&__row--step-2 {
 		@include adaptiveValue("margin-bottom", 48, 24);
+		
 	}
 
 	// .form__mail
@@ -625,6 +645,7 @@
 		@media (max-width: toEm(768.98)) {
 			grid-template-columns: 1fr;
 			row-gap: 15px;
+			
 		}
 	}
 
@@ -762,7 +783,12 @@
 	}
 
 	// .step__wrapper
-	&__wrapper {}
+	&__wrapper{
+		
+	}
+		
+     
+	
 
 	// .step__form
 	&__form {
@@ -772,6 +798,8 @@
 		align-items: center;
 	}
 }
+
+
 
 .ok {
 	margin: 0 auto;
@@ -827,7 +855,10 @@
 	position: absolute;
 	top: 10px;
 	right: 20px;
-	transition: all 0.3s ease 0s;
+	transition: all 0.3s;
+	img{
+		width: 20px;
+	}
 	@media (any-hover: hover) {
 		&:hover{
 			img {
@@ -867,6 +898,10 @@
 	top: 0;
 	left: 0;
 	visibility: visible;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 	
@@ -874,11 +909,14 @@
 
 
 .popup1__body{
-	position: relative;
-	transform: translateY(50%);
+	display: flex;
+	flex-direction: column;
+	
 	padding: toRem(0) toRem(15);
-	max-width: 1264px;
-	margin: 0 auto;
+	max-width: 768px;
+	max-height:192px;
+	
+	
 	
 }
      body.popap-lock{
@@ -890,7 +928,11 @@
 .page {
 
 	// .page__hero
-	&__hero {}
+	&__hero {
+	@media (max-width: toEm(768.98)) {
+		padding-top: toRem(24);
+	}
+	}
 }
 
 .text-hero {
@@ -1218,6 +1260,12 @@
 	transform: translateX(-100%);
 	opacity: 0;
 	transition: all 0.3s linear;
+	@media (max-width: toEm(768.98)) {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		max-height: 364px;
+	}
  }
  
  #some-form-2 {
@@ -1225,7 +1273,12 @@
 	grid-row: 1;
 	transform: translateX(100%);
 	opacity: 0;
-	transition: all 0.3s linear;
+	transition: all 0.2s linear;
+	@media (max-width: toEm(768.98)){
+		max-height: 470px;
+	} 
+	
+	
  }
  
  #some-form.active {
@@ -1237,7 +1290,11 @@
  #some-form-2.active {
 	transform: translateX(0%);
 	opacity: 1;
-	transition: all 0.3s linear;
+	transition: all 0.2s linear;
+	
+	@media (max-width: toEm(768.98)){
+		max-height: 642px;
+	} 
  }
 
  
