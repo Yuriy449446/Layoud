@@ -2386,16 +2386,6 @@ body.popap-lock {
      -moz-column-gap: 0.5rem;
           column-gap: 0.5rem;
 }
-@media (max-width: 26.62375em) {
-  .block-activ__row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-}
 .block-activ__app {
   width: 94.5px;
   height: 40px;
@@ -2404,6 +2394,10 @@ body.popap-lock {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   border-radius: 4px;
+}
+.block-activ__app img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (any-hover: hover) {
   .block-activ__app:hover {
@@ -2414,7 +2408,7 @@ body.popap-lock {
 }
 @media (max-width: 26.62375em) {
   .block-activ__app {
-    width: 140px;
+    width: 100%;
     background-color: black;
     text-align: center;
   }
@@ -2426,12 +2420,17 @@ body.popap-lock {
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   border-radius: 4px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.block-activ__google img {
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 @media (max-width: 26.62375em) {
   .block-activ__google {
-    width: 140px;
-  }
-  .block-activ__google img {
+    background-color: black;
+    text-align: center;
     width: 100%;
   }
 }
