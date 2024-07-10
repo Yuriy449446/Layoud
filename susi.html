@@ -71,10 +71,10 @@
 							<li class="info__item"><a href="#">Замовлення</a></li>
 							<li class="info__item"><a href="#">Доставка</a></li>
 							<li class="info__item--arrow"><a href="#">Каталог</a>
-								<ul class="info__sub-menu">
+								<ul id="touchButton" class="info__sub-menu">
+									<li class="info__sab-item"><a href="index.html">Роли</a></li>
 									<li class="info__sab-item"><a href="susi.html">Суші</a></li>
 									<li class="info__sab-item"><a href="catalog.html">Піца</a></li>
-									<li class="info__sab-item"><a href="index.html">Роли</a></li>
 								</ul>
 							</li>
 							<li class="info__item"><a href="#">Про мене</a></li>
@@ -97,9 +97,9 @@
 			</div>
 		</header>
 		<main>
-        <div class="pizza">
-			<div class="pzza__container">
-				<h2 class="pizza__title">Суши</h2>
+        <div class="pizza--susi">
+			<div class="pizza__container">
+				<h2 class="pizza__title">Суші</h2>
 				<div class="pizza__items">
 					<div class="pizza__item item-pizza">
 						<a class="item-pizza__link--susi" href="#"><img src="img/susi-img/gurkan-avakado.webp" alt="img"></a>
@@ -107,7 +107,7 @@
 						<p class="item-pizza__text">Склад: авокадо, вугор, японський омлет, японський майонез, рис японський</p>
 						<div class="item-pizza__row">
 							<div class="item-pizza__price">Ціна: 230 &#x20b4</div>
-							<button class="item-pizza__button">Замовити</button>
+							<button class="item-pizza__button item__link">Замовити</button>
 						</div>
 					</div>
 					<div class="pizza__item item-pizza">
@@ -116,7 +116,7 @@
 						<p class="item-pizza__text">Склад: норі, лосось атлантичний, сир філадельфія, рис японський, шпинат</p>
 						<div class="item-pizza__row">
 							<div class="item-pizza__price">Ціна: 240 &#x20b4</div>
-							<button class="item-pizza__button">Замовити</button>
+							<button class="item-pizza__button item__link">Замовити</button>
 						</div>
 					</div>
 					<div class="pizza__item item-pizza">
@@ -125,7 +125,7 @@
 						<p class="item-pizza__text">Склад: норі, рис, морський окунь.</p>
 						<div class="item-pizza__row">
 							<div class="item-pizza__price">Ціна: 250 &#x20b4</div>
-							<button class="item-pizza__button">Замовити</button>
+							<button class="item-pizza__button item__link">Замовити</button>
 						</div>
 					</div>
 					<div class="pizza__item item-pizza">
@@ -134,7 +134,7 @@
 						<p class="item-pizza__text">Склад: огірок, лосось х/к, соус спайсі, рис японський.</p>
 						<div class="item-pizza__row">
 							<div class="item-pizza__price">Ціна: 225 &#x20b4</div>
-							<button class="item-pizza__button">Замовити</button>
+							<button class="item-pizza__button item__link">Замовити</button>
 						</div>
 					</div>
 					<div class="pizza__item item-pizza">
@@ -143,7 +143,7 @@
 						<p class="item-pizza__text">Склад: норі, рис, лосось атлантичний, ікра.</p>
 						<div class="item-pizza__row">
 							<div class="item-pizza__price">Ціна: 200 &#x20b4</div>
-							<button class="item-pizza__button">Замовити</button>
+							<button class="item-pizza__button item__link">Замовити</button>
 						</div>
 					</div>
 					<div class="pizza__item item-pizza">
@@ -152,7 +152,7 @@
 							<p class="item-pizza__text">Склад: сир філадельфія, соус спайсі, рис японський, філе лосося атлантичного.</p>
 							<div class="item-pizza__row">
 								<div class="item-pizza__price">Ціна: 240 &#x20b4</div>
-								<button class="item-pizza__button">Замовити</button>
+								<button class="item-pizza__button item__link">Замовити</button>
 							</div>
 					</div>
 					<div class="pizza__item item-pizza">
@@ -161,7 +161,7 @@
 						<p class="item-pizza__text">Склад:рис, лосось атлантичний.</p>
 						<div class="item-pizza__row">
 							<div class="item-pizza__price">Ціна: 250 &#x20b4</div>
-							<button class="item-pizza__button">Замовити</button>
+							<button class="item-pizza__button item__link">Замовити</button>
 						</div>
 					</div>
 					<div class="pizza__item item-pizza">
@@ -170,14 +170,81 @@
 							<p class="item-pizza__text">Склад: рис, морський окунь.</p>
 							<div class="item-pizza__row">
 								<div class="item-pizza__price">Ціна: 250 &#x20b4</div>
-								<button class="item-pizza__button">Замовити</button>
+								<button class="item-pizza__button item__link">Замовити</button>
 							</div>
 					</div>
 					
 				</div>
 			</div>
 		  </div>
+		  <div class="page__check hidden check-out">
+			<div class="check-out_clouse"><img src="img/POP-AP/Closet.svg" alt=""> </div>
+			<h3 class="check-out__title "> Внесіть свої контактні дані.</h3>
+			<h4 class="check-out__billing ">Менеджер зв'яжеться з вами для підтвердження замовлення.</h4>
+			<form id="some-form-check" enctype="multipart/form-data" method="GET" class="form-check" action="#">
+				<div class="form-check__container">
+					<div class="form-check__first-name check-item">
+						<label for="form-check-first">Ім'я*</label>
+						<input id="form-check-first" autocomplete="off" name="form-check-first" placeholder="First Name"
+							type="text" required>
+					</div>
+					<div class="form-check__last-name check-item">
+						<label for="form-check-last">Прізвище*</label>
+						<input id="form-check-last" autocomplete="off" name="form-check-last" placeholder="Last Name*"
+							type="text" required>
+					</div>
+					<div class="form-check__phone check-item">
+						<label for="form-check-first">Телефон*</label>
+						<input id="form-check-phone" autocomplete="off" name="form-check-phone" placeholder="Phone"
+							type="tel" required>
+					</div>
+				</div>
 
+				<div class="form-check__container-button">
+					<button class="form-check__button" type="submit">Надіслати</button>
+
+				</div>
+				<div class="form-check__container-info">
+					<div class="form-check__info check-item">
+						<input id="form-check-info" name="form-check-info" type="checkbox">
+						<label for="form-check-first">Збережіть мою інформацію для швидшої оплати.</label>
+
+
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="popup3 hidden ">
+			<div class="popup3_body">
+				<div class="popup3_maim_picture">
+					<div class="popup3_clouse"><img src="img/POP-AP/Closet.svg" alt=""> </div>
+					<div class="popup3_title">
+						<h2>Колісник Іван Віталійович</h2>
+					</div>
+					<div class="popup3_text">
+						<h3>Суши шеф:<span> ФОП-“I-one+KO”</span> <a href="tel:+380975241841">моб:0975241841</a> </h3>
+					</div>
+
+					<div class="popup3_btn">
+
+
+						<div class="popup3_btn_right">
+							<a href="#"><button>Оформити замовленя.</button></a>
+						</div>
+
+
+					</div>
+					<div class="popup3_order hidden">
+						<img src="img/comp/order.jpg" alt="img">
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+		<div class="scroll-top-container">
+			<a><img src="img/scroll-up.png" alt="img"></a>
+		</div>
 		</main>
 	</div>
  
