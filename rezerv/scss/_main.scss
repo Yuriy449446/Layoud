@@ -157,15 +157,18 @@
 			border-radius: 50%;
 			background-color: rgb(243, 153, 36);
 			align-self: flex-end;
-			margin-bottom: 10px;
-			&span{
-				color: black;
-				
-				display: flex;
-				justify-self: center;
-				align-self: center;
-				
+			//margin-bottom: 10px;
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img{
+				position: absolute;
+				width: 40px;
+			   height: 40px;
 			}
+			
+			
 		}
 	}
 }
@@ -238,4 +241,23 @@
 	}
 }
 
- 
+.jr-code{
+	
+		padding-top: 20px;
+		display: flex;
+		column-gap: 10px;
+		justify-content: center;
+		font-weight: 500;
+		font-size: 14px;
+		align-items: center;
+	img{
+		width: 20px;
+		height: 20px;
+		@media (any-hover: hover){
+			&:hover{
+				transform: scale(1.1);
+			}
+		}
+	}
+	
+ }
