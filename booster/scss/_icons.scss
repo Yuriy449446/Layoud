@@ -1,0 +1,34 @@
+
+[class^="_icon-"], [class*=" _icon-"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+ 
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+ }
+ 
+ ._icon-arrow-left:before {
+
+	content: "\e900";
+	position: relative;
+	z-index: 3;
+	 width: 20px;
+		height: 25px;
+ }
+	
+ 
+ ._icon-arrow-right:before {
+	content: "\e901";
+	position: relative;
+	z-index: 3;
+	 width: 20px;
+		height: 25px;
+ }
+ 
