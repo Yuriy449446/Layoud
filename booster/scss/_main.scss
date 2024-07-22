@@ -671,35 +671,34 @@
 
 	// .accessoris__arrow
 	&__arrow {
-		position: relative;
-
-		span {
-			position: absolute;
-			width: 44px;
-			height: 44px;
-			border-radius: 50%;
-			background: rgba(255, 255, 255, 0.75);
-			//z-index: 1;
-			left: -5px;
-			top: -15px;
-
-		}
+		
+     
+		
 	}
 
 	// .accessoris__arrow--left
 	&__arrow--left {
 		position: absolute;
 		top: 50%;
-		left: 20px;
+		left: 15px;
 		z-index: 3;
 		transition: all 0.3s;
-
+       width: 18px;
 		@media (any-hover: hover) {
 			&:hover span {
 				background: rgba(225, 209, 209, 0.75);
 			}
 		}
-
+        span{
+			position: absolute;
+			width: 44px;
+			height: 44px;
+			border-radius: 50%;
+			//background: rgba(255, 255, 255, 0.75);
+			background-color: green;
+			left: -12px;
+			top: -15px;
+		 }
 
 	}
 
@@ -707,12 +706,19 @@
 	&__arrow--right {
 		position: absolute;
 		top: 50%;
-		right: 20px;
+		right: 15px;
+		width: 18px;
 		z-index: 3;
 		transition: all 0.3s;
 
 		span {
-			right: -5px;
+			position: absolute;
+			width: 44px;
+			height: 44px;
+			border-radius: 50%;
+			//background: rgba(255, 255, 255, 0.75);
+			background-color: green;
+			right: -12px;
 			top: -15px;
 		}
 

@@ -1128,41 +1128,45 @@ textarea {
 .accessoris__slide {
   position: relative;
 }
-.accessoris__arrow {
-  position: relative;
-}
-.accessoris__arrow span {
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.75);
-  left: -5px;
-  top: -15px;
-}
 .accessoris__arrow--left {
   position: absolute;
   top: 50%;
-  left: 20px;
+  left: 15px;
   z-index: 3;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  width: 18px;
 }
 @media (any-hover: hover) {
   .accessoris__arrow--left:hover span {
     background: rgba(225, 209, 209, 0.75);
   }
 }
+.accessoris__arrow--left span {
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: green;
+  left: -12px;
+  top: -15px;
+}
 .accessoris__arrow--right {
   position: absolute;
   top: 50%;
-  right: 20px;
+  right: 15px;
+  width: 18px;
   z-index: 3;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 .accessoris__arrow--right span {
-  right: -5px;
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: green;
+  right: -12px;
   top: -15px;
 }
 @media (any-hover: hover) {
@@ -1555,9 +1559,12 @@ textarea {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+    gap: 0.625rem;
   }
 }
 .servise-footer__link {
+  font-size: 0.75rem;
+  line-height: 1.566667; /* 18.8/12 */
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
