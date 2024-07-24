@@ -1147,7 +1147,7 @@ textarea {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: green;
+  background-color:rgb(102, 107, 102, 0.5);
   left: -12px;
   top: -15px;
 }
@@ -1165,7 +1165,7 @@ textarea {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: green;
+  background-color:rgb(102, 107, 102, 0.5);
   right: -12px;
   top: -15px;
 }
