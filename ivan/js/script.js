@@ -93,22 +93,20 @@ if (newSlider) {
 
 */
 
+
+
 const mainSlider = new Swiper('.swiper', {
 	spaceBetween: 20,
 	loop: true,
 	pagination: {
 	  el: '.swiper-pagination',
-	  clickable: true,
+	 clickable: true,
 	},
 	navigation: {
 	  nextEl: '.swiper-button-next',
 	  prevEl: '.swiper-button-prev',
 	},
-	breakpoints: {
-	  480: {
-		 spaceBetween: 15,
-	  },
-	},
+	
  });
 
 
@@ -121,10 +119,10 @@ const mainSlider = new Swiper('.swiper', {
 	const newSlider = new Swiper('.new__slider', {
 		spaceBetween: 20,
 		loop: true,
-		pagination: {
-		  el: '.swiper-pagination',
-		  clickable: true,
-		},
+		//pagination: {
+		 // el: '.swiper-pagination',
+		 // clickable: true,
+		//},
 	  navigation: {
 		 nextEl: '.new__arrow--right',
 		 prevEl: '.new__arrow--left',
@@ -876,4 +874,11 @@ pizzaItems.forEach(item => {
 		button.addEventListener('click', function() {
 		  hideElement('sezon');
 		});
+		
 	 });
+     
+	  
+
+
+
+	

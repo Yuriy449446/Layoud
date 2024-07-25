@@ -3117,7 +3117,7 @@ body {
 }
 
 
-/*     */
+//========================================================================================================================================================
 .sushi-slader {
 	margin-top: 250px;
 
@@ -3154,16 +3154,34 @@ body {
 
 
 .swiper-pagination-bullet.swiper-pagination-bullet {
-
+  
 	background: #b1a9b0;
 
 }
 
-.swiper-pagination-bullet-active.swiper-pagination-bullet-active {
-
-	background: #e3e4e9;
+button.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal{
+	span.swiper-pagination-bullet.swiper-pagination-bullet-active{
+     background-color: #831329;
+	  
+	}
 
 }
+
+button.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal{
+	span.swiper-pagination-bullet{
+     
+	  &:not(:first-child){
+		margin-left: 15px;
+	  }
+	  width:20px;
+	  height:15px;
+	  border-radius: 30%;
+	  background-color: #edf2ed;
+	}
+
+}
+
+
 
 .swiper-pagination-bullet-active.swiper-pagination-bullet-active {
 
@@ -3185,7 +3203,8 @@ body {
 
 }
 
-/*     */
+
+//========================================================================================================================================================
 .info-sushi {
 
 	// .info-sushi__container
@@ -3568,7 +3587,7 @@ body {
 
 }
 
-////////////////////////////////
+//========================================================================================================================================================
 
 
 .business__title {
@@ -3853,7 +3872,7 @@ body {
 }
 
 
-/////////////////////////////
+//========================================================================================================================================================
 .page__check {
 
 	position: fixed;
@@ -4093,8 +4112,7 @@ body {
 	overflow: hidden;
 }
 
-///////////////////////////////////////////////////
-/// 
+//========================================================================================================================================================
 .pizza {
 	// .pizza__title
 	margin-bottom: clamp(3.125rem, 2.1046rem + 5.102vw, 6.25rem);
@@ -4710,4 +4728,17 @@ body {
 	color: #DDD;
 	font-size: 30px;
 	padding-bottom: 20px;
+}
+
+///Радіуси картинок.
+.swiper-slide{
+	img{
+		border-radius: 20px;
+	}
+}
+.info-sushi__img {
+	img{
+		border-radius: 20px;
+		
+	}
 }

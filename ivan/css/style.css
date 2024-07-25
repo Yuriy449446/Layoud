@@ -3037,7 +3037,6 @@ body {
   color: #6B77E5;
 }
 
-/*     */
 .sushi-slader {
   margin-top: 250px;
 }
@@ -3081,8 +3080,18 @@ body {
   background: #b1a9b0;
 }
 
-.swiper-pagination-bullet-active.swiper-pagination-bullet-active {
-  background: #e3e4e9;
+button.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #831329;
+}
+
+button.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal span.swiper-pagination-bullet {
+  width: 20px;
+  height: 15px;
+  border-radius: 30%;
+  background-color: #edf2ed;
+}
+button.swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal span.swiper-pagination-bullet:not(:first-child) {
+  margin-left: 15px;
 }
 
 .swiper-pagination-bullet-active.swiper-pagination-bullet-active {
@@ -3102,7 +3111,6 @@ body {
   }
 }
 
-/*     */
 .info-sushi__container {
   padding: 50px 10px;
 }
@@ -4562,4 +4570,12 @@ body {
   color: #DDD;
   font-size: 30px;
   padding-bottom: 20px;
+}
+
+.swiper-slide img {
+  border-radius: 20px;
+}
+
+.info-sushi__img img {
+  border-radius: 20px;
 }
