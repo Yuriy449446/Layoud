@@ -98,11 +98,11 @@ if (slider) {
 				  }
 				  if (counter === 10) {
 						clearInterval(interval);
-						setTimeout(addLightClassToTab1Elements, 1000); // Виклик функції із затримкою 2 секунди
+						setTimeout(addLightClassToTab1Elements, 100); // Виклик функції із затримкою 2 секунди
 				  }
 				  counter++;
-			 }, 1000);
-		}, 1000);
+			 }, 100);
+		}, 12000);
   });
 
   function addLightClassToTab1Elements() {
@@ -124,7 +124,7 @@ function printWithDelay(text, index) {
         const letter = text[index];
         const span = document.createElement('span');
         span.textContent = letter;
-        span.style.animationDelay = `${index * 0.3}s`;
+        span.style.animationDelay = `${index * 0.05}s`;
         title.appendChild(span);
         setTimeout(() => printWithDelay(text, index + 1), 465);
     }
