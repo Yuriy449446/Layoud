@@ -1,0 +1,137 @@
+.footer {
+	// .footer__container
+	&__container {
+		@include adaptiveValue("padding-top", 70, 35 );
+		@include adaptiveValue("padding-bottom", 78, 39 );
+	}
+	// .footer__items
+	&__items {
+		display: grid;
+		//grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: minmax(auto , 186px) auto auto minmax(auto , 333px);
+		column-gap: toRem(120);
+		@media (max-width: toEm(1025.98)){
+			grid-template-columns: repeat(3, 1fr);
+			row-gap:toRem(25);
+			column-gap: toRem(100);
+		}
+		@media (max-width: toEm(768.98)){
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: toRem(80);
+		}
+		@media (max-width: toEm(550.98)){
+			grid-template-columns: auto;
+			
+		}
+		
+	}
+	// .footer__item
+	&__item {
+		a{
+			display:block;
+			&:not(:last-child){
+				margin-bottom: toRem(20);
+			}
+			@media (any-hover: hover){
+				&:hover{
+					text-decoration: underline;
+				}
+			}
+			font-size: toRem(16);
+		}
+		
+	}
+	// .footer__title
+	&__title {
+		font-family: "Ribeye";
+		font-size: toRem(24);
+		line-height: 1.5;
+		@include adaptiveValue("margin-bottom", 40 , 20 );
+      &--fore{
+			font-family: "Roboto";
+			font-size: toRem(20);
+			line-height: 1.5;
+			font-weight: 500;
+			@include adaptiveValue("margin-bottom", 40 , 20 );
+		}
+	}
+	// .footer__social
+	&__social {
+		display: flex;
+		column-gap: toRem(27);
+
+	}
+	// .footer__link
+	&__link {
+		font-size: toRem(16);
+		line-height: 1.6;
+		
+		
+	}
+	// .footer__img
+	&__img {
+		width: 20px;
+		height: 20px;
+		object-fit: cover;
+		object-position: center;
+		transition: all 0.3s;
+		@media (any-hover: hover){
+			&:hover{
+				transform: scale(1.05);
+			}
+		}
+	}
+	// .footer__list
+	&__list {
+		li{
+			&:not(:last-child){
+				@include adaptiveValue("margin-bottom", 20 , 10 );
+			}
+			&:hover{
+				text-decoration: underline;
+			}
+			font-weight: 500;
+			font-size: toRem(16);
+		}
+	}
+	// .footer__link--list
+	&__link--list {
+		
+	}
+	// .footer__form
+	&__form {
+		display: flex;
+		column-gap:toRem(35) ;
+		@media (max-width: toEm(768.98)){
+			flex-direction: column;
+			row-gap: toRem(20);
+			
+			
+		}
+		input{
+			padding: toRem(10) toRem(0) toRem(10) toRem(20);
+			font-size: toRem(16);
+			border: 1px solid rgba(0, 0, 0, 0.2);
+			border-radius: 5px;
+			width: 195px;
+		}
+		button {
+			color: $mainColor;
+			font-size: toRem(16);
+			background-color: $pinkColor;
+			padding: toRem(10) toRem(32);
+			transition: all 0.3s;
+			border-radius: 5px;
+			@media (any-hover: hover){
+				&:hover{
+					transform: scale(1.05);
+				}
+			}
+			@media (max-width: toEm(768.98)){
+				
+				align-self: flex-start;
+				
+			}
+		}
+	}
+}

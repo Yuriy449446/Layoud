@@ -1,0 +1,540 @@
+//Мобiльне меню
+.menu {
+	  //Мобільне меню, при натисканні на бургер
+		@media (max-width:toEm(850.98)){
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			overflow: auto;
+			left: -100%;
+			transition: all 0.5s ease 0s;
+			z-index: 2;
+			padding: toRem(0) toRem(15) toRem(30) toRem(15);
+			background-color: $mainColor;
+			&::before{
+				content: "";
+				position: fixed;
+				width: 100%;
+				@include adaptiveValue("height", 80, 50);
+				background-color: green;
+				z-index: 2;
+				top: 0;
+				left: -100%;
+				transition: left 0.5s;
+				
+			}
+			.menu-open & {
+				left: 0;
+				transition: all 0.5s ease 0s;
+				
+
+				&::before {
+					left: 0;
+				}
+			}
+		}
+
+	// .menu__body
+	&__body {
+	}
+	// .menu__list
+	&__list {
+		
+      
+		//Перевертвння мобільного меню
+		@media (max-width: toEm(850.98)) {
+			margin: 0 auto;
+			flex-direction: column;
+			row-gap: toRem(15);
+			align-items: center;
+			justify-content: center;
+			padding-top: toRem(80);
+        
+
+		}
+	}
+	// .menu__item
+	&__item {
+		
+		
+		//padding: toRem(22) toRem(0) toRem(22) toRem(0);
+		@media (max-width: toEm(850.98)) {
+			padding: toRem(0) toRem(0) toRem(0) toRem(0);
+        font-size: toRem(20);
+
+		}
+	}
+	// .menu__link
+	//Підкреслення при наведенні у різні боки
+	&__link {
+		position: relative;
+		&::before {
+			content: "";
+			height: toRem(3);
+			background-color: $mainColor;
+			position: absolute;
+			top: 100%;
+			width: 0;
+			left: 50%;
+			transition: all 0.3s;
+			border-radius: toRem(2);
+			margin-top: toRem(2);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				&::before {
+					width: 100%;
+					left: 0;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+//========================================================================================================================================================
+.header {
+	height: 100dvh;
+	display: grid;
+	position: relative;
+	@include adaptiveValue("margin-bottom", 140 ,50 );
+	// .header__container
+	&__container {
+		display: grid;
+		grid-column: 1;
+		grid-row: 1;
+		width: 100%;
+		position: relative;
+		align-self: self-start;
+		
+	}
+   //.header__row
+	&__row{
+    display: flex;
+	 justify-content: space-between;
+	 column-gap: toRem(10);
+	 align-items: center;
+	 @include adaptiveValue("padding-top", 35, 10);
+	}
+	// .header__logo
+	&__logo {
+		display: block;
+		font-family: "Ribeye";
+		color: $mainColor;
+		line-height: 1.5;
+		font-size: toRem(24);
+		font-size: toRem(28);
+		
+		@media (max-width: toEm(395.98)){
+			font-size: toRem(20);
+		}
+      position: relative;
+		z-index: 5;
+	}
+	// .header__menu
+	&__menu {
+	}
+	// .header__actions
+	&__actions {
+	}
+	// .header__body-container
+	&__body-container {
+		display: grid;
+		grid-column: 1;
+		grid-row: 1;
+		width: 100%;
+		position: relative;
+		color: $mainColor;
+		max-width: toRem(804);
+		
+		
+	} 
+		
+	
+	// .header__foto
+	&__foto {
+		display: grid;
+		grid-column: 1;
+		grid-row: 1;
+		width: 100%;
+		aspect-ratio: 1600 / 900;
+		object-fit: cover;
+		height: 100%;
+		object-position: right;
+		position: relative;
+	}
+	&__foto-house{
+		display: grid;
+		grid-column: 1;
+		grid-row: 1;
+		width: 100%;
+		align-self: center;
+	}
+}
+
+//========================================================================================================================================================
+		.house {
+			 position: relative;
+			 width: 300px;
+			 height: 200px;
+			 border: 2px solid black;
+			 margin: 50px auto;
+			 transition: all 0.3s;
+			 opacity: 1;
+			 &.hidden{
+				//border: 2px solid transparent;
+				opacity: 0;
+			 }
+		}
+		.roof {
+			 position: absolute;
+			 width: 0;
+			 height: 0;
+			 border-left: 150px solid transparent;
+			 border-right: 150px solid transparent;
+		    border-bottom: 100px solid black;
+			 top: -100px;
+			 left: 0;
+			 transition: all 0.3s;
+			 opacity: 1;
+			 &.hidden{
+				//border-bottom: 100px solid transparent;
+				opacity: 0;
+			 }
+		}
+		.chimney {
+			 position: absolute;
+			 width: 20px;
+			 height: 50px;
+			 background-color: black;
+			 top: -150px;
+			 left: 100px;
+			 transition: all 0.3s;
+			 opacity: 1;
+			 &.hidden{
+				//background-color: transparent;
+				opacity: 0;
+			 }
+		}
+		.door {
+			 position: absolute;
+			 width: 40px;
+			 height: 80px;
+			 background-color: black;
+			 bottom: 0;
+			 left: 130px;
+			 transition: all 0.3s;
+			 opacity: 1;
+			 &.hidden{
+				//background-color: transparent;
+				opacity: 0;
+			 }
+		}
+		.window {
+			 position: absolute;
+			 width: 50px;
+			 height: 50px;
+			 border: 2px solid black;
+			 transition: all 0.3s;
+			 	 
+			 
+		}
+		.window1 {
+			 top: 20px;
+			 left: 20px;
+			 transition: all 0.3s;
+			 opacity: 1;
+			 &.hidden{
+				//border: 2px solid transparent;
+				opacity: 0;
+			 }
+			 &.light{
+				background-color: rgb(255, 255, 0,0.5);
+				box-shadow: 0 0 10px rgba(255, 255, 0, 0.3), 0 0 40px rgba(255, 255, 0, 0.3), 0 0 60px rgba(255, 255, 0, 0.3);
+			 }
+		}
+		.window2 {
+			 top: 20px;
+			 right: 20px;
+			
+			 transition: all 0.3s;
+			 opacity: 1;
+			 &.hidden{
+				//border: 2px solid transparent;
+				opacity: 0;
+			 }
+			 &.light{
+				background-color: rgb(255, 255, 0,0.5);
+				box-shadow: 0 0 10px rgba(255, 255, 0, 0.3), 0 0 40px rgba(255, 255, 0, 0.3), 0 0 60px rgba(255, 255, 0, 0.3);
+			 }
+		}
+		.window3 {
+			 bottom: 20px;
+			 left: 20px;
+			 
+			 transition: all 0.3s;
+			 opacity: 1;
+			 &.hidden{
+				//border: 2px solid transparent;
+				opacity: 0;
+			 }
+			 &.light{
+				background-color: rgb(255, 255, 0,0.5);
+				box-shadow: 0 0 10px rgba(255, 255, 0, 0.3), 0 0 40px rgba(255, 255, 0, 0.3), 0 0 60px rgba(255, 255, 0, 0.3);
+			 }
+		}
+		.window4 {
+			 bottom: 20px;
+			 right: 20px;
+			 
+			 transition: all 0.3s;
+			 opacity: 1;
+			 &.hidden{
+				//border: 2px solid transparent;
+				opacity: 0;
+			 }
+			 &.light{
+				background-color: rgb(255, 255, 0,0.5);
+				box-shadow: 0 0 10px rgba(255, 255, 0, 0.3), 0 0 40px rgba(255, 255, 0, 0.3), 0 0 60px rgba(255, 255, 0, 0.3);
+				
+			 }
+		}
+		.garage {
+			 position: absolute;
+			 width: 100px;
+			 height: 80px;
+			 border: 2px solid black;
+			 bottom: 0;
+			 left: -120px;
+			 transition: all 0.3s;
+			 opacity: 1;
+			 &.hidden{
+				//border: 2px solid transparent;
+				opacity: 1;
+			 }
+			 @media (max-width: toEm(575.98)){
+				display: none;
+		  }
+		}
+		.garage-door {
+			 position: absolute;
+			 width: 80px;
+			 height: 60px;
+			 background-color: black;
+			 bottom: 0;
+			 left: 10px;
+			 transition: all 0.3s;
+			 opacity: 1;
+			 &.hidden{
+				//background-color: transparent;
+				opacity: 0;
+			 }
+			 @media (max-width: toEm(575.98)){
+				  display: none;
+			 }
+		}
+  
+
+//========================================================================================================================================================
+
+
+
+
+.menu {
+	color: $mainColor;
+	// .menu__body
+	&__body {
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: toRem(50);
+		row-gap: toRem(7);
+		.menu-open &{
+			color:$blackColor;
+			padding-top:toRem(100);
+			row-gap: toRem(20);
+		}
+	}
+	// .menu__item
+	&__item {
+	}
+	// .menu__link
+	&__link {
+	}
+}
+.button {
+	// .button__boking
+	&__boking {
+		color: $mainColor;
+		font-size: toRem(16);
+		line-height: 1.5;
+		padding: toRem(14) toRem(35) toRem(14) toRem(35);
+		background-color: $pinkColor;
+		border-radius: 5px;
+		transition: all 0.3s;
+		position: relative;
+		z-index: 2;
+		@media (any-hover: hover){
+			&:hover{
+				transform: scale(1.05);
+			}
+		}
+		@media (max-width: toEm(850.98)){
+			padding: toRem(5) toRem(15) toRem(5) toRem(15);
+		}
+	}
+}
+.icon-menu {
+}
+.body-container {
+	align-self: flex-start;
+	max-width: toRem(1170);
+	margin: 0 auto;
+	padding-left: toRem(15);
+	padding-right: toRem(15);
+	padding-top: 7%;
+	align-items: center;
+	@media (max-width: toEm(1100.98)){
+		align-self: self-end;
+  }
+    
+   //.body-container__box
+	&__box{
+		max-width: toRem(400);
+		padding-bottom: toRem(15);
+	  }
+	  // .body-container__title
+	  &__title {
+		  font-family: "Gelasio";
+		  @include adaptiveValue("font-size",50 ,28 );
+		  font-weight: 700;
+		  line-height: 1.2;
+		  position: relative;
+		  z-index: 10;
+		  
+		  align-self: flex-start;
+		  //@include adaptiveValue("margin-bottom",30 ,15 );
+		  @media (max-width: toEm(768.98)){
+			align-self: flex-start;
+			padding-bottom: 15%;
+	 }
+	  }
+	  // .body-container__text
+	  &__text {
+		position: relative;
+		  @include adaptiveValue("margin-bottom",40 ,5 );
+		  @include adaptiveValue("font-size",18 ,16 );
+		  line-height: 1.6;
+		  max-width: toRem(458);
+		  @media (max-width: toEm(768.98)){
+			  display: none;
+		}
+		position: relative;
+		  z-index: 10;
+		color: $blackColor;
+	  }
+	  // .body-container__button
+	  &__button {
+		  padding: toRem(18) toRem(46) toRem(18) toRem(46);
+		  background-color: $pinkColor;
+		  border-radius: 5px;
+		  transition: all 0.3s;
+		  font-size: toRem(16);
+		  line-height: 1.5;
+		  @media (any-hover: hover){
+			  &:hover{
+				  transform: scale(1.05);
+			  }
+		  }
+		  @media (max-width: toEm(850.98)){
+			  padding: toRem(5) toRem(15) toRem(5) toRem(15);
+		  }
+  
+		  @media (max-width: toEm(545.98)){
+			//  display: none;
+	  }
+  }
+	}
+  
+
+
+
+//========================================================================================================================================================
+//Підключення меню бургер 
+//Burger Icon
+.icon-menu {
+	display: none;
+
+	@media (max-width: toEm(850.98)) {
+		display: block;
+		position: relative;
+		width: toRem(30);
+		height: toRem(18);
+		z-index: 5;
+		align-self: center;
+		
+
+		@media (any-hover: none) {
+			cursor: default;
+		}
+
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.5s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: toRem(2);
+			//background-color: $blackColor;
+			background-color:$mainColor ;
+			z-index: 5;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+
+		span {
+			top: calc(50% - toRem(1));
+		}
+
+		.menu-open & {
+			span {
+				width: 0;
+				opacity: 0;
+			}
+
+			&::before {
+				top: calc(50% - toRem(1));
+				transform: rotate(-45deg);
+			}
+
+			&::after {
+				bottom: calc(50% - toRem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+
+/// Обертання бургер меню.
+.icon-menu.rotate::before {
+	transform: translate(-0%, -0%) rotate(-360deg);
+}
+
+.icon-menu.rotate::after {
+	transform: translate(-0%, -0%) rotate(360deg);
+}
