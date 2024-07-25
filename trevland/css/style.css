@@ -969,6 +969,8 @@ textarea {
 
 .swiper-initialized.swiper-horizontal.swiper-autoheight {
   position: relative;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
 }
 @media (min-width: 73.125em) {
   .swiper-initialized.swiper-horizontal.swiper-autoheight {
@@ -1042,20 +1044,20 @@ textarea {
   }
 }
 @media (min-width: 20em) and (max-width: 73.125em) {
-  @supports (margin-bottom: clamp( 3.125rem , 0.9602941176rem  +  10.8235294118vw , 8.875rem )) {
+  @supports (margin-bottom: clamp( 1.25rem , -1.6205882353rem  +  14.3529411765vw , 8.875rem )) {
     .from {
-      margin-bottom: clamp( 3.125rem , 0.9602941176rem  +  10.8235294118vw , 8.875rem );
+      margin-bottom: clamp( 1.25rem , -1.6205882353rem  +  14.3529411765vw , 8.875rem );
     }
   }
-  @supports not (margin-bottom: clamp( 3.125rem , 0.9602941176rem  +  10.8235294118vw , 8.875rem )) {
+  @supports not (margin-bottom: clamp( 1.25rem , -1.6205882353rem  +  14.3529411765vw , 8.875rem )) {
     .from {
-      margin-bottom: calc(3.125rem + 5.75 * (100vw - 20rem) / 53.125);
+      margin-bottom: calc(1.25rem + 7.625 * (100vw - 20rem) / 53.125);
     }
   }
 }
 @media (max-width: 20em) {
   .from {
-    margin-bottom: 3.125rem;
+    margin-bottom: 1.25rem;
   }
 }
 .from__title {
@@ -1250,11 +1252,6 @@ textarea {
        -moz-column-gap: 1.25rem;
             column-gap: 1.25rem;
     grid-template-rows: 1fr 1fr;
-  }
-}
-@media (max-width: 26.62375em) {
-  .from__item--right {
-    justify-items: center;
   }
 }
 .element {
