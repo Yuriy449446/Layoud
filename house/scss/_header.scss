@@ -198,11 +198,12 @@
 			 height: 0;
 			 border-left: 150px solid transparent;
 			 border-right: 150px solid transparent;
-		    border-bottom: 100px solid black;
+		    border-bottom: 100px solid $pinkColor;
 			 top: -100px;
 			 left: 0;
 			 transition: all 0.3s;
 			 opacity: 1;
+			 z-index: 2;
 			 &.hidden{
 				//border-bottom: 100px solid transparent;
 				opacity: 0;
@@ -213,7 +214,7 @@
 			 width: 20px;
 			 height: 50px;
 			 background-color: black;
-			 top: -150px;
+			 top: -110px;
 			 left: 100px;
 			 transition: all 0.3s;
 			 opacity: 1;
@@ -226,7 +227,7 @@
 			 position: absolute;
 			 width: 40px;
 			 height: 80px;
-			 background-color: black;
+			 background-color: $pinkColor;
 			 bottom: 0;
 			 left: 130px;
 			 transition: all 0.3s;
@@ -242,7 +243,7 @@
 			 height: 50px;
 			 border: 2px solid black;
 			 transition: all 0.3s;
-			 	 
+			 border-radius: 5px;	 
 			 
 		}
 		.window1 {
@@ -326,7 +327,7 @@
 			 position: absolute;
 			 width: 80px;
 			 height: 60px;
-			 background-color: black;
+			 background-color: $pinkColor;
 			 bottom: 0;
 			 left: 10px;
 			 transition: all 0.3s;

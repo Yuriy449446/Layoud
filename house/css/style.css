@@ -352,12 +352,13 @@ textarea {
   height: 0;
   border-left: 150px solid transparent;
   border-right: 150px solid transparent;
-  border-bottom: 100px solid black;
+  border-bottom: 100px solid #C9453B;
   top: -100px;
   left: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   opacity: 1;
+  z-index: 2;
 }
 .roof.hidden {
   opacity: 0;
@@ -368,7 +369,7 @@ textarea {
   width: 20px;
   height: 50px;
   background-color: black;
-  top: -150px;
+  top: -110px;
   left: 100px;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -382,7 +383,7 @@ textarea {
   position: absolute;
   width: 40px;
   height: 80px;
-  background-color: black;
+  background-color: #C9453B;
   bottom: 0;
   left: 130px;
   -webkit-transition: all 0.3s;
@@ -400,6 +401,7 @@ textarea {
   border: 2px solid black;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  border-radius: 5px;
 }
 
 .window1 {
@@ -490,7 +492,7 @@ textarea {
   position: absolute;
   width: 80px;
   height: 60px;
-  background-color: black;
+  background-color: #C9453B;
   bottom: 0;
   left: 10px;
   -webkit-transition: all 0.3s;
