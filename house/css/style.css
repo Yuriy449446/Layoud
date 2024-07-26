@@ -758,6 +758,9 @@ textarea {
           transform: translate(0%, 0%) rotate(360deg);
 }
 
+.popular {
+  margin-top: 80px;
+}
 @media (min-width: 73.125em) {
   .popular {
     margin-bottom: 8.75rem;

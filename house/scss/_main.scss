@@ -3,6 +3,7 @@
 }
 .popular {
 	@include adaptiveValue("margin-bottom", 140 ,50 );
+	margin-top: 80px;
 	// .popular__container
 	&__container {
 		

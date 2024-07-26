@@ -98,11 +98,11 @@ if (slider) {
 				  }
 				  if (counter === 10) {
 						clearInterval(interval);
-						setTimeout(addLightClassToTab1Elements, 100); // Виклик функції із затримкою 2 секунди
+						setTimeout(addLightClassToTab1Elements, 300); // Виклик функції із затримкою 2 секунди
 				  }
 				  counter++;
-			 }, 100);
-		}, 12000);
+			 }, 300);
+		}, 6000);
   });
 
   function addLightClassToTab1Elements() {
@@ -116,18 +116,19 @@ if (slider) {
 
   //Друкування тексту із затримкою.
 
-const text = "Your dreams will come true!";
-const title = document.querySelector('.body-container__title');
-
-function printWithDelay(text, index) {
-    if (index < text.length) {
-        const letter = text[index];
-        const span = document.createElement('span');
-        span.textContent = letter;
-        span.style.animationDelay = `${index * 0.05}s`;
-        title.appendChild(span);
-        setTimeout(() => printWithDelay(text, index + 1), 465);
-    }
-}
-
-printWithDelay(text, 0);
+  const text = "Your dreams will come true!";
+  const title = document.querySelector('.body-container__title');
+  
+  function printWithDelay(text, index) {
+		if (index < text.length) {
+			 const letter = text[index];
+			 const span = document.createElement('span');
+			 span.textContent = letter;
+			 span.style.animationDelay = `${index * 0.025}s`; // Зменшено вдвічі
+			 title.appendChild(span);
+			 setTimeout(() => printWithDelay(text, index + 1), 232.5); // Зменшено вдвічі
+		}
+  }
+  
+  printWithDelay(text, 0);
+  
