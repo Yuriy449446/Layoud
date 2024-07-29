@@ -203,7 +203,7 @@
 			 left: 0;
 			 transition: all 0.3s;
 			 opacity: 1;
-			 z-index: 2;
+			 z-index: 1;
 			 &.hidden{
 				//border-bottom: 100px solid transparent;
 				opacity: 0;
@@ -411,6 +411,7 @@
 	&__box{
 		max-width: toRem(400);
 		padding-bottom: toRem(15);
+		padding-top: toRem(15);
 	  }
 	  // .body-container__title
 	  &__title {

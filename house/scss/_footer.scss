@@ -96,42 +96,18 @@
 	}
 	// .footer__link--list
 	&__link--list {
-		
-	}
-	// .footer__form
-	&__form {
-		display: flex;
-		column-gap:toRem(35) ;
-		@media (max-width: toEm(768.98)){
-			flex-direction: column;
-			row-gap: toRem(20);
-			
+		&.thick{
+			font-size: toRem(20);
 			
 		}
-		input{
-			padding: toRem(10) toRem(0) toRem(10) toRem(20);
-			font-size: toRem(16);
-			border: 1px solid rgba(0, 0, 0, 0.2);
-			border-radius: 5px;
-			width: 195px;
-		}
-		button {
-			color: $mainColor;
-			font-size: toRem(16);
-			background-color: $pinkColor;
-			padding: toRem(10) toRem(32);
-			transition: all 0.3s;
-			border-radius: 5px;
-			@media (any-hover: hover){
-				&:hover{
-					transform: scale(1.05);
-				}
-			}
-			@media (max-width: toEm(768.98)){
-				
-				align-self: flex-start;
-				
-			}
-		}
 	}
+
+	&__year{
+		padding: toRem(20) toRem(0) toRem(20) toRem(0);
+	  text-align: center;
+	  font-family: "Ribeye";
+	  font-size: toRem(16);
+	}
+     
+	
 }
