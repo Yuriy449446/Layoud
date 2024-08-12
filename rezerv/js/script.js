@@ -22,15 +22,15 @@ function documentActions(e) {
 
 // Показуємо блоки из затримкою  в 0,5s
 
-document.addEventListener('DOMContentLoaded', function() {
-	var wrappers = document.querySelectorAll('.items-create__wrapper'); // Отримуємо всі елементи з класом "items-create__wrapper"
-	var delay = 500; // Затримка у 0.5 секунди
-	wrappers.forEach(function(wrapper, index) {
-		 setTimeout(function() {
-			  wrapper.classList.add('show'); // Додаємо клас "show" з затримкою
-		 }, delay * (index + 1)); // Затримка для кожного елемента
-	});
-});
+//document.addEventListener('DOMContentLoaded', function() {
+	//var wrappers = document.querySelectorAll('.items-create__wrapper'); // Отримуємо всі елементи з класом "items-create__wrapper"
+	//var delay = 500; // Затримка у 0.5 секунди
+	//wrappers.forEach(function(wrapper, index) {
+	//	 setTimeout(function() {
+	//		  wrapper.classList.add('show'); // Додаємо клас "show" з затримкою
+	//	 }, delay * (index + 1)); // Затримка для кожного елемента
+	//});
+//});
 
 
 
@@ -52,19 +52,16 @@ document.addEventListener('DOMContentLoaded', function() {
 // Повноекраній режим
 document.addEventListener("DOMContentLoaded", function () {
 	function requestFullScreen() {
-	  if (!document.fullscreenElement) {
-		 document.documentElement.requestFullscreen().catch(err => {
-			console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-		 });
-	  }
+		// Проверка, не находится ли документ уже в полноэкранном режиме
+		if (!document.fullscreenElement) {
+			document.documentElement.requestFullscreen().catch(err => {
+				console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+			});
+		}
 	}
- 
-	requestFullScreen();
- 
-	document.addEventListener('click', function() {
-	  requestFullScreen();
-	});
- });
- 
 
- 
+	// Полноэкранный режим включается только по клику
+	document.addEventListener('click', function() {
+		requestFullScreen();
+	});
+});
