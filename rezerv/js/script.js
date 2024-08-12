@@ -52,15 +52,31 @@ document.addEventListener('DOMContentLoaded', function() {
 // Повноекраній режим
 document.addEventListener("DOMContentLoaded", function () {
 	function requestFullScreen() {
+		let elem = document.documentElement; // Весь документ
+
 		// Проверка, не находится ли документ уже в полноэкранном режиме
 		if (!document.fullscreenElement) {
-			document.documentElement.requestFullscreen().catch(err => {
-				console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-			});
+			if (elem.requestFullscreen) {
+				elem.requestFullscreen().catch(err => {
+					console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+				});
+			} else if (elem.mozRequestFullScreen) { // Firefox
+				elem.mozRequestFullScreen().catch(err => {
+					console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+				});
+			} else if (elem.webkitRequestFullscreen) { // Chrome, Safari и Opera
+				elem.webkitRequestFullscreen().catch(err => {
+					console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+				});
+			} else if (elem.msRequestFullscreen) { // IE/Edge
+				elem.msRequestFullscreen().catch(err => {
+					console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+				});
+			}
 		}
 	}
 
-	// Полноэкранный режим включается только по клику
+	// Слушатель кликов на документе
 	document.addEventListener('click', function() {
 		requestFullScreen();
 	});
