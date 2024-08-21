@@ -77,7 +77,5 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	// Слушатель кликов на документе
-	document.addEventListener('click', function() {
-		requestFullScreen();
-	});
+	document.addEventListener('click', requestFullScreen);
 });
