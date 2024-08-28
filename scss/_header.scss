@@ -1,0 +1,434 @@
+
+
+//Мобiльне меню
+.menu {
+	//Мобільне меню, при натисканні на бургер
+	 @media (max-width:toEm(1035.98)){
+		 position: fixed;
+		 width: 100%;
+		 height: 100%;
+		 top: 0;
+		 overflow: auto;
+		 left: -100%;
+		 transition: all 0.5s ease 0s;
+		 z-index: 2;
+		 padding: toRem(0) toRem(15) toRem(30) toRem(15);
+		 background-color: $mainColor;
+		 &::before{
+			 content: "";
+			 position: fixed;
+			 width: 100%;
+			 @include adaptiveValue("height", 80, 70);
+			 background-color: $greyColor;
+			 z-index: 2;
+			 top: 0;
+			 left: -100%;
+			 transition: left 0.5s;
+			 
+		 }
+		 .menu-open & {
+			 left: 0;
+			 transition: all 0.5s ease 0s;
+			 
+
+			 &::before {
+				 left: 0;
+			 }
+		 }
+	 }
+		 
+	 
+
+ 
+ // .menu__list
+ &__list {
+	 
+	 
+	 //Перевертвння мобільного меню
+	 @media (max-width: toEm(1035.98)) {
+		 margin: 0 auto;
+		 flex-direction: column;
+		 row-gap: toRem(15);
+		 //align-items: center;
+		 //justify-content: center;
+		 padding-top: toRem(100);
+	 }
+		 
+		
+
+	 
+ }
+ // .menu__item
+ &__item {
+	 margin-bottom: 15px;
+	 
+	 
+ }
+ // .menu__link
+ //Підкреслення при наведенні у різні боки
+ &__link {
+	 position: relative;
+	 &::before {
+		 content: "";
+		 height: toRem(3);
+		 background-color: $greyColor;
+		 position: absolute;
+		 top: 100%;
+		 width: 0;
+		 left: 50%;
+		 transition: all 0.3s;
+		 border-radius: toRem(2);
+		 margin-top: toRem(2);
+	 }
+
+	 @media (any-hover: hover) {
+		 &:hover {
+			 &::before {
+				 width: 100%;
+				 left: 0;
+			 }
+		 }
+	 }
+ }
+}
+
+//========================================================================================================================================================
+
+.header {
+	display: grid;
+		grid-column: 1;
+		grid-row: 1;
+		//height: 100dvh;
+		
+	// .header__container
+	&__container {
+		@include adaptiveValue("padding-top",55 ,15 );
+		display: grid;
+		grid-column: 1;
+		grid-row: 1;
+		align-content: flex-start;
+	}
+	// .header__row
+	&__row {
+		
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		column-gap: toRem(30);
+		@include adaptiveValue("margin-bottom", 100, 0);
+      
+		
+	}
+	// .header__logo
+	&__logo {
+		width: toRem(185);
+		height: toRem(33);
+		overflow: hidden;
+		object-fit: cover;
+		position: relative;
+		z-index: 3;
+		
+		@media (max-width: toEm(650.98)){
+			width: toRem(40);
+		   height: toRem(27);
+		}
+	}
+	// .header__info
+	&__info {
+		display: block;
+		display: flex;
+		column-gap: toRem(30);
+		font-weight: 600;
+			@media (max-width: toEm(450.98)){
+			flex-direction: column;
+			row-gap: toRem(10);
+		}
+	}
+	// .header__mail
+	&__mail {
+		@media (any-hover: hover){
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+		transition: all 0.3s;
+		display: block;
+		position: relative;
+		.menu-open &{
+			color: white;
+			z-index: 3;
+		}
+	}
+	// .header__tel
+	&__tel {
+		@media (any-hover: hover){
+			&:hover{
+				text-decoration: underline;
+			}
+		}
+		transition: all 0.3s;
+		display: block;
+		position: relative;
+		.menu-open &{
+			color: white;
+			z-index: 3;
+		}
+	}
+	
+	// .header__body-container
+	&__body-container {
+		display: grid;
+		grid-column: 1;
+		grid-row: 1;
+		width: 100%;
+		position: relative;
+		justify-content: center;
+		align-self: center;
+		@media (max-width: toEm(600.98)){
+			  align-self: flex-end;
+		}
+	}
+		
+		
+	
+   //.header__fon
+	&__fon{
+		aspect-ratio: 1600 / 922;
+	  width: 100%;
+	  height: 100%;
+	  object-fit: cover;
+	  object-position: center;
+	  display: grid;
+		grid-column: 1;
+		grid-row: 1;
+	}
+     
+			
+}
+		
+	
+
+.menu {
+	
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	column-gap: toRem(262);
+	@media (max-width: toEm(1345.98)){
+		flex-direction: column;
+      justify-content: flex-start;
+		row-gap: toRem(20);
+	}
+	
+	
+	// .menu__list
+	&__list {
+		display: flex;
+		column-gap:toRem(75);
+		flex-wrap: wrap;
+		row-gap: toRem(15);
+		@media (max-width: toEm(1345.98)){
+					column-gap:toRem(55);
+		}
+		
+	
+			
+
+
+	}
+	
+	// .menu__link
+	&__link {
+		font-size: toRem(18);
+		font-weight: 700;
+	}
+	// .menu__social
+	&__social {
+		display: flex;
+		gap: toRem(10);
+		position: relative;
+		z-index: 2;
+		
+	}
+	// .menu__link--social
+	&__link--social {
+		width:26px;
+		height: 26px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 2px solid $blackColor;
+		transition: all 0.3s;
+		@media (any-hover: hover){
+			&:hover{
+				border: 2px solid $orangColor;
+			}
+		}
+		img{
+			width: 15px;
+			height: 15px;
+			transition: all 0.3s;
+			@media (any-hover: hover){
+				&:hover{
+					transform: scale(1.1);
+				}
+			}
+		}
+		
+	}
+}
+
+.body-container {
+ 
+	// .body-container__box
+	&__box {
+		padding: toRem(0) toRem(15) toRem(15) toRem(15);
+	}
+	// .body-container__title
+	&__title {
+		//color: $greyColor;
+		@include adaptiveValue("font-size",68 , 30);
+		margin-bottom: toRem(25);
+		text-align: center;
+		text-transform: uppercase;
+		@media (max-width: toEm(600.98)){
+			display: none;
+		}
+	}
+	// .body-container__text
+	&__text {
+		@include adaptiveValue("font-size",30 , 20);
+		margin-bottom: toRem(28);
+		text-align: center;
+		@media (max-width: toEm(600.98)){
+			display: none;
+		}
+	}
+	// .body-container__button-box
+	&__button-box {
+		display: flex;
+		column-gap: toRem(20);
+		row-gap: toRem(25);
+		justify-content: center;
+		padding: toRem(0) toRem(10) toRem(0) toRem(10);
+		
+		
+		@media (max-width: toEm(600.98)){
+			  flex-direction: column;
+			  
+		}
+	}
+	// .body-container__button--orang
+	&__button--orang {
+		padding: toRem(18) toRem(52) toRem(18) toRem(50);
+		background-color: $orangColor;
+		border-radius: 5px;
+		transition: all 0.3s;
+		@media (any-hover: hover){
+			&:hover{
+				transform: scale(1.05);
+				color: $mainColor;
+			}
+		}
+		@media (max-width: toEm(600.98)){
+			padding: toRem(10) toRem(25) toRem(10) toRem(25);
+			display: block;
+	 }
+	}
+	// .body-container__button--grey
+	&__button--grey {
+		padding: toRem(18) toRem(74) toRem(18) toRem(78);
+		background-color: $greyColor;
+		border-radius: 5px;
+		transition: all 0.3s;
+		@media (any-hover: hover){
+			&:hover{
+				transform: scale(1.05);
+				color: $mainColor;
+			}
+		}
+		@media (max-width: toEm(600.98)){
+			padding: toRem(10) toRem(25) toRem(10) toRem(25);
+			display: block;
+	 }
+	}
+}
+
+//========================================================================================================================================================
+
+//Підключення меню бургер 
+//Burger Icon
+.icon-menu {
+	display: none;
+
+	@media (max-width: toEm(1035.98)) {
+		display: block;
+		position: relative;
+		width: toRem(30);
+		height: toRem(18);
+		z-index: 5;
+		align-self: center;
+		
+
+		@media (any-hover: none) {
+			cursor: default;
+		}
+
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.5s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: toRem(2);
+			//background-color: $blackColor;
+			background-color:$blackColor;
+			z-index: 5;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+
+		span {
+			top: calc(50% - toRem(1));
+		}
+
+		.menu-open & {
+			span {
+				width: 0;
+				opacity: 0;
+			}
+
+			&::before {
+				top: calc(50% - toRem(1));
+				transform: rotate(-45deg);
+				background-color: white;
+			}
+
+			&::after {
+				bottom: calc(50% - toRem(1));
+				transform: rotate(45deg);
+				background-color: white;
+			}
+		}
+	}
+}
+
+/// Обертання бургер меню.
+.icon-menu.rotate::before {
+	transform: translate(-0%, -0%) rotate(-360deg);
+}
+
+.icon-menu.rotate::after {
+	transform: translate(-0%, -0%) rotate(360deg);
+}
+
+//========================================================================================================================================================

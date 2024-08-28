@@ -2,7 +2,6 @@
 	$rez: math.div($num1, $num2) * 100%;
 	@return $rez;
 }
-
 @function toRem($num1, $num2: 16) {
 	$rez: math.div($num1, $num2) + rem;
 	@return $rez;
@@ -71,5 +70,3 @@
 		}
 	}
 }
-
-// .....
