@@ -1037,6 +1037,7 @@ textarea {
 
 .open.scroll-top-container {
   opacity: 0;
+  overflow: hidden;
 }
 
 .proects__container {
