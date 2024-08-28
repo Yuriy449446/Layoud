@@ -3,7 +3,7 @@
 //Мобiльне меню
 .menu {
 	//Мобільне меню, при натисканні на бургер
-	 @media (max-width:toEm(1035.98)){
+	 @media (max-width:toEm(1045.98)){
 		 position: fixed;
 		 width: 100%;
 		 height: 100%;
@@ -45,7 +45,7 @@
 	 
 	 
 	 //Перевертвння мобільного меню
-	 @media (max-width: toEm(1035.98)) {
+	 @media (max-width: toEm(1045.98)) {
 		 margin: 0 auto;
 		 flex-direction: column;
 		 row-gap: toRem(15);
@@ -107,6 +107,7 @@
 		grid-column: 1;
 		grid-row: 1;
 		align-content: flex-start;
+		width: 100%;
 	}
 	// .header__row
 	&__row {
@@ -139,6 +140,7 @@
 		display: flex;
 		column-gap: toRem(30);
 		font-weight: 600;
+		
 			@media (max-width: toEm(450.98)){
 			flex-direction: column;
 			row-gap: toRem(10);
@@ -195,7 +197,7 @@
 	&__fon{
 		aspect-ratio: 1600 / 922;
 	  width: 100%;
-	  height: 100%;
+	 height: 100%;
 	  object-fit: cover;
 	  object-position: center;
 	  display: grid;
@@ -209,13 +211,12 @@
 	
 
 .menu {
-	
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
+	
 	column-gap: toRem(262);
-	@media (max-width: toEm(1345.98)){
+	@media (max-width: toEm(1045.98)){
 		flex-direction: column;
       justify-content: flex-start;
 		row-gap: toRem(20);
@@ -231,6 +232,9 @@
 		@media (max-width: toEm(1345.98)){
 					column-gap:toRem(55);
 		}
+		@media (max-width: toEm(1225.98)){
+			column-gap:toRem(25);
+}
 		
 	
 			
@@ -242,6 +246,7 @@
 	&__link {
 		font-size: toRem(18);
 		font-weight: 700;
+		text-wrap: nowrap;
 	}
 	// .menu__social
 	&__social {
@@ -278,6 +283,9 @@
 		
 	}
 }
+	
+	
+
 
 .body-container {
  
