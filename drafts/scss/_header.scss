@@ -68,10 +68,12 @@
  //Підкреслення при наведенні у різні боки
  &__link {
 	 position: relative;
+	 
+	
 	 &::before {
 		 content: "";
 		 height: toRem(3);
-		 background-color: $greyColor;
+		 background-color:$orangColor;
 		 position: absolute;
 		 top: 100%;
 		 width: 0;
@@ -116,7 +118,9 @@
 		justify-content: space-between;
 		align-items: center;
 		column-gap: toRem(30);
-		@include adaptiveValue("margin-bottom", 100, 0);
+		@include adaptiveValue("margin-bottom", 80, 0);
+		//line-height: 8.45; /* 845/100 */
+		//margin-bottom: 8.45svh;
       
 		
 	}
@@ -213,27 +217,27 @@
 .menu {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	align-items: baseline;
 	
-	column-gap: toRem(262);
+	
+	
+	
 	@media (max-width: toEm(1045.98)){
 		flex-direction: column;
       justify-content: flex-start;
 		row-gap: toRem(20);
 	}
 	
-	
 	// .menu__list
 	&__list {
 		display: flex;
-		column-gap:toRem(75);
+		column-gap:toRem(50);
 		flex-wrap: wrap;
 		row-gap: toRem(15);
-		@media (max-width: toEm(1345.98)){
-					column-gap:toRem(55);
-		}
-		@media (max-width: toEm(1225.98)){
-			column-gap:toRem(25);
+		align-self: center;
+		
+		@media (max-width: toEm(1150.98)){
+			column-gap:toRem(35);
 }
 		
 	
@@ -244,7 +248,7 @@
 	
 	// .menu__link
 	&__link {
-		font-size: toRem(18);
+		font-size: toRem(22);
 		font-weight: 700;
 		text-wrap: nowrap;
 	}
@@ -258,12 +262,12 @@
 	}
 	// .menu__link--social
 	&__link--social {
-		width:26px;
-		height: 26px;
+		width: 40px;
+		height: 40px;
+		border: 2px solid $greyColor;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		border: 2px solid $blackColor;
 		transition: all 0.3s;
 		@media (any-hover: hover){
 			&:hover{
@@ -271,12 +275,11 @@
 			}
 		}
 		img{
-			width: 15px;
-			height: 15px;
+			width:20px;
 			transition: all 0.3s;
-			@media (any-hover: hover){
+         @media (any-hover: hover){
 				&:hover{
-					transform: scale(1.1);
+					transform: scale(1.01);
 				}
 			}
 		}

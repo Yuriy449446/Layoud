@@ -76,6 +76,37 @@ function initializeScrollToTop() {
 // Call the function to initialize
 initializeScrollToTop();
 
+//========================================================================================================================================================
+// Коли стрідка прокрутки проходить над блоком такого ж кольору додаемо заливку через before
+// Находим элементы на странице
+const scrollTopContainer = document.querySelector('.scroll-top-container');
+const buttonSolution = document.querySelector('.button-solution');
+
+// Callback функция для Intersection Observer
+const observerCallback = (entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Если пересекается, добавляем класс shadow
+      scrollTopContainer.classList.add('shadow');
+    } else {
+      // Если не пересекается, удаляем класс shadow
+      scrollTopContainer.classList.remove('shadow');
+    }
+  });
+};
+
+// Опции для Intersection Observer
+const observerOptions = {
+  root: null, // Используем viewport как контейнер
+  threshold: 0, // Активируем callback при любом пересечении
+};
+
+// Создаем Intersection Observer
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+// Наблюдаем за элементом buttonSolution
+observer.observe(buttonSolution);
+
 
 //========================================================================================================================================================
 
