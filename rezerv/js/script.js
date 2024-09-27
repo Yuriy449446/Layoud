@@ -55,23 +55,21 @@ document.addEventListener("DOMContentLoaded", function () {
 		let elem = document.documentElement; // Весь документ
 
 		// Проверка, не находится ли документ уже в полноэкранном режиме
-		if (!document.fullscreenElement) {
+		if (!document.fullscreenElement && 
+			!document.mozFullScreenElement && 
+			!document.webkitFullscreenElement && 
+			!document.msFullscreenElement) {
+			
 			if (elem.requestFullscreen) {
 				elem.requestFullscreen().catch(err => {
 					console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
 				});
 			} else if (elem.mozRequestFullScreen) { // Firefox
-				elem.mozRequestFullScreen().catch(err => {
-					console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-				});
+				elem.mozRequestFullScreen();
 			} else if (elem.webkitRequestFullscreen) { // Chrome, Safari и Opera
-				elem.webkitRequestFullscreen().catch(err => {
-					console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-				});
+				elem.webkitRequestFullscreen();
 			} else if (elem.msRequestFullscreen) { // IE/Edge
-				elem.msRequestFullscreen().catch(err => {
-					console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-				});
+				elem.msRequestFullscreen();
 			}
 		}
 	}
