@@ -53,15 +53,19 @@ document.addEventListener('DOMContentLoaded', function() {
 // Повноекраній режим
 document.addEventListener("DOMContentLoaded", function () {
 	function requestFullScreen() {
-	  if (!document.fullscreenElement) {
-		 document.documentElement.requestFullscreen().catch(err => {
+	  const element = document.documentElement;
+	  if (element.requestFullscreen) {
+		 element.requestFullscreen().catch(err => {
 			console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
 		 });
+	  } else if (element.webkitRequestFullscreen) { // Для Safari
+		 element.webkitRequestFullscreen();
+	  } else if (element.msRequestFullscreen) { // Для IE/Edge
+		 element.msRequestFullscreen();
 	  }
 	}
  
-	requestFullScreen();
- 
+	// Запит повноекранного режиму на подію кліку
 	document.addEventListener('click', function() {
 	  requestFullScreen();
 	});
