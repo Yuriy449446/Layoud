@@ -1,0 +1,442 @@
+//Мобiльне меню
+.menu {
+	  //Мобільне меню, при натисканні на бургер
+		@media (max-width:toEm(970.98)){
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			overflow: auto;
+			left: -100%;
+			transition: all 0.5s ease 0s;
+			z-index: 2;
+			padding: toRem(0) toRem(15) toRem(30) toRem(15);
+			background:rgb(0, 0, 0, 0.8);
+			background-position: center;
+			&::before{
+				content: "";
+				position: fixed;
+				width: 100%;
+				@include adaptiveValue("height", 70, 70);
+				background-color:rgb(31, 31, 31);
+				z-index: 7;
+				top: 0;
+				left: -100%;
+				transition: left 0.5s;
+				
+			}
+			.menu-open & {
+				left: 0;
+				transition: all 0.5s ease 0s;
+				
+
+				&::before {
+					left: 0;
+				}
+			}
+		}
+
+	// .menu__body
+	&__body {
+	}
+	// .menu__list
+	&__list {
+		
+      
+		//Перевертвння мобільного меню
+		@media (max-width: toEm(970.98)) {
+			margin: 0 auto;
+			flex-direction: column;
+			row-gap: toRem(15);
+			align-items: start;
+			justify-content: center;
+			padding-top: toRem(152);
+          
+
+		}
+	}
+	// .menu__item
+	&__item {
+		
+		
+		//padding: toRem(22) toRem(0) toRem(22) toRem(0);
+		@media (max-width: toEm(970.98)) {
+			padding: toRem(0) toRem(0) toRem(0) toRem(0);
+        //font-size: toRem(20);
+		  &:not(:last-child){
+			margin-bottom: toRem(40);
+		  }
+        a{
+			color:$mainColor;
+		  }
+		}
+	}
+	// .menu__link
+	
+}
+
+
+
+
+
+//========================================================================================================================================================
+.header {
+	background-color:rgb(31, 31, 31);
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: 5;
+	
+}
+.header__container {
+}
+.header__row{
+	display: flex;
+	justify-content: space-between;
+	justify-content: baseline;
+	@media (max-width: toEm(970.98)){
+		 
+	}
+}
+.header__left {
+	display: flex;
+	column-gap: toRem(65);
+	align-items: center;
+	@media (max-width: toEm(1300.98)){
+		column-gap: toRem(30); 
+	}
+}
+.header__logo {
+	padding: toRem(30) toRem(0) toRem(20) toRem(0);
+	position: relative;
+	z-index: 5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	img{
+		width: 95px;
+		height: 51px;
+		object-fit: contain;
+	}
+	@media (max-width: toEm(970.98)){
+		padding: toRem(10) toRem(0) toRem(10) toRem(0); 
+		
+	}
+}
+.header__menu {
+}
+.menu {
+	color: $mainColor;
+}
+.menu__body {
+}
+.menu__list {
+	display: flex;
+	column-gap: toRem(44);
+	
+	row-gap: toRem(20);
+	flex-wrap: wrap;
+	@media (max-width: toEm(1300.98)){
+		column-gap: toRem(20); 
+	}
+}
+.menu__item {
+	position: relative;
+	@media (any-hover: hover){
+		&:hover{
+			.menu__link{
+				background-color: $pinkColor;
+				&::after{
+					content:'';
+					position: absolute;
+					width: 100%;
+					height: 150px;
+					left: 0;
+					//background-color: green;
+					z-index: 1;
+					
+				}
+			}
+			.sub-menu{
+				display: block;
+			}
+  
+	
+
+			
+		}
+	}
+	&--hidden{
+		display: none;
+		.menu-open &{
+			display: block;
+		}
+	}
+}
+.menu__link {
+	@include adaptiveValue("font-size",24 ,20 );
+	font-weight: 500;
+	padding: toRem(10) toRem(30);
+	border-radius: 60px;
+	transition: all 0.3s;
+	
+	
+	
+	@media (max-width: toEm(1240.98)){
+		padding: toRem(10) toRem(10);
+	}
+	
+	
+}
+.sub-menu {
+	position: absolute;
+	top: 180%;
+	width: toRem(230);
+	background-color: rgb(35 34 41);
+	border-radius: toRem(10);
+	display: none;
+	z-index: 5;
+}
+
+
+
+
+
+
+
+
+
+.sub-menu__list {
+	padding: toRem(10);
+	& :not(:last-child){
+		margin-bottom: toRem(25);
+	}
+	
+}
+.sub-menu__item {
+	position: relative;
+	&:not(:last-child){
+      &::before{
+			content:'';
+			position: absolute;
+			top: 170%;
+			width: 100%;
+			height: 1px;
+			background-color:rgb(55 54 60) ;
+		}
+	}
+	
+	
+}
+.sub-menu__link {
+	font-size: toRem(19);
+	font-weight: 500;
+	
+	@media (any-hover: hover){
+		&:hover{
+			text-decoration: underline;
+			text-decoration-color:$mainColor;
+
+		}
+	}
+}
+.header__find {
+	display: flex;
+	column-gap: toRem(20);
+	align-items: center;
+	@media (max-width: toEm(970.98)){
+		display: flex;
+		justify-content: space-between;
+		flex-grow: 1;
+		margin-left: 50px;
+		margin-right: 50px;
+	}
+	
+	.menu-open &{
+		@media (max-width: toEm(970.98)){
+			position: absolute;
+			margin-top: 80px;
+			z-index: 5;
+			margin-left: 0px;
+		   margin-right: 0px;
+	 }
+	}
+	@media (max-width: toEm(480)){
+		display: none;
+		.menu-open &{
+			display: block;
+		}
+	}
+}
+.header__search {
+	position: relative;
+	background-color: rgd(6 7 8);
+	border: 1px solid transparent;
+	display: flex;
+	align-items: center;
+	
+	button{
+		position: absolute;
+		left: 10px;
+		//top: 16px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: toRem(24);
+		height: toRem(24);
+	}
+	
+	
+	@media (any-hover: hover){
+		&:hover{
+			border: 1px solid rgb(47 47 47 );
+		}
+	}
+}
+.search-input {
+	padding: toRem(17) toRem(0) toRem(15) toRem(50);
+	display: block;
+	height: toRem(48);
+	//width:394px; /* 334/1794 */
+	@include adaptiveValue("width",394 , 200 );
+	background-color:rgb(35 34 41);
+	color: $mainColor;
+	border-radius: 8px;
+	.menu-open &{
+		min-width: toRem(320);
+		
+	}
+}
+.search-input::placeholder {
+	color:rgb(78 76 93); 
+	font-size: toRem(24);
+	font-family: "Montserrat";
+	font-weight: 600;
+	padding-left: toRem(50);
+	
+}
+
+
+
+.header__sign {
+	color: $mainColor;
+	display: flex;
+	column-gap: toRem(10);
+	align-items: center;
+	img{
+		width: 24px;
+		height: 24px;
+		transition: all 0.3s;
+		@media (any-hover: hover){
+			&:hover{
+				transform: scale(1.05);
+			}
+		}
+	}
+	
+}
+#header-sign{
+	.menu-open &{
+		display: none;
+	}
+	@media (max-width: toEm(610)){
+		display: none;
+	}
+}
+//========================================================================================================================================================
+
+
+
+
+//========================================================================================================================================================
+//Підключення меню бургер 
+//Burger Icon
+.icon-menu {
+	display: none;
+   position: relative;
+	@media (max-width: toEm(970.98)) {
+		display: block;
+		position: relative;
+		width: toRem(40);
+		height: toRem(30);
+		z-index: 5;
+		align-self: start;
+		margin-top: toRem(10);
+		
+
+		@media (any-hover: none) {
+			cursor: default;
+		}
+
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.5s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: toRem(5);
+			//background-color: $blackColor;
+			background-color:$mainColor ;
+			z-index: 5;
+			border-radius: toRem(6);
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+			width: toRem(19.5);
+		}
+
+		span {
+			top: calc(50% - toRem(1));
+			width: toRem(27);
+		}
+
+		.menu-open & {
+			margin-top: toRem(20);
+			span {
+				width: 0;
+				opacity: 0;
+			}
+
+			&::before {
+				top: calc(50% - toRem(2.5));
+				transform: rotate(-45deg);
+				
+			}
+
+			&::after {
+				bottom: calc(50% - toRem(2.5));
+				transform: rotate(45deg);
+				width: 100%;
+			}
+		}
+	}
+	
+}
+#menu{
+	position: absolute;
+	top: 140%;
+	color: $mainColor;
+	font-size: toRem(15);
+	text-align: center;
+	text-transform: capitalize;
+	background-color:inherit;
+	left: 0px;
+	.menu-open &{
+		display: none;
+	}
+}
+/// Обертання бургер меню.
+.icon-menu.rotate::before {
+	transform: translate(-0%, -0%) rotate(-360deg);
+}
+
+.icon-menu.rotate::after {
+	transform: translate(-0%, -0%) rotate(360deg);
+}
