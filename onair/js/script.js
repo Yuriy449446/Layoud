@@ -113,7 +113,7 @@ if (newSlider) {
 		autoHeight: true,
 		direction: 'horizontal',
 		autoplay: {
-			delay: 1000, // задержка между прокрутками в миллисекундах
+			delay: 4000, // задержка между прокрутками в миллисекундах
 			disableOnInteraction: false, // продолжает прокрутку даже при взаимодействии
 		},
 		spaceBetween: 30,
@@ -179,7 +179,7 @@ if (newChanel) {
 		autoHeight: true,
 		direction: 'horizontal',
 		autoplay: {
-			delay: 2000, // задержка между прокрутками в миллисекундах
+			delay: 5000, // задержка между прокрутками в миллисекундах
 			disableOnInteraction: false, // продолжает прокрутку даже при взаимодействии
 		},
 		spaceBetween: 30,
