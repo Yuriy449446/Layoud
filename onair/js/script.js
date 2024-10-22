@@ -122,18 +122,18 @@ if (newSlider) {
 		// Responsive breakpoints
 		breakpoints: {
             319: {
-				slidesPerView: 1,
+				slidesPerView: 3,
 				spaceBetween: 5
 			},
             450: {
-				slidesPerView: 1.5,
+				slidesPerView: 3,
 				spaceBetween: 5
 			},
-            550: {
-				slidesPerView: 2,
+            650: {
+				slidesPerView: 3,
 				spaceBetween: 5
 			},
-			850: {
+			650: {
 				slidesPerView: 3,
 				spaceBetween: 5
 			},
@@ -180,7 +180,7 @@ if (newChanel) {
 		direction: 'horizontal',
 		autoplay: {
 			delay: 5000, // задержка между прокрутками в миллисекундах
-			disableOnInteraction: false, // продолжает прокрутку даже при взаимодействии
+			//disableOnInteraction: false, // продолжает прокрутку даже при взаимодействии
 		},
 		spaceBetween: 30,
 		simulateTouch: true,
@@ -188,18 +188,18 @@ if (newChanel) {
 		// Responsive breakpoints
 		breakpoints: {
             319: {
-				slidesPerView: 1,
+				slidesPerView: 3,
 				spaceBetween: 5
 			},
             450: {
-				slidesPerView: 1.5,
+				slidesPerView: 3,
 				spaceBetween: 5
 			},
-            550: {
-				slidesPerView: 2,
+            650: {
+				slidesPerView: 3,
 				spaceBetween: 5
 			},
-			850: {
+			650: {
 				slidesPerView: 3,
 				spaceBetween: 5
 			},
