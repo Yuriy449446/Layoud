@@ -48,8 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	});
 });
 
-
-
+/*
 // Повноекраній режим
 document.addEventListener("DOMContentLoaded", function () {
 	function requestFullScreen() {
@@ -71,3 +70,21 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
  });
  
+*/ 
+
+function requestFullScreen() {
+   const element = document.documentElement;
+   if (element.requestFullscreen || element.webkitRequestFullscreen || element.msRequestFullscreen) {
+      if (element.requestFullscreen) {
+         element.requestFullscreen().catch(err => {
+            console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+         });
+      } else if (element.webkitRequestFullscreen) { 
+         element.webkitRequestFullscreen();
+      } else if (element.msRequestFullscreen) { 
+         element.msRequestFullscreen();
+      }
+   } else {
+      console.warn("Fullscreen mode is not supported on this device.");
+   }
+}
