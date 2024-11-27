@@ -1,0 +1,24 @@
+.wrapper {
+}
+.common {
+		// .common__container
+		&__container {
+		}
+}
+.header {
+		// .header__button
+		&__button {
+			font-size: toRem(14);
+			line-height: 1.428571; /* 20/14 */
+			padding: toRem(12) toRem(16);
+			border-radius: toRem(5);
+			background-color: $redColor;
+			color: $mainColor;
+			transition: all 0.3s;
+		@media (any-hover: hover){
+			&:hover{
+				background-color:rgb(148, 16, 16) ;
+			}
+		}
+		}
+}

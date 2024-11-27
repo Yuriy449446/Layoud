@@ -1,0 +1,30 @@
+[class^="_icon"], [class*=" _icon"] {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: never;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+ 
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+ }
+ 
+ ._iconarrow-rhite:before {
+	content: "\e901";
+	color: #0b0100;
+	width: 7px;
+	height: 12px;
+	
+ }
+ ._iconpoint:before {
+	content: "\e902";
+	color: #fc1200;
+ }
+ ._iconstar:before {
+	content: "\e903";
+	color: #ffc700;
+ }

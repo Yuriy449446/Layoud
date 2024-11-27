@@ -1,0 +1,84 @@
+@use "sass:math";
+
+// Мінімальна ширина сторінки
+$minWidth: 320;
+// Ширина полотна (макету)
+$maxWidth: 1440;
+// Ширина обмежуючого контейнера (0 = немає обмеження)
+$maxWidthContainer: 1200;
+// Загальний відступ у контейнера
+// (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
+$containerPadding: 30;
+// Ширина спрацьовування першого брейкпоінту
+$containerWidth: $maxWidthContainer + $containerPadding;
+
+// Кольори
+$mainColor: #FFFFFF;
+$redColor:rgb(198 16 15);
+$greyColor: rgb(204 204 204);
+$pinkColor: rgb(225 149 215);
+$lightСoral: rgb(255 110 110);
+$blueColor: rgb(23 25 36);
+$bludarkColor: rgb(18 20 30);
+$blackColor: #000000;
+
+
+
+
+
+
+
+// Функції
+@import "_functions.scss";
+// Шрифти
+@import "_fonts.scss";
+// Іконки
+@import "_icons.scss";
+// Обнулення
+@import "_reset.scss";
+// Компоненти
+@import "_common.scss";
+@import "_header.scss";
+@import "_main.scss";
+
+@import "_footer.scss";
+
+
+
+
+body {
+	font-family: 'Roboto', sans-serif;
+     font-size: toRem(20);                       
+
+	&.menu-open {
+		overflow: hidden;
+		touch-action: none;
+		overscroll-behavior: none;
+		
+	}
+
+	
+}
+
+.wrapper {
+	overflow: clip;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+
+}
+
+.wrapper>main {
+	flex-grow: 1;
+}
+
+[class*="__container"] {
+	max-width: toRem(1230);
+	margin: 0 auto;
+	padding-left: toRem(15);
+	padding-right: toRem(15);
+	
+}
+
+
+//========================================================================================================================================================

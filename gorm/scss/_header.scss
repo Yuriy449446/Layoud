@@ -1,0 +1,282 @@
+body{
+	background-color: $blackColor;
+}
+
+.header {
+	background-color: $blackColor;
+	color: $mainColor;
+	width: 100%;
+	position: fixed; 
+	top: 0;
+	left: 0;
+	right: 0;
+	border-bottom: 1px solid $mainColor;
+	z-index: 2;
+	// .header__container
+	&__container {
+	}
+	// .header__row
+	&__row {
+		display: flex;
+	  justify-content: space-between;
+	  align-items: center;
+	  @include adaptiveValue("min-height", 86, 50);
+	}
+	// .header__left
+	&__left {
+		display: flex;
+	column-gap: toRem(35);
+	align-items: center;
+	}
+	// .header__logo
+	&__logo {
+		img{
+			max-width: toRem(90);
+			max-height: toRem(25);
+			object-fit: cover;
+			position: relative;
+			z-index: 5;
+			min-width: 100%;
+			min-height: 100%;
+		}
+	}
+	// .header__menu
+	&__menu {
+	}
+	// .header__right
+	&__right {
+		display: flex;
+	column-gap: toRem(20);
+	align-items: center;
+	}
+	// .header__card
+	&__card {
+	}
+	// .header__button
+	&__button {
+		position: relative;
+			z-index: 5;
+	}
+}
+.menu {
+	color: $mainColor;
+	// .menu__body
+	&__body {
+	}
+	// .menu__list
+	&__list {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: toRem(20);
+		row-gap: toRem(7);
+				
+	}
+	// .menu__item
+	&__item {
+	}
+	// .menu__link
+	&__link {
+		font-size: toRem(15);
+		line-height: 1.2; /* 18/15 */
+	}
+}
+.card-header {
+	display: flex;
+	column-gap: toRem(5);
+	position: relative;
+			z-index: 5;
+	// .card-header__link
+	&__link {
+	}
+	// .card-header__img
+	&__img {
+		width: toRem(23);
+		height: toRem(23);
+		object-fit: contain;
+	}
+	// .card-header__number
+	&__number {
+		width: toRem(22);
+		height: toRem(22);
+		background-color: $redColor;
+		padding: toRem(2) toRem(8) ;
+		font-size: toRem(10);
+		line-height: 1.5;
+	}
+}
+
+
+
+//========================================================================================================================================================
+//Підключення меню бургер 
+//Burger Icon
+.icon-menu {
+	display: none;
+
+	@media (max-width: toEm(768.98)) {
+		display: block;
+		position: relative;
+		width: toRem(30);
+		height: toRem(18);
+		z-index: 5;
+		align-self: center;
+		
+
+		@media (any-hover: none) {
+			cursor: default;
+		}
+
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.5s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: toRem(2);
+			//background-color: $blackColor;
+			background-color:$mainColor ;
+			z-index: 5;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+
+		span {
+			top: calc(50% - toRem(1));
+		}
+
+		.menu-open & {
+			span {
+				width: 0;
+				opacity: 0;
+			}
+
+			&::before {
+				top: calc(50% - toRem(1));
+				transform: rotate(-45deg);
+			}
+
+			&::after {
+				bottom: calc(50% - toRem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+
+/// Обертання бургер меню.
+.icon-menu.rotate::before {
+	transform: translate(-0%, -0%) rotate(-360deg);
+}
+
+.icon-menu.rotate::after {
+	transform: translate(-0%, -0%) rotate(360deg);
+}
+
+//========================================================================================================================================================
+
+//Мобiльне меню
+.menu {
+	//Мобільне меню, при натисканні на бургер
+	 @media (max-width:toEm(768.98)){
+		 position: fixed;
+		 width: 100%;
+		 height: 100%;
+		 top: 0;
+		 overflow: auto;
+		 left: -100%;
+		 transition: all 0.5s ease 0s;
+		 z-index: 2;
+		 padding: toRem(0) toRem(15) toRem(30) toRem(15);
+		 background-color: $bludarkColor;
+		 &::before{
+			 content: "";
+			 position: fixed;
+			 width: 100%;
+			 @include adaptiveValue("min-height", 86, 50);
+			 background-color: $blackColor;
+			 z-index: 2;
+			 top: 0;
+			 left: -100%;
+			 transition: left 0.5s;
+			 
+		 }
+		 .menu-open & {
+			 left: 0;
+			 transition: all 0.5s ease 0s;
+			 
+
+			 &::before {
+				 left: 0;
+			 }
+		 }
+	 }
+
+ // .menu__body
+ &__body {
+ }
+ // .menu__list
+ &__list {
+	 
+	 
+	 //Перевертвння мобільного меню
+	 @media (max-width: toEm(768.98)) {
+		 margin: 0 auto;
+		 flex-direction: column;
+		 row-gap: toRem(25);
+		 align-items: center;
+		 justify-content: center;
+		 padding-top:30%;
+		
+
+	 }
+ }
+ // .menu__item
+ &__item {
+	 
+	 
+	 //padding: toRem(22) toRem(0) toRem(22) toRem(0);
+	 @media (max-width: toEm(768.98)) {
+		 padding: toRem(0) toRem(0) toRem(0) toRem(0);
+		font-size: toRem(20);
+      color: $mainColor;
+	 }
+ }
+
+//========================================================================================================================================================
+
+ // .menu__link
+ //Підкреслення при наведенні у різні боки
+ &__link {
+	 position: relative;
+	 &::before {
+		 content: "";
+		 height: toRem(3);
+		 background-color: $mainColor;
+		 position: absolute;
+		 top: 100%;
+		 width: 0;
+		 left: 50%;
+		 transition: all 0.3s;
+		 border-radius: toRem(2);
+		 margin-top: toRem(2);
+	 }
+
+	 @media (any-hover: hover) {
+		 &:hover {
+			 &::before {
+				 width: 100%;
+				 left: 0;
+			 }
+		 }
+	 }
+ }
+}
+
