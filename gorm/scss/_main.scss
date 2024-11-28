@@ -285,7 +285,9 @@
 		
 	}
 }
-
+#header-button{
+	z-index: 1;
+}
 //========================================================================================================================================================
 .page {
 	// .page__work
@@ -837,24 +839,7 @@
 	&__skills {
 	}
 }
-.skills {
-	
-	// .skills__container
-	&__container {
-	}
-	// .skills__row
-	&__row {
-	}
-	// .skills__wrapper
-	&__wrapper {
-	}
-	// .skills__right
-	&__right {
-	}
-	// .skills__img
-	&__img {
-	}
-}
+
 
 .fun-facts-row{
 	
@@ -898,14 +883,7 @@
 }
 
 
-.right-skills {
-	// .right-skills__title
-	&__title {
-	}
-	// .right-skills__graphic--form
-	&__graphic--form {
-	}
-}
+
 .form {
 	// .form__mail
 	&__mail {
@@ -948,13 +926,10 @@
 	padding-bottom: toRem(70);
 	
 }
-.header {
-	// .header__button
-	&__button {
-		
-	}
-}
 
+#header-button{
+	z-index: 1;
+}
 
 
 //========================================================================================================================================================

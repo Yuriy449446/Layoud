@@ -977,6 +977,10 @@ body {
   }
 }
 
+#header-button {
+  z-index: 1;
+}
+
 .work__title {
   text-align: center;
   margin-bottom: 3.75rem;
@@ -2137,6 +2141,10 @@ body {
 
 #project {
   padding-bottom: 4.375rem;
+}
+
+#header-button {
+  z-index: 1;
 }
 
 .from {
