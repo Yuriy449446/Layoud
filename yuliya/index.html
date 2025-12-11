@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,regular,600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Federo:regular&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Potta+One:regular&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<title>Psychology</title>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+
+			<div class="header__container">
+
+				<div class="header__logo">Grollis</div>
+				<div class="header__menu menu">
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item">
+								<a href="#" class="menu__link">Головна</a>
+							</li>
+							<li class="menu__item">
+								<a data-popup="popup6" href="#" class="menu__link">Влог</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" class="menu__link">Сторінка</a>
+							</li>
+							<li class="menu__item">
+								<a href="#" data-popup="popup5" class="menu__link">Контакти</a>
+							</li>
+
+						</ul>
+
+					</nav>
+
+				</div>
+				<div class="header__actions button-actions">
+					<a class="language" href="#"><svg fill="none" viewBox="0 0 16 16">
+							<path fill="currentColor" fill-rule="evenodd"
+								d="M8 14.166A6.163 6.163 0 0 1 1.833 8 6.163 6.163 0 0 1 8 1.836 6.163 6.163 0 0 1 14.164 8 6.163 6.163 0 0 1 8 14.166M.663 8A7.333 7.333 0 0 0 8 15.336 7.333 7.333 0 0 0 15.334 8 7.333 7.333 0 0 0 8 .666 7.333 7.333 0 0 0 .664 8"
+								clip-rule="evenodd"></path>
+							<path fill="currentColor" fill-rule="evenodd"
+								d="M14.189 10.115H1.813v1.17h12.376zm0-5.402H1.813v1.17h12.376z" clip-rule="evenodd"></path>
+							<path fill="currentColor" fill-rule="evenodd"
+								d="M6.634 12.557c-.455-1.136-.75-2.747-.75-4.556s.295-3.42.75-4.556c.228-.57.484-.992.74-1.262.254-.268.465-.347.626-.347s.372.079.626.347c.255.27.512.692.74 1.262.455 1.136.749 2.747.749 4.556s-.294 3.42-.749 4.556c-.228.57-.485.992-.74 1.262-.254.268-.466.347-.626.347s-.372-.079-.626-.347c-.256-.27-.512-.692-.74-1.262m-.11 2.066c.392.414.89.713 1.476.713.585 0 1.084-.299 1.476-.713.39-.413.716-.98.976-1.631.523-1.307.833-3.071.833-4.991s-.31-3.685-.833-4.99c-.26-.652-.585-1.219-.976-1.632C9.084.965 8.586.666 8 .666s-1.084.299-1.476.713c-.391.413-.716.98-.977 1.631-.522 1.306-.832 3.07-.832 4.99s.31 3.685.832 4.992c.26.651.586 1.218.977 1.63"
+								clip-rule="evenodd"></path>
+						</svg>
+
+
+
+					</a>
+					<a href="https://www.facebook.com/profile.php?id=100007612095170" target="_blank">
+						<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M10.9332 0C4.89557 0 0 4.92084 0 10.9897C0 16.4993 4.03815 21.049 9.29872 21.8437V13.9019H6.59359V11.0133H9.29872V9.09099C9.29872 5.90864 10.8412 4.5121 13.4727 4.5121C14.7325 4.5121 15.3999 4.60636 15.7149 4.64863V7.16991H13.9201C12.8032 7.16991 12.413 8.23507 12.413 9.43463V11.0133H15.6867L15.243 13.9019H12.413V21.8665C17.7493 21.1395 21.8665 16.5534 21.8665 10.9897C21.8665 4.92084 16.9713 0 10.9332 0Z"
+								fill="#1877F2" />
+						</svg>
+					</a>
+					<a href="https://www.instagram.com/yulia_grollis/" target="_blank">
+						<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M5.61114 0C2.51733 0 0 2.40433 0 5.35825V13.011C0 15.9646 2.51882 18.3678 5.6134 18.3678H13.6306C16.7248 18.3678 19.2425 15.9635 19.2425 13.0096V5.35609C19.2425 2.40291 16.7237 0 13.6291 0H5.61114ZM15.394 2.93886C15.8189 2.93886 16.1637 3.26801 16.1637 3.67357C16.1637 4.07913 15.8189 4.40828 15.394 4.40828C14.9691 4.40828 14.6243 4.07913 14.6243 3.67357C14.6243 3.26801 14.9691 2.93886 15.394 2.93886ZM9.62125 4.40828C12.3806 4.40828 14.6243 6.54997 14.6243 9.18392C14.6243 11.8179 12.3802 13.9596 9.62125 13.9596C6.86188 13.9596 4.6182 11.8175 4.6182 9.18392C4.6182 6.55034 6.86188 4.40828 9.62125 4.40828ZM9.62125 5.87771C7.70816 5.87771 6.1576 7.35779 6.1576 9.18392C6.1576 11.0101 7.70816 12.4901 9.62125 12.4901C11.5343 12.4901 13.0849 11.0101 13.0849 9.18392C13.0849 7.35779 11.5343 5.87771 9.62125 5.87771Z"
+								fill="#fd5949" />
+						</svg>
+					</a>
+					<ul id="lang-menu" class="lang-dropdown">
+						<!--  
+							<li class="lang-dropdown__ukrain"><a href="#">UA</a></li>
+							-->
+						<li class="lang-dropdown__polski"><a href="#">EN</a></li>
+
+						<li class="lang-dropdown__english"><a href="#">PL</a></li>
+					</ul>
+				</div>
+				<button class="icon-menu"><span></span></button>
+			</div>
+		</header>
+		<main class="page">
+			<section class="page__main-foto main-foto">
+          <img  class="main-foto__img" src="img/psihologia/main-foto/lotus.jpeg" alt="Image">
+			 <div class="maim-foto__body">
+				<h3 class="main-foto__title">Привіт</h3>
+				<p class="main-foto__text">Гармонія важлива в житті людини, тому що допомагає краще розуміти себе, свої емоції та поведінку. Вона вчить будувати здорові стосунки, долати стрес і знаходити внутрішню рівновагу. Завдяки психології людина може усвідомлено розвиватися, приймати кращі рішення та покращувати якість свого життя.</p>
+			 </div>
+
+			 
+			</section>
+			<section class="page__slider slider">
+				<div class="slider__wrapper">
+					<div class="slider__container">
+						<div class="swiper">
+							<!-- Additional required wrapper -->
+							<div class="swiper-wrapper">
+								<!-- Slides -->
+								<div class="swiper-slide">
+									<div class="swiper-slide__item">
+										<img class="swiper-slide__foto" src="img/psihologia/04-new.png" alt="Image">
+										<div class="swiper-slide__info info-swiper">
+											<h4 class="info-swiper__label">Знайти свій баланс.
+
+											</h4>
+											<button data-popup="popup3" class="info-swiper__button">Дізнатись більше</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide__item">
+										<img class="swiper-slide__foto" src="img/psihologia/01-new.png" alt="Image">
+										<div class="swiper-slide__info info-swiper">
+											<h4 class="info-swiper__label">Діалог, який лікує.
+
+											</h4>
+											<button data-popup="popup1" class="info-swiper__button">Дізнатись більше</button>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="swiper-slide__item">
+										<img class="swiper-slide__foto" src="img/psihologia/03-new.png" alt="Image">
+										<div class="swiper-slide__info info-swiper">
+											<h4 class="info-swiper__label">Психологія взаєморозу- <br> міння.
+
+											</h4>
+											<button data-popup="popup2" class="info-swiper__button">Дізнатись більше</button>
+										</div>
+									</div>
+								</div>
+
+
+								<div class="swiper-slide">
+									<div class="swiper-slide__item">
+										<img class="swiper-slide__foto" src="img/psihologia/08.png" alt="Image">
+										<div class="swiper-slide__info info-swiper">
+											<h4 class="info-swiper__label">Психологічне консультування.
+
+											</h4>
+											<button data-popup="popup4" class="info-swiper__button">Дізнатись більше</button>
+										</div>
+									</div>
+								</div>
+
+							</div>
+							<!-- If we need pagination -->
+
+						</div>
+					</div>
+					<button class="accessoris__arrow accessoris__arrow--left"> <svg viewBox="0 0 27 53" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M0.00819732 26.6316C0.0364472 26.9013 0.152723 27.153 0.338187 27.3466L24.9762 52.626C25.1936 52.86 25.4933 52.9948 25.8086 52.9999C26.1238 53.0049 26.4276 52.8793 26.6516 52.652C26.8755 52.4247 27.0012 52.1143 27 51.7912C26.9988 51.4677 26.8706 51.1585 26.6446 50.9329L2.83039 26.5L26.6446 2.0671L26.6446 2.06668C26.8706 1.8415 26.9988 1.53229 27 1.20881C27.0012 0.885323 26.8755 0.575287 26.6516 0.348004C26.4276 0.120301 26.1238 -0.00489013 25.8086 0.000145266C25.4933 0.00518448 25.1936 0.139626 24.9762 0.37405L0.337137 25.6534C0.0894364 25.9117 -0.0317458 26.2709 0.00714978 26.6314L0.00819732 26.6316Z"
+								fill="#797979" />
+						</svg>
+
+						</span></button>
+					<button class="accessoris__arrow accessoris__arrow--right"><span><svg viewBox="0 0 27 53" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M26.9918 26.3684C26.9636 26.0987 26.8473 25.847 26.6618 25.6534L2.02377 0.374049C1.80637 0.140044 1.50668 0.00518901 1.19142 0.000144965C0.876171 -0.00489628 0.572386 0.120717 0.348425 0.348C0.124474 0.575283 -0.00121883 0.885743 7.57656e-06 1.20881C0.00123589 1.53229 0.129387 1.8415 0.355381 2.0671L24.1696 26.5L0.355379 50.9329L0.355379 50.9333C0.129385 51.1585 0.0012318 51.4677 5.36553e-06 51.7912C-0.00122298 52.1147 0.124471 52.4247 0.348423 52.652C0.572374 52.8797 0.876169 53.0049 1.19142 52.9999C1.50667 52.9948 1.80637 52.8604 2.02377 52.6259L26.6629 27.3466C26.9106 27.0883 27.0317 26.7291 26.9928 26.3686L26.9918 26.3684Z"
+									fill="#797979" />
+							</svg>
+
+						</span></button>
+				</div>
+
+			</section>
+
+			<section>
+				<div class="from__wrapper">
+					<div class="from__container">
+						<div class="from__row">
+							<a class="from__link-img" href="#">
+								<div class="from__link-cikle">
+									<img id="from-img" class="from__img" src="img/psihologia/pop-ap/main-foto.png" alt="Image">
+								</div>
+							</a>
+							<div class="from__box-week week-box">
+								<div class="week-box__title"></div>
+								<div class="week-box__price">Ціна за годину консультації <span>$9.99</span></div>
+								<div class="week-box__text"> Віднайдіть внутрішній спокій та гармонію з професійним психологом.
+									Допомога у вирішенні стресу, тривоги та особистісних проблем. Запишіться на консультацію
+									сьогодні!
+								</div>
+								<button data-popup="popup5" class="week-box__button">Записатись.</button>
+								<div class="week-box__items">
+									<a class="week-box__item" href="#">
+										<img class="week-box__img" src="img/psihologia/01-new.png" alt="Image">
+									</a>
+									<a class="week-box__item" href="#">
+										<img class="week-box__img" src="img/psihologia/03-new.png" alt="Image">
+									</a>
+									<a class="week-box__item" href="#">
+										<img class="week-box__img" src="img/psihologia/04-new.png" alt="Image">
+									</a>
+									<a class="week-box__item" href="#">
+										<img class="week-box__img" src="img/psihologia/08.png" alt="Image">
+									</a>
+								</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!--
+			
+		  
+			<section class="page__seler-items items-seler">
+				<div class="items-seler__container">
+					<h3 class="items-seler__title">Best Seller Items </h3>
+					<div class="items-seler__items">
+						<div class="items-seler__item">
+							<a class="items-seler__link" href="#">
+								<img class="items-seler__img" src="img/catalog/foto-product/01.png" alt="Image">
+							</a>
+							<h4 class="items-seler__lebl">Metal Vintage Pendant</h4>
+							<span class="items-seler__prace">$79.00</span>
+							<div class="items-seler__box-activ activ-box">
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/cikl.svg" alt="Image">
+								</a>
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/heard.svg" alt="Image">
+								</a>
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/card.svg" alt="Image">
+								</a>
+							</div>
+							<div class="items-seler__box-favorit favorit-box">
+								<span class="favorit-box__hot">HOT</span>
+								<span class="favorit-box__sale">-5%</span>
+							</div>
+						</div>
+						<div class="items-seler__item">
+							<a class="items-seler__link" href="#">
+								<img class="items-seler__img" src="img/catalog/foto-product/02.png" alt="Image">
+							</a>
+							<h4 class="items-seler__lebl">Klosh Table Clock</h4>
+							<span class="items-seler__prace">$99.00</span>
+							<div class="items-seler__box-activ activ-box">
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/cikl.svg" alt="Image">
+								</a>
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/heard.svg" alt="Image">
+								</a>
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/card.svg" alt="Image">
+								</a>
+							</div>
+
+						</div>
+						<div class="items-seler__item">
+							<a class="items-seler__link" href="#">
+								<img class="items-seler__img" src="img/catalog/foto-product/03.png" alt="Image">
+							</a>
+							<h4 class="items-seler__lebl">Arne Dining Chair</h4>
+							<span class="items-seler__prace">$350.00</span>
+							<div class="items-seler__box-activ activ-box">
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/cikl.svg" alt="Image">
+								</a>
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/heard.svg" alt="Image">
+								</a>
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/card.svg" alt="Image">
+								</a>
+							</div>
+
+						</div>
+						<div class="items-seler__item">
+							<a class="items-seler__link" href="#">
+								<img class="items-seler__img" src="img/catalog/foto-product/04.png" alt="Image">
+							</a>
+							<h4 class="items-seler__lebl">Klosh Wall Clock</h4>
+							<span class="items-seler__prace">$80.00 – $129.00</span>
+							<div class="items-seler__box-activ activ-box">
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/cikl.svg" alt="Image">
+								</a>
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/heard.svg" alt="Image">
+								</a>
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/card.svg" alt="Image">
+								</a>
+							</div>
+							<div class="items-seler__box-favorit favorit-box">
+								<span class="favorit-box__hot">HOT</span>
+							</div>
+						</div>
+						<div class="items-seler__item">
+							<a class="items-seler__link" href="#">
+								<img class="items-seler__img" src="img/catalog/foto-product/05.png" alt="Image">
+							</a>
+							<h4 class="items-seler__lebl">Modern Outdoor Chair</h4>
+							<span class="items-seler__prace">$79.00</span>
+							<div class="items-seler__box-activ activ-box">
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/cikl.svg" alt="Image">
+								</a>
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/heard.svg" alt="Image">
+								</a>
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/card.svg" alt="Image">
+								</a>
+							</div>
+							<div class="items-seler__box-favorit favorit-box">
+								<span class="favorit-box__hot">HOT</span>
+								<span class="favorit-box__sale">-5%</span>
+							</div>
+						</div>
+						<div class="items-seler__item">
+							<a class="items-seler__link" href="#">
+								<img class="items-seler__img" src="img/catalog/foto-product/06.png" alt="Image">
+							</a>
+							<h4 class="items-seler__lebl">Vipp Wool Pillow
+							</h4>
+							<span class="items-seler__prace">$99.00</span>
+							<div class="items-seler__box-activ activ-box">
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/cikl.svg" alt="Image">
+								</a>
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/heard.svg" alt="Image">
+								</a>
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/card.svg" alt="Image">
+								</a>
+							</div>
+
+						</div>
+						<div class="items-seler__item">
+							<a class="items-seler__link" href="#">
+								<img class="items-seler__img" src="img/catalog/foto-product/07.png" alt="Image">
+							</a>
+							<h4 class="items-seler__lebl">Modern Bedroom Storage</h4>
+							<span class="items-seler__prace">$499.00</span>
+							<div class="items-seler__box-activ activ-box">
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/cikl.svg" alt="Image">
+								</a>
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/heard.svg" alt="Image">
+								</a>
+								<a class="activ-box__link" href="#">
+									<img src="img/catalog/svg-product/card.svg" alt="Image">
+								</a>
+							</div>
+							<div class="items-seler__box-favorit favorit-box">
+								<span class="favorit-box__hot">HOT</span>
+								<span class="favorit-box__sale">-5%</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+         -->
+
+			<section class="page__trending trending">
+				<div class="trending__box">
+					<div class="trending__container">
+						<h3 class="trending__title ">Мої досягнення!!!</h3>
+
+						<div class="trending__slider  swiper-trending">
+							<div class="new__trending swiper-wrapper">
+								<div class="trending__slide swiper-slide">
+									<article class="trending__item item-new">
+										<a href="#" class="item-new__link">
+											<img src="img/psihologia/telegram/certifikat/01.jpg" class="item-new__image"
+												alt="Image">
+											<h5 class="item-new__title">Certificate</h5>
+										</a>
+									</article>
+								</div>
+								<div class="trending__slide swiper-slide">
+									<article class="trending__item item-new">
+										<a href="#" class="item-new__link">
+											<img src="img/psihologia/telegram/certifikat/02.jpg" class="item-new__image"
+												alt="Image">
+											<h5 class="item-new__title">Certificate</h5>
+										</a>
+									</article>
+								</div>
+								<div class="trending__slide swiper-slide">
+									<article class="trending__item item-new">
+										<a href="#" class="item-new__link">
+											<img src="img/psihologia/telegram/certifikat/03.jpg" class="item-new__image"
+												alt="Image">
+											<h5 class="item-new__title">Certificate</h5>
+										</a>
+									</article>
+								</div>
+								<div class="trending__slide swiper-slide">
+									<article class="trending__item item-new">
+										<a href="#" class="item-new__link">
+											<img src="img/psihologia/telegram/certifikat/02.jpg" class="item-new__image"
+												alt="Image">
+											<h5 class="item-new__title">Certificate</h5>
+										</a>
+									</article>
+								</div>
+
+
+
+
+							</div>
+						</div>
+					</div>
+					<button class="trending__arrow trending__arrow--left"> <svg viewBox="0 0 27 53" fill="none"
+							xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M0.00819732 26.6316C0.0364472 26.9013 0.152723 27.153 0.338187 27.3466L24.9762 52.626C25.1936 52.86 25.4933 52.9948 25.8086 52.9999C26.1238 53.0049 26.4276 52.8793 26.6516 52.652C26.8755 52.4247 27.0012 52.1143 27 51.7912C26.9988 51.4677 26.8706 51.1585 26.6446 50.9329L2.83039 26.5L26.6446 2.0671L26.6446 2.06668C26.8706 1.8415 26.9988 1.53229 27 1.20881C27.0012 0.885323 26.8755 0.575287 26.6516 0.348004C26.4276 0.120301 26.1238 -0.00489013 25.8086 0.000145266C25.4933 0.00518448 25.1936 0.139626 24.9762 0.37405L0.337137 25.6534C0.0894364 25.9117 -0.0317458 26.2709 0.00714978 26.6314L0.00819732 26.6316Z"
+								fill="#797979" />
+						</svg>
+						</span></button>
+					<button class="trending__arrow trending__arrow--right"><span><svg viewBox="0 0 27 53" fill="none"
+								xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M26.9918 26.3684C26.9636 26.0987 26.8473 25.847 26.6618 25.6534L2.02377 0.374049C1.80637 0.140044 1.50668 0.00518901 1.19142 0.000144965C0.876171 -0.00489628 0.572386 0.120717 0.348425 0.348C0.124474 0.575283 -0.00121883 0.885743 7.57656e-06 1.20881C0.00123589 1.53229 0.129387 1.8415 0.355381 2.0671L24.1696 26.5L0.355379 50.9329L0.355379 50.9333C0.129385 51.1585 0.0012318 51.4677 5.36553e-06 51.7912C-0.00122298 52.1147 0.124471 52.4247 0.348423 52.652C0.572374 52.8797 0.876169 53.0049 1.19142 52.9999C1.50667 52.9948 1.80637 52.8604 2.02377 52.6259L26.6629 27.3466C26.9106 27.0883 27.0317 26.7291 26.9928 26.3686L26.9918 26.3684Z"
+									fill="#797979" />
+							</svg>
+						</span></button>
+
+				</div>
+
+			</section>
+
+			<section class="page__seler-items items-seler ">
+				<h3 class="trending__title ">Відгуки клієнтів</h3>
+				<!-- Slider main container -->
+				<div class="trending-categories">
+					<!-- Additional required wrapper -->
+					<div class="swiper-wrapper">
+
+						<!-- Slides -->
+						<div class="swiper-slide">
+							<div class="items-seler__item ">
+								<div class="items-seler__body">
+									<div class="items-seler__hed">
+										<div class="items-seler__left">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<!-- Shaft -->
+												<line x1="5" y1="12" x2="19" y2="12" stroke="#ffffff" stroke-width="2"
+													stroke-linecap="round" />
+
+												<!-- Arrowhead -->
+												<path d="M12 6L5 12L12 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+													stroke-linejoin="round" />
+											</svg>
+											<img class="items-seler__foto" src="img/catalog/foto-product/05.webp" alt="Image">
+											<div class="items-seler__nic">Ned Flanders</div>
+										</div>
+										<div class="items-seler__activ">
+											<svg width="22" height="22" viewBox="0 0 24 24" fill="white"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M22 16.92V21a1 1 0 0 1-1.09 1A19.79 19.79 0 0 1 3 4.11 1 1 0 0 1 4 3h4.09a1 1 0 0 1 1 .75 12.44 12.44 0 0 0 .7 2.11 1 1 0 0 1-.23 1L8.09 8.91a16 16 0 0 0 7 7l2-1.47a1 1 0 0 1 1-.16 12.44 12.44 0 0 0 2.11.7A1 1 0 0 1 22 16.92z"
+													fill="currentColor" />
+											</svg>
+											<span class="items-seler__dot"></span>
+										</div>
+									</div>
+									<div class="items-seler__text-body">
+										<p class="items-seler__text">
+											«Оклі-доклі! Консультація була просто чудесною. Почувався спокійно й благословенно.
+											Психолог допоміг розібратись у думках і знайти добрий напрямок. Почуваюся значно легше
+											та вдячний прец-величезно!»
+										</p>
+										<span class="items-seler__share">
+											<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path d="M4 20C4 14 7 8 14 8H14V4L22 12L14 20V16H13C8 16 6 18 4 20Z"
+													fill="#ffffff" />
+											</svg>
+
+										</span>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+						<div class="swiper-slide">
+							<div class="items-seler__item ">
+								<div class="items-seler__body">
+									<div class="items-seler__hed">
+										<div class="items-seler__left">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<!-- Shaft -->
+												<line x1="5" y1="12" x2="19" y2="12" stroke="#ffffff" stroke-width="2"
+													stroke-linecap="round" />
+
+												<!-- Arrowhead -->
+												<path d="M12 6L5 12L12 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+													stroke-linejoin="round" />
+											</svg>
+											<img class="items-seler__foto" src="img/catalog/foto-product/04.webp" alt="Image">
+											<div class="items-seler__nic">Lisa Marie Simpson</div>
+										</div>
+										<div class="items-seler__activ">
+											<svg width="22" height="22" viewBox="0 0 24 24" fill="white"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M22 16.92V21a1 1 0 0 1-1.09 1A19.79 19.79 0 0 1 3 4.11 1 1 0 0 1 4 3h4.09a1 1 0 0 1 1 .75 12.44 12.44 0 0 0 .7 2.11 1 1 0 0 1-.23 1L8.09 8.91a16 16 0 0 0 7 7l2-1.47a1 1 0 0 1 1-.16 12.44 12.44 0 0 0 2.11.7A1 1 0 0 1 22 16.92z"
+													fill="currentColor" />
+											</svg>
+											<span class="items-seler__dot"></span>
+										</div>
+									</div>
+									<div class="items-seler__text-body">
+										<p class="items-seler__text">
+											«Після консультації я відчула справжню ментальну ясність. Було приємно, що мене слухали
+											не як дитину, а як рівну. Психолог допоміг структурувати мої думки й знайти здоровий
+											баланс. Виходжу натхненною, спокійною і трішки мудрішою.»
+										</p>
+										<span class="items-seler__share">
+											<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path d="M4 20C4 14 7 8 14 8H14V4L22 12L14 20V16H13C8 16 6 18 4 20Z"
+													fill="#ffffff" />
+											</svg>
+
+										</span>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+						<div class="swiper-slide">
+							<div class="items-seler__item ">
+								<div class="items-seler__body">
+									<div class="items-seler__hed">
+										<div class="items-seler__left">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<!-- Shaft -->
+												<line x1="5" y1="12" x2="19" y2="12" stroke="#ffffff" stroke-width="2"
+													stroke-linecap="round" />
+
+												<!-- Arrowhead -->
+												<path d="M12 6L5 12L12 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+													stroke-linejoin="round" />
+											</svg>
+											<img class="items-seler__foto" src="img/catalog/foto-product/03.webp" alt="Image">
+											<div class="items-seler__nic">Homer Jay Simpson</div>
+										</div>
+										<div class="items-seler__activ">
+											<svg width="22" height="22" viewBox="0 0 24 24" fill="white"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M22 16.92V21a1 1 0 0 1-1.09 1A19.79 19.79 0 0 1 3 4.11 1 1 0 0 1 4 3h4.09a1 1 0 0 1 1 .75 12.44 12.44 0 0 0 .7 2.11 1 1 0 0 1-.23 1L8.09 8.91a16 16 0 0 0 7 7l2-1.47a1 1 0 0 1 1-.16 12.44 12.44 0 0 0 2.11.7A1 1 0 0 1 22 16.92z"
+													fill="currentColor" />
+											</svg>
+											<span class="items-seler__dot"></span>
+										</div>
+									</div>
+									<div class="items-seler__text-body">
+										<p class="items-seler__text">
+											«Воооу, ця консультація була кращою, ніж пончик із подвійною глазур’ю! Я прийшов
+											заплутаний, як дріт за телевізором, а вийшов набагато спокійнішим. Психолог усе пояснив
+											просто й доброзичливо. Тепер мозок не кипить, а працює рівно. Я справді відчуваю
+											полегшення та вдячність!»
+										</p>
+										<span class="items-seler__share">
+											<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path d="M4 20C4 14 7 8 14 8H14V4L22 12L14 20V16H13C8 16 6 18 4 20Z"
+													fill="#ffffff" />
+											</svg>
+
+										</span>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+						<div class="swiper-slide">
+							<div class="items-seler__item ">
+								<div class="items-seler__body">
+									<div class="items-seler__hed">
+										<div class="items-seler__left">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<!-- Shaft -->
+												<line x1="5" y1="12" x2="19" y2="12" stroke="#ffffff" stroke-width="2"
+													stroke-linecap="round" />
+
+												<!-- Arrowhead -->
+												<path d="M12 6L5 12L12 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+													stroke-linejoin="round" />
+											</svg>
+											<img class="items-seler__foto" src="img/catalog/foto-product/01.webp" alt="Image">
+											<div class="items-seler__nic">Marge Simpson</div>
+										</div>
+										<div class="items-seler__activ">
+											<svg width="22" height="22" viewBox="0 0 24 24" fill="white"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M22 16.92V21a1 1 0 0 1-1.09 1A19.79 19.79 0 0 1 3 4.11 1 1 0 0 1 4 3h4.09a1 1 0 0 1 1 .75 12.44 12.44 0 0 0 .7 2.11 1 1 0 0 1-.23 1L8.09 8.91a16 16 0 0 0 7 7l2-1.47a1 1 0 0 1 1-.16 12.44 12.44 0 0 0 2.11.7A1 1 0 0 1 22 16.92z"
+													fill="currentColor" />
+											</svg>
+											<span class="items-seler__dot"></span>
+										</div>
+									</div>
+									<div class="items-seler__text-body">
+										<p class="items-seler__text">
+											«Консультація виявилася дуже корисною. Я почувалася вислуханою й зрозумілою, а це для
+											мене важливо. Психолог допоміг поглянути на ситуацію спокійніше та знайти реальні кроки
+											для поліпшення. Тепер маю більше впевненості й внутрішнього порядку. Щиро вдячна за
+											підтримку.»
+										</p>
+										<span class="items-seler__share">
+											<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path d="M4 20C4 14 7 8 14 8H14V4L22 12L14 20V16H13C8 16 6 18 4 20Z"
+													fill="#ffffff" />
+											</svg>
+
+										</span>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+						<div class="swiper-slide">
+							<div class="items-seler__item ">
+								<div class="items-seler__body">
+									<div class="items-seler__hed">
+										<div class="items-seler__left">
+											<svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<!-- Shaft -->
+												<line x1="5" y1="12" x2="19" y2="12" stroke="#ffffff" stroke-width="2"
+													stroke-linecap="round" />
+
+												<!-- Arrowhead -->
+												<path d="M12 6L5 12L12 18" stroke="#ffffff" stroke-width="2" stroke-linecap="round"
+													stroke-linejoin="round" />
+											</svg>
+											<img class="items-seler__foto" src="img/catalog/foto-product/02.webp" alt="Image">
+											<div class="items-seler__nic">Bart Simpson</div>
+										</div>
+										<div class="items-seler__activ">
+											<svg width="22" height="22" viewBox="0 0 24 24" fill="white"
+												xmlns="http://www.w3.org/2000/svg">
+												<path
+													d="M22 16.92V21a1 1 0 0 1-1.09 1A19.79 19.79 0 0 1 3 4.11 1 1 0 0 1 4 3h4.09a1 1 0 0 1 1 .75 12.44 12.44 0 0 0 .7 2.11 1 1 0 0 1-.23 1L8.09 8.91a16 16 0 0 0 7 7l2-1.47a1 1 0 0 1 1-.16 12.44 12.44 0 0 0 2.11.7A1 1 0 0 1 22 16.92z"
+													fill="currentColor" />
+											</svg>
+											<span class="items-seler__dot"></span>
+										</div>
+									</div>
+									<div class="items-seler__text-body">
+										<p class="items-seler__text">
+											«Ну що ж, ця консультація була значно крутішою, ніж я очікував. Думав, що буде
+											нудятина, а виявилося реально корисно. Психолог допоміг розкласти все по поличках,
+											навіть ті речі, про які я зазвичай мовчу. Пішов звідти з яснішою головою і відчуттям,
+											що можу впоратися з будь-яким безладом. Ай, каррамба!»
+										</p>
+										<span class="items-seler__share">
+											<svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+												xmlns="http://www.w3.org/2000/svg">
+												<path d="M4 20C4 14 7 8 14 8H14V4L22 12L14 20V16H13C8 16 6 18 4 20Z"
+													fill="#ffffff" />
+											</svg>
+
+										</span>
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+					<!-- If we need pagination -->
+
+
+
+				</div>
+				<div class="swiper-pagination swiper-pagination-categories"></div>
+			</section>
+
+		</main>
+
+		<footer class="footer">
+			<div class="footer__fon">
+				<img class="footer__giv" src="img/psihologia/pop-ap/butterfly.gif" alt="Image">
+				<div class="footer__container">
+					<div class="header__logo footer-logo">Grollis</div>
+					<div class="footer__box">
+						<div class="footer__items">
+							 <div class="footer__item">
+								<p id="footer-title" class="footer__title">
+									Дякую вам за відвідування мого сайту та інтерес до моєї роботи. Мені приємно, що ви ознайомилися з матеріалами. Сподіваюся, вони були корисними та надихнули вас на подальший розвиток.
+								</p>
+							 </div>
+							<div  class="footer__item">
+								<div class="footer__title">FOLLOW US</div>
+								<a class="footer__link" href="https://www.facebook.com/profile.php?id=100007612095170"
+									target="_blank">
+									<svg width="22" height="22" viewBox="0 0 22 22" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M10.9332 0C4.89557 0 0 4.92084 0 10.9897C0 16.4993 4.03815 21.049 9.29872 21.8437V13.9019H6.59359V11.0133H9.29872V9.09099C9.29872 5.90864 10.8412 4.5121 13.4727 4.5121C14.7325 4.5121 15.3999 4.60636 15.7149 4.64863V7.16991H13.9201C12.8032 7.16991 12.413 8.23507 12.413 9.43463V11.0133H15.6867L15.243 13.9019H12.413V21.8665C17.7493 21.1395 21.8665 16.5534 21.8665 10.9897C21.8665 4.92084 16.9713 0 10.9332 0Z"
+											fill="#C1DBF0" />
+									</svg>
+
+									Facebook
+								</a>
+
+
+								<a class="footer__link" href="https://www.instagram.com/yulia_grollis/" target="_blank">
+									<svg width="20" height="19" viewBox="0 0 20 19" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M5.61114 0C2.51733 0 0 2.40433 0 5.35825V13.011C0 15.9646 2.51882 18.3678 5.6134 18.3678H13.6306C16.7248 18.3678 19.2425 15.9635 19.2425 13.0096V5.35609C19.2425 2.40291 16.7237 0 13.6291 0H5.61114ZM15.394 2.93886C15.8189 2.93886 16.1637 3.26801 16.1637 3.67357C16.1637 4.07913 15.8189 4.40828 15.394 4.40828C14.9691 4.40828 14.6243 4.07913 14.6243 3.67357C14.6243 3.26801 14.9691 2.93886 15.394 2.93886ZM9.62125 4.40828C12.3806 4.40828 14.6243 6.54997 14.6243 9.18392C14.6243 11.8179 12.3802 13.9596 9.62125 13.9596C6.86188 13.9596 4.6182 11.8175 4.6182 9.18392C4.6182 6.55034 6.86188 4.40828 9.62125 4.40828ZM9.62125 5.87771C7.70816 5.87771 6.1576 7.35779 6.1576 9.18392C6.1576 11.0101 7.70816 12.4901 9.62125 12.4901C11.5343 12.4901 13.0849 11.0101 13.0849 9.18392C13.0849 7.35779 11.5343 5.87771 9.62125 5.87771Z"
+											fill="#C1DBF0" />
+									</svg>
+
+									Instagram
+								</a>
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<h5 class="footer__info"> Yuriy Kolesnik Company 2025 © </h5>
+		</footer>
+		<div class="popup hidden" id="popup1">
+			<div class="popup-content">
+				<button class="close-btn">
+					<img src="img/psihologia/pop-ap/closet.svg" alt="Image">
+				</button>
+				<h3>Діалог, який лікує.</h3>
+				<p>Це психологічний підхід, у якому ключову роль відіграє глибока, уважна та емпатійна розмова між клієнтом
+					і терапевтом. Через безпечний простір людина може вільно висловити думки, почуття й внутрішні конфлікти.
+					Я допомагаю структуровано осмислити переживання, віддзеркалює емоції та ставить запитання, що сприяють
+					саморозумінню. Такий діалог знижує рівень тривоги, створює відчуття підтримки та прийняття. Він допомагає
+					побачити нові способи реагування, змінити деструктивні переконання й поступово відновити психологічну
+					рівновагу. Метод активно застосовується у різних видах терапії та доводить свою ефективність у покращенні
+					емоційного стану.</p>
+
+			</div>
+
+		</div>
+		<div class="popup hidden" id="popup2">
+			<div class="popup-content">
+				<button class="close-btn">
+					<img src="img/psihologia/pop-ap/closet.svg" alt="Image">
+				</button>
+				<h3>Психологія взаєморозуміння.</h3>
+				<p>Це не лише правильне сприйняття слів, але й емоцій, намірів, та невербальних сигналів співрозмовника.
+					Воно передбачає активне слухання, емпатію та здатність враховувати думки й почуття іншої людини.
+					Психологічні механізми взаєморозуміння включають адаптацію до стилів спілкування партнерів, врахування
+					культурних і соціальних особливостей. Ключовими чинниками є відкритість, довіра та вміння знижувати
+					бар'єри, які можуть виникати через різні погляди чи стереотипи. Розвиток цих навичок є основою для
+					успішної комунікації і розв'язання конфліктів.</p>
+			</div>
+		</div>
+		<div class="popup hidden" id="popup3">
+			<div class="popup-content">
+				<button class="close-btn">
+					<img src="img/psihologia/pop-ap/closet.svg" alt="Image">
+				</button>
+				<h3>Знайти свій баланс.</h3>
+				<p>Це психологічний підхід, у якому ключову роль відіграє глибока, уважна та емпатійна розмова між клієнтом
+					і терапевтом. Через безпечний простір людина може вільно висловити думки, почуття й внутрішні конфлікти.
+					Я допомагаю структуровано осмислити переживання, віддзеркалює емоції та ставить запитання, що сприяють
+					саморозумінню. Такий діалог знижує рівень тривоги, створює відчуття підтримки та прийняття. Він допомагає
+					побачити нові способи реагування, змінити деструктивні переконання й поступово відновити психологічну
+					рівновагу. Метод активно застосовується у різних видах терапії та доводить свою ефективність у покращенні
+					емоційного стану.</p>
+			</div>
+		</div>
+		<div class="popup hidden" id="popup4">
+			<div class="popup-content">
+				<button class="close-btn">
+					<img src="img/psihologia/pop-ap/closet.svg" alt="Image">
+				</button>
+				<h3>Психологічне консультування.</h3>
+				<p>Це процес, в якому психолог допомагає людині подолати особистісні труднощі, емоційні проблеми чи
+					конфлікти в стосунках. Консультування може включати різні методи: від когнітивно-поведінкових до
+					психодинамічних технік. Основна мета — забезпечити підтримку клієнту, допомогти зрозуміти свої почуття,
+					знайти ефективні способи вирішення проблем. Психолог виступає як посередник, що сприяє самопізнанню та
+					розвитку емоційної стійкості. Консультування може бути індивідуальним або груповим, і часто є важливою
+					частиною лікування стресу, тривожних розладів чи депресії. Воно допомагає не лише зняти симптоми, а й
+					змінити способи мислення та поведінки.</p>
+			</div>
+		</div>
+
+		<div class="popup hidden" id="popup5">
+			<div class="popup-content">
+				<button class="close-btn">
+					<img src="img/psihologia/pop-ap/closet.svg" alt="Image">
+				</button>
+				<div class="registration-cssave">
+					<form>
+						<h3 class="text-center">Контакти</h3>
+
+						<div class="form-group">
+							<label for="username">Телефон</label>
+							<input class="form-control item" type="text" id="username" name="username"
+								placeholder="+48721796630" required>
+							<svg width="15" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M22 16.92V21a1 1 0 0 1-1.09 1A19.79 19.79 0 0 1 3 4.11 1 1 0 0 1 4 3h4.09a1 1 0 0 1 1 .75 12.44 12.44 0 0 0 .7 2.11 1 1 0 0 1-.23 1L8.09 8.91a16 16 0 0 0 7 7l2-1.47a1 1 0 0 1 1-.16 12.44 12.44 0 0 0 2.11.7A1 1 0 0 1 22 16.92z"
+									fill="currentColor" />
+							</svg>
+						</div>
+
+						<div class="form-group">
+							<label for="viber">Viber</label>
+							<input class="form-control item" type="text" id="viber" name="viber" placeholder="+380990496240"
+								required>
+							<svg width="15" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M22 16.92V21a1 1 0 0 1-1.09 1A19.79 19.79 0 0 1 3 4.11 1 1 0 0 1 4 3h4.09a1 1 0 0 1 1 .75 12.44 12.44 0 0 0 .7 2.11 1 1 0 0 1-.23 1L8.09 8.91a16 16 0 0 0 7 7l2-1.47a1 1 0 0 1 1-.16 12.44 12.44 0 0 0 2.11.7A1 1 0 0 1 22 16.92z"
+									fill="currentColor" />
+							</svg>
+						</div>
+
+						<div class="form-group">
+							<label for="email">Email</label>
+							<input class="form-control item" type="email" id="email" name="email"
+								placeholder="GrollisYulia1985@Gmail.com" required>
+							<svg width="15" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M20 4H4C2.9 4 2 4.9 2 6v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+									fill="currentColor" />
+							</svg>
+
+						</div>
+					</form>
+
+				</div>
+			</div>
+		</div>
+		<div class="popup hidden" id="popup6">
+			<div class="popup-content__vlog">
+				<div class="popup-content">
+
+					<div class="popup-content__wrapper">
+						<h3>Давайте знайомитись!</h3>
+						<p>Привіт, друзі! Мене звати Юлія, я практикуюча психологиня, і сьогодні хочу трохи розповісти про
+							свою роботу та про те, як саме я допомагаю людям знаходити внутрішню рівновагу, впевненість і
+							спокій.
+
+							У своїй практиці я використовую поєднання сучасних психологічних методів: когнітивно-поведінкову
+							терапію, тілесно-орієнтований підхід та елементи гештальт-терапії. Для мене важливо бачити людину
+							цілісно — не лише її думки чи поведінку, а й те, що відбувається в тілі, емоціях і навіть у
+							підсвідомих реакціях. Часто саме тіло зберігає напруження та досвід, які ми не усвідомлюємо, тому я
+							допомагаю клієнтам навчитися слухати себе глибше.
+
+							На консультаціях ми разом досліджуємо причини тривожності, емоційного вигорання, проблем у
+							стосунках, низької самооцінки. Моя мета — не просто тимчасово зняти симптоми, а допомогти людині
+							навчитися самостійно справлятися з труднощами у майбутньому. Я дуже вірю в ресурс кожного клієнта і
+							завжди підтримую його на шляху змін.
+
+							Одним із важливих напрямків моєї роботи є робота з емоціями. Багато людей звикли їх придушувати,
+							соромитися або ховати, але саме емоції є нашими підказками. Коли ми навчаємося правильно їх
+							проживати, у житті з’являється більше свободи, радості та усвідомленості.
+
+							Я бачу, як змінюються люди: починають краще розуміти себе, будувати здорові стосунки, приймати
+							рішення, відчувати опору всередині. І це — найбільша винагорода для мене.
+
+							Дякую, що ви зі мною. Якщо ви хочете більше дізнатися про психологію або потребуєте підтримки — я
+							поруч. Бережіть себе!
+							
+						</p>
+
+					</div>
+					<img class="popup-content__img" src="img/psihologia/pop-ap/main-foto.png" alt="Image">
+				</div>
+				<button class="close-btn">
+					<img src="img/psihologia/pop-ap/closet.svg" alt="Image">
+				</button>
+			</div>
+		</div>
+
+	</div>
+	<!-- Підключення слайдеру Swiper -->
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+	<!-- Підключення JS-файлу з кодом -->
+	<script src="js/script.js"></script>
+</body>
+
+</html>
